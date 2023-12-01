@@ -34,7 +34,7 @@ export default function CustomFooter() {
                 <div className=" flex fle-wrap pt-3">
                   <TextInput
                     className="text-slate-800"
-                    id="email4"
+                    id="email"
                     type="email"
                     style={{ backgroundColor: "#201f23", border: "none" }}
                     placeholder="you@admin.com"
