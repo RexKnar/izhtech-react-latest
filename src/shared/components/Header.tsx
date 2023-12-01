@@ -5,11 +5,11 @@ import { MenuItem } from "./types/MenuItems";
 export default function Header() {
   return (
     <Navbar fluid rounded>
-      <Navbar.Brand href="https://flowbite-react.com">
-        <img src="/public/logo-primary.png" className="h-6 mr-3 sm:h-9" alt="Flowbite React Logo" />
+      <Navbar.Brand href="https://izhtech.com">
+        <img src="/public/logo-primary.png" className="h-6 mr-3 sm:h-9" alt="izhtech | Your Digital Partner" />
       </Navbar.Brand>
       <div className="flex md:order-2">
-        <Button className="bg-black">Get started</Button>
+        <Button className="bg-black">Let's Talk</Button>
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
