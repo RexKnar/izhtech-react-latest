@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.no-underline {
+    text-decoration: none;
+  }
+  
+  .no-underline:hover {
+    text-decoration: none;
+  }
