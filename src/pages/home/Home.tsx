@@ -5,8 +5,7 @@ export  default function Home(){
 
     return (
         <>
-        <p>welcome all</p>
-        <Button>Demo </Button>
+       <h1>Home Page</h1>
         </>
     )
 }
