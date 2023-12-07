@@ -1,15 +1,17 @@
 import Hero from "./components/Hero";
 import Feature from "./components/Feature";
-import Slider from "./components/partnercompany";
-import Banner from "./components/banner";
+import Partnercompany from "./components/Partnercompany";
+import Banner from "./components/Banner";
+import Missionstatement from "./components/Missionstatement";
 export  default function Home(){
 
     return (
        <>
        <Hero/>
        <Feature />
-       <Slider />
+       <Partnercompany />
        <Banner />
+       <Missionstatement />
        </>
     )
 }
