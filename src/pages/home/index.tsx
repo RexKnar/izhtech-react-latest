@@ -6,6 +6,7 @@ import Missionstatement from "./components/Missionstatement";
 import Platforminsights from "./components/Platforminsights";
 import Cards from "./components/BlogList";
 import Ourservice from "./components/Ourservice";
+import Process from "./components/Process";
 export  default function Home(){
 
     return (
@@ -18,6 +19,8 @@ export  default function Home(){
        <Platforminsights />
        <Cards />
        <Ourservice />
+       <Process/>
+       
        </>
     )
 }
