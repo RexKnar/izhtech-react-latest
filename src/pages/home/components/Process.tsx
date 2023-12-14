@@ -22,7 +22,6 @@ export default function Process() {
       </div>
 
 
-
       <div className="flex flex-col w-full py-4 md:flex-row lg:flex-row lg:flex-wrap lg:justify-center">
 
         <div className="flex flex-col md:flex-1 lg:w-1/4">
