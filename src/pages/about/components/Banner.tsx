@@ -1,3 +1,5 @@
+import { Progress } from 'flowbite-react';
+
 export default function Banner() {
     return (
         <section className="flex flex-col gap-10 px-4 py-3 sm:flex-col md:flex-col lg:flex-row xl:flex-row">
@@ -10,7 +12,10 @@ export default function Banner() {
                     <b>Established stages</b> which reader, taken <br /> possession of my entire soul, like these <br /> sweet mornings of spring of enjoying <br />with the theory of ethics.
                 </p>
                 <p className="pt-5 lg:text-sm md:text-sm sm:text-xs">Praesent commodo cursus magna, vel<br /> scelerisque nisl venenatis dapibus<br /> posuere velit aliquet.</p>
+                <div className="pt-4 text-xs font-bold dark:text-white">Structured Media Insights</div>
+               <div className="pt-2"><Progress progress={45} size="sm" className="bg-gradient-to-r  from-indigo-500 via-purple-500 to-pink-500 h-1 rounded-full w-[50%] relative" /></div> 
             </div>
+            {/* Remove the extra closing div tag here */}
             <div className="w-full lg:pt-12 sm:w-full md:w-1/2 lg:w-1/2 sm:pt-2 md:pt-2">
                 <h1 className="pb-4 text-2xl font-bold">Website <br /> UX/UI Design.</h1>
                 <p className="sm:text-xs md:text-sm lg:text-sm xl:text-sm">
