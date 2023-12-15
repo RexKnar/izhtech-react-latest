@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import About from "./pages/about";
 import Home from "./pages/home";
+import Contact from "./pages/contact";
 import Header from "./shared/components/Header";
 import Footer from "./shared/components/CustomFooter";
 
@@ -16,7 +17,13 @@ const router = createBrowserRouter([
     path: "/about",
     element: <About />,
   },
+  {
+    path: "/contact",
+    element: <Contact/>,
+  }
 ]);
+
+
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
