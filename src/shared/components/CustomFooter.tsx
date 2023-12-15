@@ -1,6 +1,6 @@
 import { Footer } from "flowbite-react";
 import { Button, Checkbox, TextInput } from "flowbite-react";
-import image from "/Manoj/Izh-Tech New/izhtech-react-latest/src/assets/Logo/Logo-white.png";
+import image from "../../assets/Logo/Logo-white.png";
 
 export default function CustomFooter() {
   return (
