@@ -4,7 +4,7 @@ export default function Banner() {
     return (
         <section className="flex flex-col gap-10 px-4 py-3 sm:flex-col md:flex-col lg:flex-row xl:flex-row">
             <div className="flex bg-transparent sm:w-1/2 md:w-full lg:w-full">
-                <img src="images/Aboutuspage/banner/Image.png" alt="Example Image" className="w-full h-auto" />
+                <img src="images/Aboutpage/img/banner.png" alt="Example Image" className="w-full h-auto" />
             </div>
             <div className="w-full lg:pt-12 sm:w-full md:w-1/2 lg:w-1/2 sm:pt-2 md:pt-2">
                 <h1 className="pb-4 text-2xl font-bold">Strategy & <br /> Art Direction.</h1>
