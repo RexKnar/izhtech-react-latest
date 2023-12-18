@@ -11,7 +11,6 @@ export default function PlatformInsights() {
                     and art direction.
                 </h1>
             </div>
-
             <div className="flex-1 bg-transparent sm:w-1/2 md:w-full lg:w-full">
                 <img src="images/Aboutpage/img/capabilities.png" alt="Example Image" className="w-full h-auto" />
             </div>
