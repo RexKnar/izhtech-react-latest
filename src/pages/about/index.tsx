@@ -3,6 +3,7 @@ import Banner from "./components/Banner";
 import Capabilities from "./components/Capabilities";
 import Ourclients from "./components/Ourclients";
 import Testimonials from "./components/Testimonials";
+import Awards from "./components/Awards";
 export  default function About(){
 
     return (
@@ -12,6 +13,7 @@ export  default function About(){
        <Capabilities/>
        <Ourclients/>
        <Testimonials/>
+       <Awards/>
        </>
     )
 }
