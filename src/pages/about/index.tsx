@@ -4,6 +4,8 @@ import Capabilities from "./components/Capabilities";
 import Ourclients from "./components/Ourclients";
 import Testimonials from "./components/Testimonials";
 import Awards from "./components/Awards";
+import Counts from "./components/counts";
+
 export  default function About(){
 
     return (
@@ -14,6 +16,7 @@ export  default function About(){
        <Ourclients/>
        <Testimonials/>
        <Awards/>
+       <Counts/>
        </>
     )
 }
