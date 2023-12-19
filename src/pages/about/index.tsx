@@ -6,6 +6,8 @@ import Testimonials from "./components/Testimonials";
 import Awards from "./components/Awards";
 import Counts from "./components/Counts";
 import Ourteam from "./components/Ourteam";
+import Collaborate from "./components/collaborate";
+
 
 
 export  default function About(){
@@ -20,6 +22,7 @@ export  default function About(){
        <Awards/>
        <Counts/>
        <Ourteam/>
+       <Collaborate/>
        </>
     )
 }
