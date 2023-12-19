@@ -4,7 +4,9 @@ import Capabilities from "./components/Capabilities";
 import Ourclients from "./components/Ourclients";
 import Testimonials from "./components/Testimonials";
 import Awards from "./components/Awards";
-import Counts from "./components/counts";
+import Counts from "./components/Counts";
+import Ourteam from "./components/Ourteam";
+
 
 export  default function About(){
 
@@ -17,6 +19,7 @@ export  default function About(){
        <Testimonials/>
        <Awards/>
        <Counts/>
+       <Ourteam/>
        </>
     )
 }
