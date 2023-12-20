@@ -18,5 +18,9 @@ export default function Collaborate() {
                 </div>
             </div>
         </section>
+
+
+
+
     );
 }
