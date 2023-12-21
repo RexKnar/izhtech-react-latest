@@ -1,6 +1,6 @@
 import { Accordion } from 'flowbite-react';
 
-export default function banner() {
+export default function banner(props) {
     return (
         <section className="px-6 py-4">
             <div className="flex flex-col items-center gap-4 sm:flex-col md:flex-col lg:flex-row xl:flex-row lg:gap-28">
@@ -28,7 +28,7 @@ export default function banner() {
                 </div>
                 <div className="flex flex-col md:flex-1 lg:w-1/4">
                     <p className="pb-2 text-xs">OUR SERVICES</p>
-                    <h1 className="pb-2 text-3xl font-bold">Branding.</h1>
+                    <h1 className="pb-2 text-3xl font-bold"> {props.serviceName}</h1>
                     <p className="pb-6 text-xs">Reduction in operating costs for the whole product team which creates <br />amazing UI/UX experiences, by crafting top-notch user experience of<br /> funny the century rather.</p>
                     <Accordion className="border-none outline-none">
                         <Accordion.Panel>
