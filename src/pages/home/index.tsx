@@ -4,7 +4,11 @@ import Partnercompany from "./components/Partnercompany";
 import Banner from "./components/Banner";
 import Missionstatement from "./components/Missionstatement";
 import Platforminsights from "./components/Platforminsights";
-import Cards from "./components/Cards";
+import Cards from "./components/BlogList";
+import Ourservice from "./components/Ourservice";
+import Process from "./components/Process";
+import Slider from "./components/Slider";
+
 export  default function Home(){
 
     return (
@@ -16,6 +20,9 @@ export  default function Home(){
        <Missionstatement />
        <Platforminsights />
        <Cards />
+       <Ourservice />
+       <Process/>
+       <Slider/>
        </>
     )
 }
