@@ -5,6 +5,7 @@ import "./index.css";
 import Services from "./pages/services";
 import About from "./pages/about";
 import Home from "./pages/home";
+import Contact from "./pages/contact";
 import Header from "./shared/components/Header";
 import Footer from "./shared/components/CustomFooter";
 
@@ -18,10 +19,12 @@ const router = createBrowserRouter([
     element: <About />,
   },
   {
+    path: "/contact",
+    element: <Contact/>,
+  },{
     path: "/service",
     element: <Services />,
   },
-  
 ]);
 
 

@@ -1,4 +1,4 @@
-export default function partnercompany () {
+export default function Partnercompany () {
     return (
       <section className="grid w-full bg-white">
         <div className="flex flex-col w-full py-8 md:flex-row md:py-24 lg:flex-row lg:flex-wrap lg:justify-center">
