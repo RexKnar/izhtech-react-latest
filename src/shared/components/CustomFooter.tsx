@@ -5,7 +5,7 @@ import logo from "../../assets/Logo/Logo-white.png";
 export default function CustomFooter() {
   return (
     <footer className="bg-neutral-900 ">
-      <div className="container ">
+      <div className="container-fluid">
         <div className="grid w-full gap-8 p-8 py-8 lg:grid-cols-4 lg:px-28 md:px-6 md:grid-cols-4">
           <div>
             <img src={logo} className="h-16" alt="" />
