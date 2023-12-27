@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import Services from "./pages/services";
 import About from "./pages/about";
 import Home from "./pages/home";
 import Contact from "./pages/contact";
@@ -20,9 +21,11 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact/>,
-  }
+  },{
+    path: "/service",
+    element: <Services />,
+  },
 ]);
-
 
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

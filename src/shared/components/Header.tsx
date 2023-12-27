@@ -17,7 +17,7 @@ export default function Header() {
      
         {menuItems.map((menu: MenuItem) => {
           return (
-            <Navbar.Link href={`#${menu.path}`}> { menu.label }</Navbar.Link>
+            <Navbar.Link href={`${menu.path}`}> { menu.label }</Navbar.Link>
       );
           })}
 
