@@ -5,9 +5,9 @@ import logo from "../../assets/Logo/Logo-white.png";
 export default function CustomFooter() {
   return (
     <footer className="bg-neutral-900 ">
-      <div className="container-fluid">
-        <div className="grid w-full gap-8 p-8 py-8 lg:grid-cols-4 lg:px-28 md:px-6 md:grid-cols-4">
-          <div>
+      <div className="container mx-auto">
+        <div className="grid w-full gap-8 p-4 py-8 lg:px-8 lg:grid-cols-4 md:px-6 md:grid-cols-4">
+          <div >
             <img src={logo} className="h-16" alt="" />
           </div>
           <div className="text-stone-50 ">
@@ -40,7 +40,7 @@ export default function CustomFooter() {
                     placeholder="you@admin.com"
                     required
                   />
-                  <Button className="w-16 text-slate-800" style={{ backgroundColor: "#201f23", border: "none", color:"#FFFFFF" }} size="xs">
+                  <Button className="w-16 px-0 py-0 text-slate-800" style={{ backgroundColor: "#201f23", border: "none", color:"#FFFFFF" }} size="xs">
                     Sign up
                   </Button>
                 </div>
@@ -60,23 +60,23 @@ export default function CustomFooter() {
             </Footer.LinkGroup>
           </div>
         </div>
-        <div className="w-full p-8 py-6 bg-neutral-900 lg:px-28 sm:px-4 sm:flex sm:items-center sm:justify-between">
+        <div className="w-full p-4 py-6 bg-neutral-900 lg:px-8 sm:px-4 sm:flex sm:items-center sm:justify-between">
           <Footer.Copyright
             href="#"
             by="izh tech 2023. All rights reserved"
             className="text-stone-50"
           />
           <div className="flex mt-4 space-x-6 list-none sm:mt-0 text-stone-50 sm:justify-center">
-            <Footer.Link className="text-xs text-gray-300 text-stone-50" href="#">
+            <Footer.Link className="text-xs text-gray-300 text-stone-50 mx-auto" href="#">
               Sitemap
             </Footer.Link>
-            <Footer.Link href="#" className="text-xs text-gray-300">
+            <Footer.Link href="#" className="text-xs text-gray-300 mx-auto">
               Security
             </Footer.Link>
-            <Footer.Link href="#" className="text-xs text-gray-300">
+            <Footer.Link href="#" className="text-xs text-gray-300 mx-auto">
               Privacy Policy
             </Footer.Link>
-            <Footer.Link href="#" className="text-xs text-gray-300">
+            <Footer.Link href="#" className="text-xs text-gray-300 mx-auto">
               Terms of Service
             </Footer.Link>
           </div>
