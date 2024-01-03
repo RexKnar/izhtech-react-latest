@@ -23,6 +23,9 @@ export default function Banner() {
                 </p>
                 <p className="pt-5 lg:text-sm sm:text-xs">Scelerisque nisl consectetur of your<br /> posuere erat a ante venenatis.</p>
             </div>
+
+
+            
         </section>
     );
 }
