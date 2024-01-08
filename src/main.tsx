@@ -38,7 +38,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <div className="container mx-auto">
+    <div>
       <Header />
       <RouterProvider router={router} />
     </div>

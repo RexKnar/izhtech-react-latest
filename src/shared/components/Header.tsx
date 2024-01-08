@@ -4,7 +4,7 @@ import { MenuItem } from "./types/MenuItems";
 
 export default function Header() {
   return (
-    <Navbar fluid rounded>
+    <Navbar fluid rounded className="container mx-auto bg-white sticky top-2">
       <Navbar.Brand href="https://izhtech.com">
         <img src="/public/logo-primary.png" className="h-6 mr-3 sm:h-9" alt="izhtech | Your Digital Partner" />
       </Navbar.Brand>
