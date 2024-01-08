@@ -4,7 +4,7 @@ import dot from "./dot.json";
 
 export default function Hero() {
   return (
-    <section className="h-[calc(100vh-70px)] heroSection py-[200px] container mx-auto flex gap-5 overflow-hidden">
+    <section className="h-[calc(100vh-70px)] heroSection py-[200px] container mx-auto flex gap-5 overflow-hidden relative">
       <div className="flex items-end ">
       <div className="flex flex-col gap-2 justify-end ">
             <p className="text-[#0C1C28]">
