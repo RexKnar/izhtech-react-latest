@@ -1,12 +1,14 @@
+
 export default function banner() {
   return (
-    <section className="py-4 bg-blue-100">
+    <section>
       <div className="flex-col justify-center gap-4 px-5 my-auto h-4/5 lg:flex lg:flex-row">
-        <div className=" lg:w-4/6 sm:w-[75%] sm:px-11 lg:m-0 mx-auto">
+        <div className=" lg:w-4/6 sm:w-[75%] sm:px-11 lg:m-0 mx-auto relative">
           <div className="flex flex-col justify-end h-full pb-5 ">
             <p className="text-xs">
               #DATATRACKING APP
             </p>
+
             <h1 className="pt-4 font-bold text-md lg:w-3/4 2xl:text-7xl lg:text-4xl md:text-4xl sm:text-4xl">
               The app is great<br />
               for basic setup <br />
@@ -20,6 +22,7 @@ export default function banner() {
               Explore Features
             </button>
           </div>
+
         </div>
         <div className="flex flex-col justify-end h-full pb-5 mx-auto lg:w-3/6 sm:w-full ">
           <img className=" sm:w-[50%] lg:w-[75%] lg:m-0 mx-auto h-auto" src="/images/bannar1/img.png" />
