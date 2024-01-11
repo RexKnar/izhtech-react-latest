@@ -2,3 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@keyframes pathAnimation {
+    0% {
+      opacity: 0.05;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0.05;
+    }
+  }
+  
+  .animated-path {
+    animation: pathAnimation 2s ease-in-out infinite;
+  }

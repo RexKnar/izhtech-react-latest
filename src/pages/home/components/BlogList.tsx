@@ -1,10 +1,11 @@
-import { Card } from 'flowbite-react';
+import Lottie from "lottie-react";
+import dotsanimation from "./dotsanimation.json"
 import BlogCard from '../../../shared/components/BlogCard';
 
 export default function Cards() {
     return (
 
-        <section className='py-8'>
+        <section>
 
             <div className="flex-col justify-center gap-4 px-5 my-auto h-4/5 lg:flex lg:flex-row">
                 <div className="lg:w-3/4 sm:w-[75%] sm:px-11  mx-auto">
@@ -22,6 +23,8 @@ export default function Cards() {
                             className="inline-block w-32 px-2 py-1 text-sm font-bold text-center text-black bg-white border-2 border-black rounded "
                         >Read all Guides</a>
 
+<Lottie animationData={dotsanimation} loop={true} className="absolute lg:right-[-54rem] lg:w-[20%] lg:left-[42rem] lg:bottom-[-140rem] hidden lg:block " />
+<Lottie animationData={dotsanimation} loop={true} className="absolute lg:right-[-54rem] lg:w-[20%] lg:left-[46.5rem] lg:bottom-[-140rem] hidden lg:block " />
 
                     </div>
                 </div>

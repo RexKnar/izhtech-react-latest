@@ -1,10 +1,39 @@
+import Lottie from "lottie-react";
+import circle from "./circle.json";
+import dot from "./dot.json";
+
 export default function Hero() {
   return (
-    <section className="h-[90vh] heroSection py-20">
-      <div className="flex-col justify-center gap-4 px-5 my-auto h-4/5 lg:flex lg:flex-row">
+    <section className="h-[calc(100vh-70px)] heroSection py-[200px] container mx-auto flex gap-5 overflow-hidden relative">
+      <div className="flex items-end ">
+      <div className="flex flex-col justify-end gap-2 ">
+            <p className="text-[#0C1C28]">
+              Looking to enhance your online presence? We offer top-notch
+              digital growth services to help your your brand stand out in the
+              digital world
+            </p>
+            <div
+              className="absolute bg-right bg-no-repeat bg-cover right-60 top-6 bottom-5 left-95"
+              style={{ backgroundImage: "url('images/img/Group12.png')" }}
+            >
+              
+            </div> 
+            <h1 className="text-3xl font-bold 2xl:text-7xl lg:text-4xl md:text-4xl sm:text-4xl font-['Space_Grotesk']">
+              Elevate your Online presence
+            </h1>
+          </div>
+          
+      </div>
+      <div className="relative flex flex-col justify-end h-full pb-5 mx-auto lg:w-3/6 sm:w-full">
+          <img className="sm:w-[50%] lg:w-[100%] lg:m-0 mx-auto h-auto" src="/images/hero/bg-1.png" />
+          {/* <img src="/images/hero/bottom-dots.png" className="absolute bottom-[-30rem] w-[75%] left-[5rem]"/> */}
+          <Lottie animationData={dot} loop={true} className="absolute bottom-[-14rem] w-[75%] left-[5rem]"/>
+          
+        </div>
+      {/* <div className="flex-col justify-center gap-4 px-5 my-auto lg:flex lg:flex-row">
         <div className=" lg:w-4/6 sm:w-[75%] sm:px-11 lg:m-0 mx-auto">
-          <div className="flex flex-col justify-end h-full pb-5 ">
-            <p>
+          <div className="flex flex-col justify-end h-full gap-1 pb-5 ">
+            <p className="text-[#0C1C28]">
               Looking to enhance your online presence? We offer top-notch
               digital growth services to help your your brand stand out in the
               digital world
@@ -26,7 +55,9 @@ export default function Hero() {
             </h3>
           </div>
         </div>
-      </div>
+      </div> */}
+      <Lottie animationData={circle} loop={true} className="absolute top-[-9rem] right-[-9rem] z-[-1]"/>
+    
     </section>
   );
 }

@@ -1,3 +1,4 @@
+
 import { Carousel } from 'flowbite-react';
 import { TextInput, Button } from "flowbite-react";
 import type { CustomFlowbiteTheme } from 'flowbite-react';
@@ -41,14 +42,16 @@ export default function Slider() {
 
   return (
     <section>
-      <div className="h-96 sm:h-96 lg:h-96 2xl:h-96">
+      <h1 className="pt-6 pb-3 font-bold text-center bg-gray-100 text-md lg:text-4xl md:text-4xl sm:text-4xl">
+  Meet our customers.
+</h1>
+
+      <div className="relative h-96 sm:h-96 lg:h-96 2xl:h-96">
         <Carousel theme={customTheme} leftControl={<MoveLeft/>} rightControl={<MoveRight/>}>
+          
           <div className="flex items-center justify-center h-full bg-gray-100 dark:bg-gray-700 dark:text-white">
 
             <div className="text-center ">
-              <h1 className="pb-3 font-bold text-md lg:text-4xl md:text-4xl sm:text-4xl">
-                Meet our customers.
-              </h1>
               <button className="h-6 text-xs text-black bg-gray-200 rounded w-28 rounded-2l">
                 Design Quality
               </button>
@@ -110,12 +113,13 @@ export default function Slider() {
                   Get a Demo
                 </Button>
               </div>
+
               <p className="pt-4 pb-2 text-xs text-slate-950">
                 Already using our service?<b> Sign In</b>
               </p>
             </div>
           </div>
-
+ 
         </div>
 
       </section>

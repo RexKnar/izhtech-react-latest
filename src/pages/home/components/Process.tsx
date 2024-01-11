@@ -2,24 +2,31 @@ import { Accordion } from 'flowbite-react';
 
 export default function Process() {
   return (
-    <section className='px-3 '>
-      <div className="flex-col gap-4 h-4/5 lg:flex lg:flex-row">
+    <section>
+      <div className="relative flex-col gap-4  h-4/5 lg:flex lg:flex-row">
         <div className="lg:w-3/4 sm:w-[75%]">
-          <div className="flex flex-col h-full py-5 pl-5">
+          <div className="flex flex-col h-full py-5 pl-5 ">
             <p className="text-xs">PROCESS</p>
             <h1 className="py-2 text-4xl font-bold">
               How we do it?
             </h1>
-            <p className="pt-4 pb-4 text-xs ">
+            <p className="pt-4 pb-4 text-xs">
               Our app works for businesses of all sizes and shapes.<br />
               <b>Starting at just $5 for an agent.</b>
             </p>
             <button className="w-20 h-6 text-xs font-bold text-black bg-white border border-2 border-black rounded">
               Contact Us
             </button>
+
+            <div
+              className="absolute right-0 bg-right bg-no-repeat bg-cover top-6 bottom-5 left-72"
+              style={{ backgroundImage: "url('images/img/Group11.png')" }}
+            ></div>
+
           </div>
         </div>
       </div>
+
 
 
       <div className="flex flex-col w-full py-4 md:flex-row lg:flex-row lg:flex-wrap lg:justify-center">
