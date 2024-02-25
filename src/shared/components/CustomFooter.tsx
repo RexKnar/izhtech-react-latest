@@ -1,12 +1,12 @@
 import { Footer } from "flowbite-react";
-import { Button, Checkbox, TextInput } from "flowbite-react";
+import { Button,  TextInput } from "flowbite-react";
 import logo from "../../assets/Logo/Logo-white.png";
 
 export default function CustomFooter() {
   return (
-    <footer className="bg-neutral-900 ">
-      <div className="container ">
-        <div className="grid w-full gap-8 p-8 py-8 lg:grid-cols-4 lg:px-28 md:px-6 md:grid-cols-4">
+    <footer className="py-10 mx-auto container-fluid bg-neutral-900 ">
+      <div className="container mx-auto">
+        <div className="grid w-full gap-8 p-8 py-8 lg:grid-cols-4 xl:px-28 md:px-6 md:grid-cols-4">
           <div>
             <img src={logo} className="h-16" alt="" />
           </div>
@@ -31,7 +31,7 @@ export default function CustomFooter() {
             </h2>
             <Footer.LinkGroup col>
               <div className="max-w-md">
-                <div className="flex pt-3 fle-wrap">
+                <div className="flex gap-4 pt-3 fle-wrap">
                   <TextInput
                     className="text-slate-800"
                     id="email"
@@ -46,7 +46,7 @@ export default function CustomFooter() {
                 </div>
 
                 <div className="flex flex-row gap-2 mt-4">
-                  <Checkbox
+                  {/* <Checkbox
                     id="accept"
                     style={{ backgroundColor: "#201f23", borderColor: "grey" }}
                     defaultChecked
@@ -54,7 +54,7 @@ export default function CustomFooter() {
                   <p className="text-gray-300">
                     I’m okay with getting emails and having that activity
                     tracked to improve my experience.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </Footer.LinkGroup>
@@ -63,15 +63,12 @@ export default function CustomFooter() {
         <div className="w-full p-8 py-6 bg-neutral-900 lg:px-28 sm:px-4 sm:flex sm:items-center sm:justify-between">
           <Footer.Copyright
             href="#"
-            by="izh tech 2023. All rights reserved"
+            by="izhtech 2024. All rights reserved"
             className="text-stone-50"
           />
           <div className="flex mt-4 space-x-6 list-none sm:mt-0 text-stone-50 sm:justify-center">
             <Footer.Link className="text-xs text-gray-300 text-stone-50" href="#">
               Sitemap
-            </Footer.Link>
-            <Footer.Link href="#" className="text-xs text-gray-300">
-              Security
             </Footer.Link>
             <Footer.Link href="#" className="text-xs text-gray-300">
               Privacy Policy

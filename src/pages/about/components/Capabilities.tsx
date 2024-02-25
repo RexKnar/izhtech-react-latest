@@ -1,19 +1,37 @@
-export default function PlatformInsights() {
-    return (
-        <section className="flex flex-col items-center gap-3 px-4 py-3 sm:flex-col md:flex-col lg:flex-row xl:flex-row">
+import { motion } from "framer-motion";
+import CustomObject from "../../../shared/components/CustomObjects";
+import { fadeIn } from "../../../shared/animation/variants";
 
-            <div className="w-full lg:pl-24 lg:pt-12 sm:w-full md:w-1/2 lg:w-1/2 sm:pt-2 md:pt-2">
-                <p className="text-xs">
-                    CAPABILITIES </p>
-                <h1 className="pt-2 text-3xl font-bold">We work in the fields <br/>
-                    of UI/UX design, <br/>
-                    interiors, photography  <br/>
-                    and art direction.
-                </h1>
-            </div>
-            <div className="flex-1 bg-transparent sm:w-1/2 md:w-full lg:w-full">
-                <img src="images/Aboutpage/img/capabilities.png" alt="Example Image" className="w-full h-auto" />
-            </div>
-        </section>
-    );
+export default function PlatformInsights() {
+  return (
+    <section className="flex gap-5 px-4 py-3 mx-auto row">
+      <div className="flex flex-col w-full gap-10 mx-auto lg:w-4/6 lg:flex-row">
+        <motion.div variants={fadeIn("right", 0.3)}
+  initial="hidden"
+  whileInView={"show"}
+  viewport={{ once: false, amount:0.1 }} className="flex flex-col justify-center lg:w-1/2">
+          <CustomObject className="absolute -z-10" variants="green-disk" />
+          <p className="text-xs">CAPABILITIES </p>
+          <h1 className="pt-2 text-3xl font-bold">
+            Versatile expertise, tailored strategies, and innovative solutions
+            for transparent, impactful outcomes
+          </h1>
+        </motion.div>
+        <motion.div variants={fadeIn("left", 0.3)}
+  initial="hidden"
+  whileInView={"show"}
+  viewport={{ once: false, amount:0.1 }} className="relative lg:w-1/2">
+          <CustomObject
+            className="absolute z-10 -bottom-20 -right-20 "
+            variants="blue-dots"
+          />
+          <img
+            src="images/Aboutpage/img/capabilities.png"
+            alt="Example Image"
+            className="relative z-20 w-full h-auto"
+          />
+        </motion.div>
+      </div>
+    </section>
+  );
 }

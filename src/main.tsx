@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     element: <Services />,
   },
   {
-    path: "/Read all Guides",
+    path: "/blog-detail",
     element: <BlogDetail />,
   },
   
@@ -38,10 +38,13 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <div>
+   <section className="mx-auto overflow-hidden container-fluid">
       <Header />
       <RouterProvider router={router} />
-    </div>
+    
+  
     <Footer />
+   
+    </section>
   </React.StrictMode>
 );

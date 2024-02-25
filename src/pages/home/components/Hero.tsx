@@ -1,63 +1,69 @@
 import Lottie from "lottie-react";
-import circle from "./circle.json";
 import dot from "./dot.json";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../../shared/animation/variants";
+import CustomObject from "../../../shared/components/CustomObjects";
 
 export default function Hero() {
   return (
-    <section className="h-[calc(100vh-70px)] heroSection py-[200px] container mx-auto flex gap-5 overflow-hidden relative">
-      <div className="flex items-end ">
-      <div className="flex flex-col justify-end gap-2 ">
-            <p className="text-[#0C1C28]">
-              Looking to enhance your online presence? We offer top-notch
-              digital growth services to help your your brand stand out in the
-              digital world
-            </p>
-            <div
-              className="absolute bg-right bg-no-repeat bg-cover right-60 top-6 bottom-5 left-95"
-              style={{ backgroundImage: "url('images/img/Group12.png')" }}
+    <>
+      <div className="container relative flex justify-center md:h-full h-[60vh] mx-auto ">
+        <div className="flex flex-col justify-center gap-4 px-5 my-auto lg:flex lg:flex-row">
+          <div className=" flex flex-col  justify-center lg:w-4/6 sm:w-[75%] sm:px-11 lg:m-0 mx-auto">
+            <motion.div
+              variants={fadeIn("right", 0.2)}
+              initial="hidden"
+              whileInView={"show"}
+              exit={"hidden"}
+              viewport={{ once: false, amount: 0.1 }}
+              className="flex flex-col xl:pl-36 lg:pl-16"
             >
               
-            </div> 
-            <h1 className="text-3xl font-bold 2xl:text-7xl lg:text-4xl md:text-4xl sm:text-4xl font-['Space_Grotesk']">
-              Elevate your Online presence
-            </h1>
+              <p className="text-[#0C1C28]  order-2 lg:order-1 text-justify pt-5 text-sm">
+                Don't navigate the digital world alone. We're your trusted
+                partner, providing comprehensive solutions to ignite your online
+                journey. Let's unlock your true potential and fuel your brand's
+                growth together!
+                {/* Explore our one-stop digital solutions, offering top-notch services for all your needs.Our varied services boost online success */}
+              </p>
+              <h1 className="order-1 text-[46px] font-black  lg:order-2 lg:text-5xl 2xl:text-7xl sm:text-4xl">
+                Want to elevate your business?
+              </h1>
+            </motion.div>
           </div>
-          
+          <motion.div
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            exit={"hidden"}
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.1 }}
+            className="relative flex flex-col justify-end hidden h-full pb-5 mx-auto md:block lg:w-3/6 sm:w-full "
+          >
+            <img
+              className=" sm:w-[50%] lg:w-[75%] lg:m-0 mx-auto h-auto "
+              src="/images/hero/bg-1.png"
+            />
+            <Lottie animationData={dot} loop={true} className="absolute bottom-[-14rem] w-[75%] left-[5rem]"/>
+          </motion.div>
+        </div>
+        <Lottie
+          animationData={dot}
+          loop={true}
+          className="absolute bottom-0 right-0 w-[75%] md:bottom-[-14rem] md:w-[25%] md:right-[-9rem] z-[-1]"
+        />
+        {/* <Lottie animationData={circle} loop={true} className="absolute top-[-9rem] right-[-9rem] z-[-1]"/> */}
       </div>
-      <div className="relative flex flex-col justify-end h-full pb-5 mx-auto lg:w-3/6 sm:w-full">
-          <img className="sm:w-[50%] lg:w-[100%] lg:m-0 mx-auto h-auto" src="/images/hero/bg-1.png" />
-          {/* <img src="/images/hero/bottom-dots.png" className="absolute bottom-[-30rem] w-[75%] left-[5rem]"/> */}
-          <Lottie animationData={dot} loop={true} className="absolute bottom-[-14rem] w-[75%] left-[5rem]"/>
-          
-        </div>
-      {/* <div className="flex-col justify-center gap-4 px-5 my-auto lg:flex lg:flex-row">
-        <div className=" lg:w-4/6 sm:w-[75%] sm:px-11 lg:m-0 mx-auto">
-          <div className="flex flex-col justify-end h-full gap-1 pb-5 ">
-            <p className="text-[#0C1C28]">
-              Looking to enhance your online presence? We offer top-notch
-              digital growth services to help your your brand stand out in the
-              digital world
-            </p>
-            <h1 className="text-3xl font-bold lg:w-3/4 2xl:text-7xl lg:text-4xl md:text-4xl sm:text-4xl">
-              Elevate your Online presence
-            </h1>
-          </div>
-        </div>
-        <div className="flex flex-col justify-end h-full pb-5 mx-auto lg:w-3/6 sm:w-full ">
-          <img className=" sm:w-[50%] lg:w-[75%] lg:m-0 mx-auto h-auto" src="/images/hero/bg-1.png" />
-        </div>
-        <div className="fixed right-0 flex-col items-end justify-center hidden transform rotate-90 -translate-y-1/2 lg:flex top-1/2">
-          <div className="h-[1vw] flex justify-start">
-            <h3 className="my-auto font-semibold">
-              Follow Us -<a href="">/Bg.</a>
-              <a href="">/Ig</a>
-              <a href="">/Tw</a>
-            </h3>
-          </div>
-        </div>
-      </div> */}
-      <Lottie animationData={circle} loop={true} className="absolute top-[-9rem] right-[-9rem] z-[-1]"/>
-    
-    </section>
+      <motion.span
+        variants={fadeIn("right", 0.5)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.1 }}
+      >
+        <CustomObject
+          className="absolute -top-10 lg:-top-40 -z-10  md:block  h-[80vw] lg:h-[100vh]"
+          variants="hero-left-full"
+        />
+      </motion.span>
+    </>
   );
 }

@@ -1,4 +1,8 @@
-export default function Webapp(props) {
+type webProps={
+    serviceName:string,
+description:string
+}
+export default function Webapp(props:webProps) {
     return (
         <section className="flex flex-col gap-3 px-4 py-3 lg:px-20 sm:flex-col md:flex-col lg:flex-row xl:flex-row">
             <div className="w-full lg:pt-12 sm:w-full md:w-1/2 lg:w-1/2 sm:pt-2 md:pt-2">
