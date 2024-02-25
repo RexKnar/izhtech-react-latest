@@ -8,6 +8,7 @@ import Home from "./pages/home";
 import Contact from "./pages/contact";
 import Header from "./shared/components/Header";
 import Footer from "./shared/components/CustomFooter";
+import Branding from "./pages/branding";
 import BlogDetail from "./pages/BlogDetail";
 
 const router = createBrowserRouter([
@@ -28,6 +29,9 @@ const router = createBrowserRouter([
     element: <Services />,
   },
   {
+    path: "/branding",
+    element: <Branding/>
+  },{
     path: "/blog-detail",
     element: <BlogDetail />,
   },
