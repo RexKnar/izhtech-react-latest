@@ -1,12 +1,12 @@
 import Aboutus from "./components/Aboutus";
 import Banner from "./components/Banner";
 import Capabilities from "./components/Capabilities";
-import Ourclients from "./components/Ourclients";
-import Testimonials from "./components/Testimonials";
-import Awards from "./components/Awards";
+
 import Counts from "./components/Counts";
-import Ourteam from "./components/Ourteam";
-import Collaborate from "./components/Collaborate";
+import Slider from "../home/components/Slider";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../shared/animation/variants";
+import CustomObject from "../../shared/components/CustomObjects";
 
 
 
@@ -14,15 +14,29 @@ export  default function About(){
 
     return (
        <>
-       <Aboutus />
+       <section className="mx-auto overflow-hidden container-fluid">
+      <section className="container mx-auto"> <Aboutus /> </section>
        <Banner />
        <Capabilities/>
-       <Ourclients/>
-       <Testimonials/>
-       <Awards/>
+       <section className="relative mx-auto mb-10 xl:px-20 container-fluid xl:container ">
+       <Slider/>
+       <motion.span variants={fadeIn("left", 0.1)}
+  initial="hidden"
+  whileInView={"show"}
+  viewport={{ once: false, amount:0.7 }} >
+       <CustomObject className="absolute z-10 -left-8 -top-10" variants="line-purple-left"/>
+       </motion.span>
+      
+       
+     
+       </section>
+       {/* <Ourclients/> */}
+       {/* <Testimonials/> */}
+       {/* <Awards/> */}
        <Counts/>
-       <Ourteam/>
-       <Collaborate/>
+       {/* <Ourteam/> */}
+       {/* <Collaborate/> */}
+       </section>
        </>
     )
 }

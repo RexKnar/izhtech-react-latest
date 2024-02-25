@@ -1,27 +1,38 @@
 import { Accordion } from 'flowbite-react';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../../shared/animation/variants';
+import CustomObject from '../../../shared/components/CustomObjects';
 
 export default function Process() {
   return (
-    <section>
-      <div className="relative flex-col gap-4  h-4/5 lg:flex lg:flex-row">
+    <div className='py-10'>
+      <div className="relative flex-col gap-4 py-10 h-4/5 lg:flex lg:flex-row">
         <div className="lg:w-3/4 sm:w-[75%]">
           <div className="flex flex-col h-full py-5 pl-5 ">
-            <p className="text-xs">PROCESS</p>
+          
+           <motion.div variants={fadeIn("right", 0.2)}
+  initial="hidden"
+  whileInView={"show"}
+  exit={"hidden"}
+  viewport={{ once: false, amount:0.1 }}> <p className="z-10 text-xs">OUR PROCESS</p>
+  <CustomObject className="absolute -z-10 " variants="green-disk" />
             <h1 className="py-2 text-4xl font-bold">
-              How we do it?
+            Digital Triumph Assurance
             </h1>
             <p className="pt-4 pb-4 text-xs">
-              Our app works for businesses of all sizes and shapes.<br />
-              <b>Starting at just $5 for an agent.</b>
+            How we get things done<br />
             </p>
-            <button className="w-20 h-6 text-xs font-bold text-black bg-white border border-2 border-black rounded">
-              Contact Us
-            </button>
-
-            <div
+            
+</motion.div>
+            <motion.div
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            exit={"hidden"}
+            viewport={{ once: false, amount:0.1 }}
               className="absolute right-0 bg-right bg-no-repeat bg-cover top-6 bottom-5 left-72"
               style={{ backgroundImage: "url('images/img/Group11.png')" }}
-            ></div>
+            ></motion.div>
 
           </div>
         </div>
@@ -29,125 +40,137 @@ export default function Process() {
 
 
 
-      <div className="flex flex-col w-full py-4 md:flex-row lg:flex-row lg:flex-wrap lg:justify-center">
+      <div className="flex flex-col w-full py-4 md:gap-8 md:flex-row lg:flex-row lg:flex-wrap lg:justify-center">
 
         <div className="flex flex-col md:flex-1 lg:w-1/4">
 
-          <Accordion className="border-none outline-none">
+          <Accordion collapseAll className="border-none outline-none">
+          <motion.span variants={fadeIn("up", 0.1)}
+  initial="hidden"
+  whileInView={"show"}
+  exit={"hidden"}
+  viewport={{ once: false, amount:0.1 }} className="flex items-center">
             <Accordion.Panel>
               <Accordion.Title className="text-black ">
                 <span className="flex items-center">
                   <img src="/images/process/Vector.png" alt="image" className="w-4 h-4 mr-2" />
-                  Client centric requisites
+                  Putting You First
                 </span>
               </Accordion.Title>
               <Accordion.Content >
                 <p className="text-xs text-black ">
-                  We benchmark the requirements by analyzing customers’ needs and put forth practically
-                  functional outcomes to make the product scalable.
+                We start by getting to know you and your needs. We focus on what matters to you as our client. Our aim is to suggest practical, scalable solutions that match your vision.
                 </p>
-                <button className="w-20 h-6 mt-4 text-xs font-bold text-white bg-black rounded border-1 ">
-                  Read More
-                </button>
+                
 
               </Accordion.Content>
             </Accordion.Panel>
-            <Accordion.Panel>
+            </motion.span>
+         <motion.span variants={fadeIn("up", 0.2)}
+  initial="hidden"
+  whileInView={"show"}
+  exit={"hidden"}
+  viewport={{ once: false, amount:0.1 }} className="flex items-center">   <Accordion.Panel>
               <Accordion.Title className="text-black ">
                 <span className="flex items-center">
                   <img src="/images/process/Vector.png" alt="image" className="w-4 h-4 mr-2" />
-                  Design
+                  Crafting Visual Blueprints
                 </span>
               </Accordion.Title>
               <Accordion.Content>
                 <p className="text-black ">
-                  Content
+                Our screen mockups make ideas real. These designs show a preview of what's coming, giving you a clear look at the future.
                 </p>
-                <button className="w-20 h-6 mt-4 text-xs font-bold text-white bg-black rounded border-1">
-                  Read More
-                </button>
+                
 
               </Accordion.Content>
-            </Accordion.Panel>
-            <Accordion.Panel>
+            </Accordion.Panel> </motion.span>
+          <motion.span variants={fadeIn("up", 0.4)}
+  initial="hidden"
+  whileInView={"show"}
+  exit={"hidden"}
+  viewport={{ once: false, amount:0.1 }} className="flex items-center">  <Accordion.Panel>
               <Accordion.Title className="text-black ">
                 <span className="flex items-center">
                   <img src="/images/process/Vector.png" alt="image" className="w-4 h-4 mr-2" />
-                  What discounts are available?
+                  Artistry Meets Utility
                 </span>
               </Accordion.Title>
               <Accordion.Content>
                 <p className="text-black ">
-                  Content
+                We blend creativity and functionality in our designs to elevate aesthetics, highlighting key elements for maximum impact .
                 </p>
-                <button className="w-20 h-6 mt-4 text-xs font-bold text-white bg-black rounded border-1">
-                  Read More
-                </button>
+                
 
               </Accordion.Content>
-            </Accordion.Panel>
+            </Accordion.Panel> </motion.span>
           </Accordion>
         </div>
 
 
         <div className="flex flex-col md:flex-1 lg:w-1/4">
 
-          <Accordion className="border-none outline-none">
-            <Accordion.Panel>
+          <Accordion collapseAll className="border-none outline-none">
+           <motion.span variants={fadeIn("up", 0.1)}
+  initial="hidden"
+  whileInView={"show"}
+  exit={"hidden"}
+  viewport={{ once: false, amount:0.1 }} className="flex items-center"> <Accordion.Panel>
               <Accordion.Title className="text-black ">
                 <span className="flex items-center">
                   <img src="/images/process/Vector.png" alt="image" className="w-4 h-4 mr-2" />
-                  Screen Mockups are our mid-fidelity
+                  Simplify and Elegance in Development
                 </span>
               </Accordion.Title>
               <Accordion.Content>
                 <p className="text-xs text-black">
-                  To envisage the requirements we formulate an exemplar design to foresee the static <br /> upshot of the final product.
-                </p>
-                <button className="w-20 h-6 mt-4 text-xs font-bold text-white bg-black rounded border-1">
-                  Read More
-                </button>
+                It powers digital innovation, transforming ideas into practical solutions for users and businesses. Our developer-friendly approach ensures smooth customer experiences, driven by these forces.</p>
+                
 
               </Accordion.Content>
-            </Accordion.Panel>
-            <Accordion.Panel>
+            </Accordion.Panel> </motion.span>
+           <motion.span variants={fadeIn("up", 0.2)}
+  initial="hidden"
+  whileInView={"show"}
+  exit={"hidden"}
+  viewport={{ once: false, amount:0.1 }} className="flex items-center"> <Accordion.Panel>
               <Accordion.Title className="text-black ">
                 <span className="flex items-center">
                   <img src="/images/process/Vector.png" alt="image" className="w-4 h-4 mr-2" />
-                  Development
+                  Meticulous Testing for Perfection
                 </span>
               </Accordion.Title>
               <Accordion.Content>
                 <p className="mb-2 text-black dark:text-black">
-                  content
+                We thoroughly test at every level—unit, integration, user acceptance—strengthening the software's reliability and performance to ensure it stands strong.
                 </p>
-                <button className="w-20 h-6 mt-4 text-xs font-bold text-white bg-black rounded border-1">
-                  Read More
-                </button>
+               
 
               </Accordion.Content>
-            </Accordion.Panel>
-            <Accordion.Panel>
+            </Accordion.Panel> </motion.span>
+           <motion.span variants={fadeIn("up", 0.4)}
+  initial="hidden"
+  whileInView={"show"}
+  exit={"hidden"}
+  viewport={{ once: false, amount:0.1 }} className="flex items-center"> <Accordion.Panel>
               <Accordion.Title className="text-black ">
                 <span className="flex items-center">
                   <img src="/images/process/Vector.png" alt="image" className="w-4 h-4 mr-2" />
-                  How can I cancel my subscription?
+                  Unveiling Excellence
                 </span>
               </Accordion.Title>
               <Accordion.Content>
                 <p className="mb-2 text-black">
-                  content
+                It's the ‘big reveal’. We prepare by setting up servers, optimizing databases, and ensuring a flawless live performance. It's the moment when your vision becomes reality.
                 </p>
-                <button className="w-20 h-6 mt-4 text-xs font-bold text-white bg-black rounded border-1">
-                  Read More
-                </button>
+              
 
               </Accordion.Content>
-            </Accordion.Panel>
+            </Accordion.Panel> </motion.span>
           </Accordion>
 
         </div>
       </div>
-    </section>
+    </div>
   );
 }

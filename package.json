@@ -12,6 +12,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.16",
     "flowbite-react": "^0.7.0",
+    "framer-motion": "^11.0.5",
     "jquery": "^3.7.1",
     "lottie-react": "^2.4.0",
     "lucide-react": "^0.295.0",

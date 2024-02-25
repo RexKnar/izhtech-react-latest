@@ -1,50 +1,50 @@
+import { motion } from "framer-motion";
+import { fadeIn } from "../../../shared/animation/variants";
 
-import { Footer, TextInput, Button } from "flowbite-react";
 
 export default function MissionStatement() {
   return (
-    <section>
-      <div className="text-center ">
-        <h1 className="font-bold text-md lg:text-3xl md:text-3xl sm:text-3xl">
-          We are  <span className="text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text">izh tech</span> <br />
-          Innovation ahead
-        </h1>
+    <div className="flex flex-col w-full gap-6 px-4 py-8 md:flex-row lg:flex-row lg:flex-wrap lg:justify-center">
 
-        <p className="pt-4 pb-2 text-xs">
-          Helping SaaS teams to increase e-commerce conversions,<br />
-          reduce bounce rate, and <b>scale up fast.</b>
-        </p>
+        <motion.div variants={fadeIn("up", 0.2)}
+  initial="hidden"
+  whileInView={"show"}
+  exit={"hidden"}
+  viewport={{ once: false, amount:0.1 }} className="flex flex-col py-2 border-t border-slate-600 md:flex-1 lg:w-1/4 ">
+          <img src="/images/bannar1/mission.png" alt="Image" className="w-8 h-8 mt-5" />
+          <h2 className="pt-2 text-sm font-bold">Mission</h2>
+          <p className="pt-2 pb-3 text-xs">Simplify digital challenges and provide clear solutions.</p>
+          <button className="h-6 text-xs text-white bg-black rounded w-28 rounded-2l">
+            Know More<span>s</span>
+          </button>
+        </motion.div>
 
+        <motion.div variants={fadeIn("up", 0.2)}
+  initial="hidden"
+  whileInView={"show"}
+  exit={"hidden"}
+  viewport={{ once: false, amount:0.1 }} className="flex flex-col py-2 border-t md:flex-1 lg:w-1/4 border-slate-600">
+          <img src="/images/bannar1/vision.png" alt="Image" className="w-8 h-8 mt-5" />
+          <h2 className="pt-2 text-sm font-bold">Vision</h2>
+          <p className="pt-2 pb-3 text-xs">Simplifying life through user-friendly technology solutions.</p>
+          <button className="h-6 text-xs text-white bg-black rounded w-28 rounded-2l">
+            Know More<span></span>
+          </button>
+        </motion.div>
 
-        <div className="flex flex-col items-center">
-          <h2 className="items-center font-semibold text-stone-50">
-            Sign up for the newsletter
-          </h2>
+        <motion.div variants={fadeIn("up", 0.2)}
+  initial="hidden"
+  whileInView={"show"}
+  exit={"hidden"}
+  viewport={{ once: false, amount:0.1 }} className="flex flex-col py-2 border-t md:flex-1 lg:w-1/4 border-slate-600">
+          <img src="/images/bannar1/values.png" alt="Image" className="w-8 h-8 mt-5" />
+          <h2 className="pt-2 text-sm font-bold">Values</h2>
+          <p className="pt-2 pb-3 text-xs">Embracing Equal Discipline and Cherishing Work Ethics.</p>
+          <button className="h-6 text-xs text-white bg-black rounded w-28 rounded-2l">
+            Know More<span>{'->'}</span>
+          </button>
+        </motion.div>
 
-          <Footer.LinkGroup col>
-            <div className="max-w-md">
-              <div className="flex items-center">
-                <TextInput
-                  className="py-2 border-transparent w-46 text-slate-800"
-                  id="email"
-                  type="email"
-                  placeholder="you@admin.com"
-                  required
-                />
-                <Button
-                  className="w-24 h-10 text-white bg-gray-800"
-                  size="xs"
-                >
-                  Get a Demo
-                </Button>
-              </div>
-            </div>
-          </Footer.LinkGroup>
-
-        </div>
-        
       </div>
-
-    </section>
   );
 }

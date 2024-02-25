@@ -46,13 +46,13 @@ export default function ServiceCard() {
         <div className="flex mt-4 space-x-3 lg:mt-6">
           <a
             href="#"
-            className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg bg-cyan-700 hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg bg-cyan-700 hover:bg-cyan-800 focus:outline-none dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
           >
             Add friend
           </a>
           <a
             href="#"
-            className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
           >
             Message
           </a>
