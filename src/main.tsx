@@ -9,6 +9,7 @@ import Contact from "./pages/contact";
 import Header from "./shared/components/Header";
 import Footer from "./shared/components/CustomFooter";
 import Branding from "./pages/branding";
+import BlogDetail from "./pages/BlogDetail";
 
 const router = createBrowserRouter([
   {
@@ -30,16 +31,24 @@ const router = createBrowserRouter([
   {
     path: "/branding",
     element: <Branding/>
-  }
+  },{
+    path: "/blog-detail",
+    element: <BlogDetail />,
+  },
+  
+  
 ]);
 
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <div className="container mx-auto">
+   <section className="mx-auto overflow-hidden container-fluid">
       <Header />
       <RouterProvider router={router} />
-    </div>
+    
+  
     <Footer />
+   
+    </section>
   </React.StrictMode>
 );

@@ -1,7 +1,8 @@
+
 export default function PlatformInsights() {
     return (
-      <section className="py-4 bg-gray-100">
-        <div className="flex-col px-5 my-auto h-4/5 lg:flex lg:flex-row">
+      <section>
+        <div className="relative flex-col px-5 my-auto h-4/5 lg:flex lg:flex-row">
         <div className="flex flex-col self-center h-full px-2 pb-5 mx-auto lg:w-3/6 sm:w-full">
         <img className="sm:w-[50%] lg:w-[80%] justify-center mx-auto h-auto" src="/images/platforminsights/img.png" alt="pic" />
         </div>
@@ -33,6 +34,7 @@ export default function PlatformInsights() {
               </div>
             </div>
           </div>
+
         </div>
       </section>
     );
