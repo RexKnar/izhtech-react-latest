@@ -5,16 +5,17 @@ import WebDevelopmentService from "./webdevelopment/WebDevlopmentService";
 import MobileAppService from "./mobileapp/MobileAppService";
 import DigitalMarketingService from "./digitalmarketing/DigitalMarketingService";
 import PieScroll from "../../../shared/animation/PieScroll";
+import GroupLine from "../../../shared/animation/GroupLine";
 export default function Ourservice() {
   const customTheme: CustomFlowbiteTheme["tabs"] = {
-    base: "flex flex-row ring-transparent align-start md:flex-col sm:flex-col lg:flex-row gap-2 md:gap-4 lg:gap-2 sm:justify-center md:justify-start",
+    base: "flex flex-col ring-transparent align-start md:flex-col  lg:flex-row gap-2 md:gap-4 lg:gap-2 sm:justify-center md:justify-start",
     tablist: {
       base: "flex text-center mt-8 ring-transparent align-left lg:items-baseline lg:justify-start justify-center ",
       styles: {
         default:
           "flex-wrap border-b-0 border-r rounded-none ring-transparent border-transparent dark:border-gray-700 ",
         pills:
-          "flex-wrap lg:flex-col font-medium text-sm ring-transparent rounded-none text-gray-500 dark:text-gray-400 bg-gray border-transparent space-x-2 ",
+          "flex-wrap text-left lg:flex-col font-medium text-sm ring-transparent rounded-none text-gray-500 dark:text-gray-400 bg-gray border-transparent space-x-2 ",
       },
       tabitem: {
         
@@ -22,7 +23,7 @@ export default function Ourservice() {
           
           pills: {
             
-            base: "bg-transparent rounded-none lg:w-full justify-start !focus:outline-none ring-transparent",
+            base: "text-left bg-transparent rounded-none lg:w-full justify-start !focus:outline-none ring-transparent",
             active: {
               on: "text-black border-transparent border-[#FFD074] hover:bg-gray-50 bg-transparent ring-transparent !focus:outline-none border-b-2 lg:border-r-2 lg:border-b-0",
               off: "text-black border-transparent bg-transparent hover:bg-gray-50",
@@ -44,13 +45,17 @@ export default function Ourservice() {
   };
 
   return (
-    <div className="relative ">
+    <div className="relative py-10">
       <PieScroll
             svgClassName="-rotate-90 -translate-x-60 xl:w-[10vw] xl:h-[10vw] w-[20vw] h-[20vw] "
             ringColor="purple"
             parentClassName=" absolute z-50 -right-60 md:-right-50"
           />
-      <div className="py-10 text-center ">
+          <GroupLine  svgClassName="-rotate-90 -translate-x-60 xl:w-[10vw] xl:h-[10vw] w-[20vw] h-[20vw] "
+            ringColor="purple"
+            parentClassName=" absolute z-50 -right-60 md:-right-50"
+          />
+      <div className="text-center ">
         <p className="pt-4 pb-2 text-xs">#OUR SERVICE</p>
         <h1 className="pb-3 font-bold text-md lg:text-3xl md:text-3xl sm:text-3xl">
           What to expect? 

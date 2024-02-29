@@ -3,18 +3,12 @@ import { Button,  TextInput } from "flowbite-react";
 import logo from "../../assets/Logo/Logo-white.png";
 
 export default function CustomFooter() {
+  
   return (
-<<<<<<< HEAD
-    <footer className="bg-neutral-900 ">
-      <div className="container mx-auto">
+    <footer className="py-10 bg-neutral-900">
+      <div className="mx-auto md:container">
         <div className="grid w-full gap-8 p-4 py-8 lg:px-8 lg:grid-cols-4 md:px-6 md:grid-cols-4">
           <div >
-=======
-    <footer className="py-10 mx-auto container-fluid bg-neutral-900 ">
-      <div className="container mx-auto">
-        <div className="grid w-full gap-8 p-8 py-8 lg:grid-cols-4 xl:px-28 md:px-6 md:grid-cols-4">
-          <div>
->>>>>>> 9e7af7f8c368d77f1f4cb25f707392d35b265157
             <img src={logo} className="h-16" alt="" />
           </div>
           <div className="text-stone-50 ">
@@ -74,20 +68,16 @@ export default function CustomFooter() {
             className="text-stone-50"
           />
           <div className="flex mt-4 space-x-6 list-none sm:mt-0 text-stone-50 sm:justify-center">
-            <Footer.Link className="text-xs text-gray-300 text-stone-50 mx-auto" href="#">
+            <Footer.Link className="mx-auto text-xs text-gray-300 text-stone-50" href="#">
               Sitemap
             </Footer.Link>
-<<<<<<< HEAD
-            <Footer.Link href="#" className="text-xs text-gray-300 mx-auto">
+            <Footer.Link href="#" className="mx-auto text-xs text-gray-300">
               Security
             </Footer.Link>
-            <Footer.Link href="#" className="text-xs text-gray-300 mx-auto">
-=======
-            <Footer.Link href="#" className="text-xs text-gray-300">
->>>>>>> 9e7af7f8c368d77f1f4cb25f707392d35b265157
+            <Footer.Link href="#" className="mx-auto text-xs text-gray-300">
               Privacy Policy
             </Footer.Link>
-            <Footer.Link href="#" className="text-xs text-gray-300 mx-auto">
+            <Footer.Link href="#" className="mx-auto text-xs text-gray-300">
               Terms of Service
             </Footer.Link>
           </div>

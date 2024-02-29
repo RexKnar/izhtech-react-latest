@@ -5,7 +5,7 @@ import CustomObject from "../../../shared/components/CustomObjects";
 
 export default function banner() {
   return (
-    <section className="px-10 py-20 bg-[#F5F7FF] rounded">
+    <section className="lg:px-10 pb-20 pt-28 bg-[#F5F7FF] rounded">
       <div className="flex-col justify-center gap-4 px-5 my-auto h-4/5 lg:flex lg:flex-row">
         <motion.div variants={fadeIn("right", 0.2)}
   initial="hidden"
@@ -21,10 +21,10 @@ export default function banner() {
             {/* <CustomObject className="absolute -z-10" variants="orange-disk" /> */}
             Innovate in Software and Excel in Digital
             </h1>
-            <p className="z-10 pt-4 pb-4 text-xs">
+            <p className="z-10 pt-4 pb-4 text-xs text-justify">
             We are dedicated to advancing your business. Whether you're a growing startup, a traditional business adapting to digital transformation, or an individual entrepreneur, our tailored suite of services is strategically crafted to enhance your online visibility and elevate your digital presence.
             </p>
-            <button className="w-32 px-2 py-1 text-xs font-bold text-black bg-white border border-black rounded">
+            <button className="w-32 px-2 py-1 text-xs font-bold text-black border-2 border-black rounded">
               Explore More
             </button>
           </div>
@@ -34,8 +34,12 @@ export default function banner() {
   initial="hidden"
   whileInView={"show"}
   exit={"hidden"}
-  viewport={{ once: false, amount:0.1 }} className="flex flex-col justify-end h-full pb-5 mx-auto my-auto lg:w-3/6 sm:w-full ">
-          <img className=" sm:w-[50%] lg:w-[100%] lg:m-0 mx-auto h-auto" src="/images/bannar1/img.png" />
+  viewport={{ once: false, amount:0.1 }} className="relative flex flex-col justify-end h-full pb-5 mx-auto my-auto lg:w-3/6 sm:w-full ">
+    <CustomObject
+          className="absolute -z-1 -top-20 lg:-top-20 -left-40 max-w-screen-2xl "
+          variants="purple-line-small-right"
+        />
+          <img className=" sm:w-[50%] lg:w-[100%] z-10 lg:m-0 mx-auto h-auto" src="/images/bannar1/img.png" />
         </motion.div>
       </div>
 
