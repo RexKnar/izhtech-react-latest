@@ -16,40 +16,32 @@ export default function PieScroll({parentClassName, svgClassName, ringColor='pur
   });
 
 
-// //   .progress {
-//   position: sticky;
-//   top: 0;
-//   width: 80px;
-//   height: 80px;
-//   margin: 0;
-//   padding: 0;
-// }
 
-// .progress svg {
-//   transform: translateX(-100px) rotate(-90deg);
-// }
-
-// circle {
-//   stroke-dashoffset: 0;
-//   stroke-width: 5%;
-//   fill: none;
-// }
   return (
     // <section>
       <div ref={ref}>
         
         <figure className={` ${parentClassName}`}>
-          <svg id="progress" className={` ${svgClassName} progress  stroke-${ringColor}-600`} width="75" height="75" viewBox="0 0 100 100">
+        <div className="relative w-40 h-40 ml-4">
+                        <svg  className="w-full h-full" viewBox="0 0 100 100">
+                            <motion.circle
+                                className={` stroke-1 stroke-current text-${ringColor}-600 progress-ring__circle stroke-${ringColor}-600`}
+                                strokeWidth="0.2"
+                                strokeLinecap="round"
+                                cx="50"
+                                cy="50"
+                                r="40"
+                                fill="transparent"
+                                style={{ pathLength: scrollYProgress }}
+                                strokeDashoffset="calc(400 - (400 * 45) / 100)"
+                            />
+                            <text x="50" y="50" fontFamily="Verdana" fontSize="12" textAnchor="middle" className="font-bold" alignmentBaseline="middle">63%</text>
+                        </svg>
+                    </div>
+          {/* <svg id="progress" className={` ${svgClassName} progress  stroke-${ringColor}-600`} width="75" height="75" viewBox="0 0 100 100">
             <circle cx="50" cy="50" r="30" pathLength="1" className={`stroke-${ringColor}-50`}  />
-            <motion.circle
-              cx="50"
-              cy="50"
-              r="30"
-              pathLength="1"
-              className="indicator"
-              style={{ pathLength: scrollYProgress }}
-            />
-          </svg>
+        
+          </svg> */}
         </figure>
       </div>
     // </section>

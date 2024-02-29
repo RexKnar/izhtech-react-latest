@@ -9,6 +9,7 @@ import CustomObject from "../../shared/components/CustomObjects";
 import NewsLetter from "./components/NewsLetter";
 import { fadeIn } from "../../shared/animation/variants";
 import { motion } from "framer-motion";
+import Platforminsights from "./components/Platforminsights";
 
 export default function Home() {
   return (
@@ -35,9 +36,9 @@ export default function Home() {
           <NewsLetter />
         </section>
 
-        {/* <section className="py-4 bg-gray-100">
+        <section className="py-4 bg-gray-100">
        <Platforminsights />
-       </section> */}
+       </section>
 
         {/* <section className='container px-20 py-8 mx-auto'>
        <BlogList />

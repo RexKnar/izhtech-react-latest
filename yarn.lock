@@ -1877,35 +1877,7 @@ es-module-lexer@^1.2.1:
   resolved "https://registry.npmjs.org/es-module-lexer/-/es-module-lexer-1.4.1.tgz"
   integrity sha512-cXLGjP0c4T3flZJKQSuziYoq7MlT+rnvfZjfp7h+I7K9BNX54kP9nyWvdbwjQ4u1iWbOL4u96fgeZLToQlZC7w==
 
-esbuild@*, esbuild@^0.19.3, esbuild@>=0.11.0, esbuild@0.*:
-  version "0.19.8"
-  resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.19.8.tgz"
-  integrity sha512-l7iffQpT2OrZfH2rXIp7/FkmaeZM0vxbxN9KfiCwGYuZqzMg/JdvX26R31Zxn/Pxvsrg3Y9N6XTcnknqDyyv4w==
-  optionalDependencies:
-    "@esbuild/android-arm" "0.19.8"
-    "@esbuild/android-arm64" "0.19.8"
-    "@esbuild/android-x64" "0.19.8"
-    "@esbuild/darwin-arm64" "0.19.8"
-    "@esbuild/darwin-x64" "0.19.8"
-    "@esbuild/freebsd-arm64" "0.19.8"
-    "@esbuild/freebsd-x64" "0.19.8"
-    "@esbuild/linux-arm" "0.19.8"
-    "@esbuild/linux-arm64" "0.19.8"
-    "@esbuild/linux-ia32" "0.19.8"
-    "@esbuild/linux-loong64" "0.19.8"
-    "@esbuild/linux-mips64el" "0.19.8"
-    "@esbuild/linux-ppc64" "0.19.8"
-    "@esbuild/linux-riscv64" "0.19.8"
-    "@esbuild/linux-s390x" "0.19.8"
-    "@esbuild/linux-x64" "0.19.8"
-    "@esbuild/netbsd-x64" "0.19.8"
-    "@esbuild/openbsd-x64" "0.19.8"
-    "@esbuild/sunos-x64" "0.19.8"
-    "@esbuild/win32-arm64" "0.19.8"
-    "@esbuild/win32-ia32" "0.19.8"
-    "@esbuild/win32-x64" "0.19.8"
-
-"esbuild@0.17.x || 0.18.x":
+esbuild@*, esbuild@>=0.11.0, esbuild@0.*, "esbuild@0.17.x || 0.18.x":
   version "0.18.20"
   resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.18.20.tgz"
   integrity sha512-ceqxoedUrcayh7Y7ZX6NdbbDzGROiyVBgC4PriJThBKSVPWnnFHZAkfI1lJT8QFkOwH4qOS2SJkS4wvpGl8BpA==
@@ -1932,6 +1904,34 @@ esbuild@*, esbuild@^0.19.3, esbuild@>=0.11.0, esbuild@0.*:
     "@esbuild/win32-arm64" "0.18.20"
     "@esbuild/win32-ia32" "0.18.20"
     "@esbuild/win32-x64" "0.18.20"
+
+esbuild@^0.19.3:
+  version "0.19.8"
+  resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.19.8.tgz"
+  integrity sha512-l7iffQpT2OrZfH2rXIp7/FkmaeZM0vxbxN9KfiCwGYuZqzMg/JdvX26R31Zxn/Pxvsrg3Y9N6XTcnknqDyyv4w==
+  optionalDependencies:
+    "@esbuild/android-arm" "0.19.8"
+    "@esbuild/android-arm64" "0.19.8"
+    "@esbuild/android-x64" "0.19.8"
+    "@esbuild/darwin-arm64" "0.19.8"
+    "@esbuild/darwin-x64" "0.19.8"
+    "@esbuild/freebsd-arm64" "0.19.8"
+    "@esbuild/freebsd-x64" "0.19.8"
+    "@esbuild/linux-arm" "0.19.8"
+    "@esbuild/linux-arm64" "0.19.8"
+    "@esbuild/linux-ia32" "0.19.8"
+    "@esbuild/linux-loong64" "0.19.8"
+    "@esbuild/linux-mips64el" "0.19.8"
+    "@esbuild/linux-ppc64" "0.19.8"
+    "@esbuild/linux-riscv64" "0.19.8"
+    "@esbuild/linux-s390x" "0.19.8"
+    "@esbuild/linux-x64" "0.19.8"
+    "@esbuild/netbsd-x64" "0.19.8"
+    "@esbuild/openbsd-x64" "0.19.8"
+    "@esbuild/sunos-x64" "0.19.8"
+    "@esbuild/win32-arm64" "0.19.8"
+    "@esbuild/win32-ia32" "0.19.8"
+    "@esbuild/win32-x64" "0.19.8"
 
 escalade@^3.1.1:
   version "3.1.1"

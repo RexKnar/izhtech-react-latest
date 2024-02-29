@@ -2,9 +2,9 @@ import CustomObject from "../../../shared/components/CustomObjects";
 
 export default function Aboutus() {
     return (
-        <section className="relative py-4 bg-transparent ">
-            <div className="flex-col justify-center gap-4 px-5 my-auto h-4/5 lg:flex lg:flex-row">
-                <div className=" lg:w-full sm:w-[75%] sm:px-11 mx-auto">
+        <section className="relative py-10 bg-transparent lg:py-15 ">
+            <div className="flex-col justify-center gap-4 my-auto h-4/5 lg:flex lg:flex-row">
+                <div className="w-full mx-auto ">
                     <div className="flex flex-col justify-end h-full pb-5 ">
                     <CustomObject className="absolute -z-10" variants="orange-disk" />
                         <h1 className="pt-4 font-bold text-md lg:w-3/4 2xl:text-7xl lg:text-4xl md:text-4xl sm:text-4xl">

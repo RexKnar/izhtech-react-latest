@@ -1,5 +1,4 @@
-import Lottie from "lottie-react";
-import dot from "./dot.json";
+
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../shared/animation/variants";
 import CustomObject from "../../../shared/components/CustomObjects";
@@ -7,7 +6,7 @@ import CustomObject from "../../../shared/components/CustomObjects";
 export default function Hero() {
   return (
     <>
-      <div className="container relative flex justify-center md:h-full h-[60vh] mx-auto ">
+      <div className="md:container relative flex justify-center md:h-full h-[60vh] mx-auto ">
         <div className="flex flex-col justify-center gap-4 px-5 my-auto lg:flex lg:flex-row">
           <div className=" flex flex-col  justify-center lg:w-4/6 sm:w-[75%] sm:px-11 lg:m-0 mx-auto">
             <motion.div
@@ -43,14 +42,14 @@ export default function Hero() {
               className=" sm:w-[50%] lg:w-[75%] lg:m-0 mx-auto h-auto "
               src="/images/hero/bg-1.png"
             />
-            <Lottie animationData={dot} loop={true} className="absolute bottom-[-14rem] w-[75%] left-[5rem]"/>
+            {/* <Lottie animationData={dot} loop={true} className="absolute bottom-[-14rem] w-[75%] left-[5rem]"/> */}
           </motion.div>
         </div>
-        <Lottie
+        {/* <Lottie
           animationData={dot}
           loop={true}
           className="absolute bottom-0 right-0 w-[75%] md:bottom-[-14rem] md:w-[25%] md:right-[-9rem] z-[-1]"
-        />
+        /> */}
         {/* <Lottie animationData={circle} loop={true} className="absolute top-[-9rem] right-[-9rem] z-[-1]"/> */}
       </div>
       <motion.span
@@ -60,7 +59,7 @@ export default function Hero() {
         viewport={{ once: false, amount: 0.1 }}
       >
         <CustomObject
-          className="absolute -top-10 lg:-top-40 -z-10  md:block  h-[80vw] lg:h-[100vh]"
+          className="absolute -top-20 lg:-top-40 -z-10  -left-16 max-w-screen-2xl  h-[140vw] lg:h-[100vh]"
           variants="hero-left-full"
         />
       </motion.span>

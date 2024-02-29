@@ -2,7 +2,7 @@ import { Accordion } from 'flowbite-react';
 
 export default function banner(props:{serviceName:string, description:string}) {
     return (
-        <section className="px-6 py-4">
+        <section className="py-4 ">
             <div className="flex flex-col items-center gap-4 sm:flex-col md:flex-col lg:flex-row xl:flex-row lg:gap-28">
                 <div className="flex bg-center h-[20rem]  lg:h-[30rem] bg-no-repeat bg-[url('images/servicepage/img.png')]">
                     <div className="container flex items-end justify-center md:justify-end">
