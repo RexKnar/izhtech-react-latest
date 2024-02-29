@@ -1,5 +1,5 @@
 interface CustomObjectProps {
-  variants: "line-purple-left" | "hero-left-full" | "hero-left-full-gif" | "purple-dots" | "purple-line-small-right" | "green-disk" | "orange-disk" | "blue-dots" | "line-orange-left" | "long-line-orange-left" | "long-line-teal-left" | "line-teal-up" | "teal-disk"; // Define a union type with valid keys
+  variants: "line-purple-left" | "hero-left-full" | "hero-left-full-gif" | "purple-dots" | "purple-line-small-right" | "green-disk" | "orange-disk" | "blue-dots" | "line-orange-left" | "long-line-orange-left" | "long-line-teal-left" | "line-teal-up" | "teal-disk" | "vector_one"  |"vector_fixed"; // Define a union type with valid keys
   className: string;
 }
 
@@ -17,7 +17,11 @@ function CustomObject({ variants, className }: CustomObjectProps) {
     "orange-disk": "/images/objects/orange-right.svg",
     "line-teal-up": "/images/objects/line-up-teal.svg",
     "teal-disk":"/images/objects/teal-disk.svg",
-    "purple-line-small-right":"/images/objects/purple-line-right-small.svg"
+    "purple-line-small-right":"/images/objects/purple-line-right-small.gif",
+    "vector_one":"/images/objects/Vector1.png",
+    "vector_fixed":"/images/objects/purple-line-right-small-rename.svg"
+
+
 
   };
 

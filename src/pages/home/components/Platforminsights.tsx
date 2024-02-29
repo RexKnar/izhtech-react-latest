@@ -8,7 +8,7 @@ export default function PlatformInsights() {
         </div>
           <div className="lg:w-4/6 sm:w-[75%] sm:px-2 lg:px-2 mx-auto">
             <div className="flex flex-col justify-end h-full pb-1">
-              <p className="text-xs">
+              <p className="pt-10 text-xs">
                 THE NUMBER ONE #DATATRACKING APP
               </p>
               <h1 className="pt-4 font-bold text-md lg:w-3/4 lg:text-3xl md:text-3xl sm:text-3xl">

@@ -17,7 +17,7 @@ export default function Hero() {
               viewport={{ once: false, amount: 0.1 }}
               className="flex flex-col xl:pl-36 lg:pl-16"
             >
-              
+             
               <p className="text-[#0C1C28]  order-2 lg:order-1 text-justify pt-5 text-sm">
                 Don't navigate the digital world alone. We're your trusted
                 partner, providing comprehensive solutions to ignite your online
@@ -30,6 +30,7 @@ export default function Hero() {
               </h1>
             </motion.div>
           </div>
+          
           <motion.div
             variants={fadeIn("left", 0.2)}
             initial="hidden"

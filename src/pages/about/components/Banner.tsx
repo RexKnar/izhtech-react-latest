@@ -3,6 +3,8 @@ import PieScroll from "../../../shared/animation/PieScroll";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../shared/animation/variants";
 
+
+
 export default function Banner() {
   return (
     <section className="flex gap-5 py-3 mx-auto ">
@@ -11,11 +13,13 @@ export default function Banner() {
   initial="hidden"
   whileInView={"show"}
   viewport={{ once: false, amount:0.1 }} className="relative bg-transparent lg:w-1/2">
+   
           <img
             src="images/Aboutpage/img/banner.png"
             alt="Example Image"
             className="w-full h-auto"
           />
+   
           <PieScroll
             svgClassName="-rotate-90 -translate-x-60 xl:w-[10vw] xl:h-[10vw] w-[20vw] h-[20vw] "
             ringColor="purple"
@@ -24,6 +28,8 @@ export default function Banner() {
 
           {/* <CustomObject className="absolute z-10 -bottom-10 -left-32 !-z-50" variants="purple-dots"/> */}
         </motion.div>
+   
+   
         <motion.div variants={fadeIn("left", 0.1)}
   initial="hidden"
   whileInView={"show"}
@@ -44,7 +50,7 @@ export default function Banner() {
               className="bg-gradient-to-r mt-5 from-indigo-500 via-purple-500 to-pink-500 h-1 rounded-full w-[50%] relative"
             />
           </div>
-
+   
           <div>
             <h1 className="pb-4 text-2xl font-bold">
               Customized Business Success
