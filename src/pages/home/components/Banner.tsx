@@ -36,8 +36,8 @@ export default function banner() {
   exit={"hidden"}
   viewport={{ once: false, amount:0.1 }} className="relative flex flex-col justify-end h-full pb-5 mx-auto my-auto lg:w-3/6 sm:w-full ">
     <CustomObject
-          className="absolute -z-1 -top-20 lg:-top-20 -left-40 max-w-screen-2xl "
-          variants="purple-line-small-right"
+          className="absolute -left-20 w-100 h-60 -z-1 -top-20 lg:-top-20 max-w-screen-2xl"
+          variants="vector_fixed"
         />
           <img className=" sm:w-[50%] lg:w-[100%] z-10 lg:m-0 mx-auto h-auto" src="/images/bannar1/img.png" />
         </motion.div>

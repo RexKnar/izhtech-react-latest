@@ -5,7 +5,6 @@ import Banner from "./components/Banner";
 import Ourservice from "./components/Ourservice";
 import Process from "./components/Process";
 import Slider from "./components/Slider";
-import CustomObject from "../../shared/components/CustomObjects";
 import NewsLetter from "./components/NewsLetter";
 import { fadeIn } from "../../shared/animation/variants";
 import { motion } from "framer-motion";
@@ -36,7 +35,7 @@ export default function Home() {
           <NewsLetter />
         </section>
 
-        <section className="py-4 bg-gray-100">
+        <section className="mx-auto bg-gray-100 xl:px-20 container-fluid xl:container">
        <Platforminsights />
        </section>
 
@@ -44,7 +43,7 @@ export default function Home() {
        <BlogList />
        </section> */}
 
-        <section className="mx-auto bg-gray-100 xl:px-20 container-fluid xl:container ">
+        <section className="mx-auto bg-gray-100 xl:px-20 container-fluid xl:container">
           <Ourservice />
         </section>
 
@@ -60,10 +59,7 @@ export default function Home() {
             whileInView={"show"}
             viewport={{ once: false, amount: 0.1 }}
           >
-            <CustomObject
-              className="absolute z-10 -left-8 -top-10"
-              variants="line-purple-left"
-            />
+  
           </motion.span>
         </section>
         <section className="px-6">

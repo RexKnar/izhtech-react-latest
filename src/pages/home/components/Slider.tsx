@@ -3,7 +3,10 @@ import { Carousel } from 'flowbite-react';
 import type { CustomFlowbiteTheme } from 'flowbite-react';
 import { MoveLeft } from 'lucide-react';
 import { MoveRight } from 'lucide-react';
+import CustomObject from "../../../shared/components/CustomObjects";
+
 export default function Slider() {
+  
 
 
   const customTheme: CustomFlowbiteTheme['carousel'] = {
@@ -44,7 +47,14 @@ export default function Slider() {
       <h1 className="pt-6 pb-3 font-bold text-center text-md lg:text-4xl md:text-4xl sm:text-4xl">
   Meet our customers.
 </h1>
-
+<CustomObject
+  className="absolute w-8 h-8 -z-1 -top-20 lg:-top-0 left-18 max-w-screen-2xl sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-60 lg:w-60"
+  variants="vector_one"
+/>
+<CustomObject
+  className="absolute w-8 h-8 top-60 -z-1 left-50 right-10 max-w-screen-2xl sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-60 lg:w-60"
+  variants="vector_one"
+/>
       <div className="relative h-60">
         <Carousel theme={customTheme} leftControl={<MoveLeft/>} rightControl={<MoveRight/>}>
           
@@ -73,7 +83,7 @@ export default function Slider() {
               <p className="pt-2 pb-2 text-sm">
                 “Izhtech's strategic marketing has successfully <br/> attracted more customers for us.  ”
               </p>
-
+   
               <div className="flex flex-col items-center">
                 <img src="/images/cardprofile/Avatar.png" alt="Image" className="w-auto h-12 mb-2" />
                 {/* <h2 className="pt-2 text-sm font-bold">Colin Lucido</h2> */}
@@ -92,7 +102,7 @@ export default function Slider() {
                 “Izhtech team clearly fulfils what we needed! <br/>They extract every details of what we want from us in prior and gave us the perfect design
            ”
               </p>
-
+  
               <div className="flex flex-col items-center">
                 <img src="/images/cardprofile/Avatar.png" alt="Image" className="w-auto h-12 mb-2" />
                 {/* <h2 className="pt-2 text-sm font-bold">Colin Lucido</h2> */}
@@ -100,7 +110,7 @@ export default function Slider() {
               </div>
             </div>
           </div>
-
+  
         </Carousel>
       </div>
       

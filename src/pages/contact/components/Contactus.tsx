@@ -13,7 +13,11 @@ export default function Contactus() {
                 <div className="w-full mx-auto ">
                     <div className="flex flex-col justify-end h-full pb-5 ">
                       
-                    <CustomObject className="absolute -z-10" variants="teal-disk" />
+                    
+                    <CustomObject
+  className="absolute w-12 h-12 -z-1 -top-20 lg:-top-30 left-40 max-w-screen-2xl sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-60 lg:w-60"
+  variants="teal-disk"
+/>
                         <h1 className="pt-4 font-bold text-md lg:w-3/4 2xl:text-7xl lg:text-4xl md:text-4xl sm:text-4xl">
                             Contact Us
                         </h1>
