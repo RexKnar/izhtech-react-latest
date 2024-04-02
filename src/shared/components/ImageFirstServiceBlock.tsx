@@ -1,7 +1,8 @@
-import { Accordion } from "flowbite-react";
+// import { Accordion } from "flowbite-react";
 import { ServiceBlockProps, ServiceBlockList } from "./types/services";
 import { fadeIn } from "../animation/variants";
 import { motion } from "framer-motion";
+import AccordionPage from "./Accordion";
 
 export default function ImageFirstServiceBlock(props: ServiceBlockProps) {
   return (
@@ -46,9 +47,10 @@ export default function ImageFirstServiceBlock(props: ServiceBlockProps) {
           <p className="pb-2 text-xs">OUR SERVICES</p>
           <h1 className="pb-2 text-3xl font-bold"> {props.serviceName}</h1>
           <p className="pb-6 text-xs">{props.description}</p>
-          <Accordion className="border-none outline-none">
+          {/* <Accordion className="border-none outline-none">
             {props.listItem.map((item: ServiceBlockList) => {
               return (
+            
                 <Accordion.Panel>
                   <Accordion.Title className="text-black ">
                     <span className="flex items-center">
@@ -64,9 +66,17 @@ export default function ImageFirstServiceBlock(props: ServiceBlockProps) {
                     <p className="text-xs text-black">{item.description}</p>
                   </Accordion.Content>
                 </Accordion.Panel>
+              
               );
             })}
-          </Accordion>
+          </Accordion> */}
+
+          {props.listItem.map((item: ServiceBlockList) => {
+            return <AccordionPage header={item.title} content={item.description} />
+          })}
+          
+
+          
           <button className="h-8 mt-4 text-xs font-bold text-white rounded bg-indigo-950 w-28 border-1">
             Learn more {"->"}
           </button>

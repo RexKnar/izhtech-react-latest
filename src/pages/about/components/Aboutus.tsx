@@ -1,4 +1,6 @@
+import { fadeIn } from "../../../shared/animation/variants";
 import CustomObject from "../../../shared/components/CustomObjects";
+import {motion } from "framer-motion"
 
 export default function Aboutus() {
     return (
@@ -19,7 +21,13 @@ export default function Aboutus() {
                     </div>
                 </div>
             </div>
-            <CustomObject className="absolute z-10 opacity-25 top-10 -right-32 z-1" variants="long-line-orange-left"/>
+            <motion.div
+                // variants={fadeIn("left", 0.3)}
+                initial="hidden"
+                whileInView="show"
+                exit="hidden"
+            > <CustomObject className="absolute z-10 opacity-25 top-10 -right-32 z-1" variants="long-line-orange-left" /></motion.div>
+           
         </section>
     );
 }

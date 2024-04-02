@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import { Outlet, useLocation } from "react-router-dom";
 import CustomFooter from "../components/CustomFooter";
 
-export default function CommonLayout() {
+export default function  CommonLayout() {
   const location = useLocation();
   const currentPath = location.pathname || "/";
   return (
