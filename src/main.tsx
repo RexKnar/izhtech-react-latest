@@ -10,7 +10,7 @@ import Branding from "./pages/branding";
 import BlogDetail from "./pages/BlogDetail";
 
 import CommonLayout from "./shared/layouts/CommonLayout";
-import Brandingpage from "./pages/brandingPage";
+// import Brandingpage from "./pages/brandingPage";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       { path: "/service", element: <Services /> },
       { path: "/branding", element: <Branding /> },
       { path: "/blog-detail", element: <BlogDetail /> },
-      { path: '/brandingpage', element:<Brandingpage />}
+      // { path: '/brandingpage', element:<Brandingpage />}
     ],
   },
 ]);
