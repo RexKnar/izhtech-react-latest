@@ -6,7 +6,7 @@ import AccordionPage from "./Accordion";
 
 export default function TextFirstServiceBlock(props: ServiceBlockProps) {
   return (
-    <section className="">
+    <section className="container">
       <div className="flex flex-col items-center gap-4 sm:flex-col md:flex-col lg:flex-row xl:flex-row lg:gap-20">
         <motion.div  variants={fadeIn("left", 0.2)}
               initial="hidden"

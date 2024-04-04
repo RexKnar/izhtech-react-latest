@@ -1,7 +1,15 @@
 import { motion } from "framer-motion"
-import { fadeIn } from "../../../shared/animation/variants";  
+import { fadeIn } from "../../animation/variants";  
 
-export default function Servicedetails() {
+interface propValues{
+  header: string,
+  company_details: string,
+  commitment: string
+  commit_heading: string
+  izhtech:string
+}
+
+export default function Servicedetails({izhtech,header,company_details,commitment,commit_heading}:propValues) {
   return (
     <section>
       <div className="container lg:mx-auto lg:px-16 px-2 py-10">
@@ -16,22 +24,16 @@ export default function Servicedetails() {
             initial="hidden"
             whileInView="show"
             exit="hidden">
-            <p className="text-xs font-medium tracking-wide">IZH-TECH</p>
+            <p className="text-xs font-medium tracking-wide">{ izhtech}</p>
             <p className="xl:text-6xl text-4xl font-bold pb-2.5">
-              Your Partner for Crafting Unforgettable Brand Identities
+          {header}
             </p>
             <p className="text-sm leading-7 tracking-wider text-justify">
-              At Izh-Tech, we firmly believe that a robust brand forms the very
-              heart of a successful business. Our conviction in this truth is
-              what fuels our passion to provide a comprehensive array of
-              branding and design services aimed at not just helping you
-              establish your brand, but nurturing its growth over time.
+{company_details}
             </p>
-            <p className="tracking-wider font-bold text-sm py-4">Our Comprehensive Suite of Branding and Design Services</p>
+            <p className="tracking-wider font-bold text-sm py-4">{ commit_heading}</p>
             <p className="tracking-wider text-sm text-justify leading-7">
-              Our commitment to your brand’s success is reflected in our
-              wide-ranging suite of services. Here’s a closer look at what we
-              offer:
+              {commitment}
             </p>
           </motion.div>
         </div>

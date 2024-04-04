@@ -12,7 +12,7 @@ export default function PlatformInsights() {
   viewport={{ once: false, amount:0.1 }} className="flex flex-col justify-center lg:w-1/2">
           <CustomObject className="absolute -z-10" variants="green-disk" />
           <p className="text-xs">CAPABILITIES </p>
-          <h1 className="pt-2 text-3xl font-bold text-center  ">
+          <h1 className="pt-2 text-3xl font-bold   ">
             Versatile expertise, tailored strategies, and innovative solutions
             for transparent, impactful outcomes
           </h1>
