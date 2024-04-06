@@ -63,7 +63,7 @@ export default function Item() {
 
   return <>
     
-    <motion.div className="fixed cursor-pointer rounded-2xl"  onClick={handleScroll}>
+    <motion.div className="fixed cursor-pointer rounded-2xl "  onClick={handleScroll}>
     <div className="w-[20px] h-[100px] bg-slate-300 ml-10 ">
     {scrollIndicator}
       </div>
