@@ -9,7 +9,7 @@ interface propValues{
 export default function Ourservice2({heading,content}:propValues) {
   return (
     <section>
-      <div className="container lg:mx-auto lg:px-16 px-2 py-10 bg-teal-50">
+      <div className="container lg:mx-auto lg:px-16 px-2 py-10 bg-teal-50 mx-auto">
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 xl:gap-16 md:items-center lg:justify-center">
          
           <motion.div className="lg:w-3/6 md:px-14 lg:px-2" variants={fadeIn("right", 0.3)}

@@ -8,7 +8,8 @@ import Home from "./pages/home";
 import Contact from "./pages/contact";
 import Branding from "./pages/branding";
 import BlogDetail from "./pages/BlogDetail";
-
+import MobileApplication from "./pages/mobile-Apllication";
+import DigitalMarketing from "./pages/digital-marketing";
 import CommonLayout from "./shared/layouts/CommonLayout";
 import WebApplication from "./pages/Web-Application";
 const router = createBrowserRouter([
@@ -22,7 +23,11 @@ const router = createBrowserRouter([
       { path: "/service", element: <Services /> },
       { path: "/branding", element: <Branding /> },
       { path: "/blog-detail", element: <BlogDetail /> },
-      { path: '/webapplication', element:<WebApplication />}
+      { path: '/webapplication', element: <WebApplication /> },
+      {path:"/mobileapplication",element:<MobileApplication />},
+      { path: "/digitalmarketing", element: <DigitalMarketing /> },
+  
+      
     ],
   },
 ]);

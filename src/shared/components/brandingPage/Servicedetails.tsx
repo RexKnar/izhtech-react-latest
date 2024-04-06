@@ -12,10 +12,10 @@ interface propValues{
 export default function Servicedetails({izhtech,header,company_details,commitment,commit_heading}:propValues) {
   return (
     <section>
-      <div className="container lg:mx-auto lg:px-16 px-2 py-10">
+      <div className="container lg:mx-auto lg:px-16 px-2 py-10 mx-auto">
         <div className="flex flex-col lg:flex-row xl:gap-16 gap-8 md:items-center lg:justify-center">
           <div className="lg:w-2/6">
-            <motion.img src="/images/branding/banner.jpg" alt="" variants={fadeIn("right", 0.3)}
+            <motion.img src="/images/branding/banner.jpg" alt="" className="rounded-xl" variants={fadeIn("right", 0.3)}
             initial="hidden"
             whileInView="show"
             exit="hidden"  />

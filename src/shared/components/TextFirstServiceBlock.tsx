@@ -3,6 +3,7 @@ import { ServiceBlockList, ServiceBlockProps } from "./types/services";
 import { fadeIn } from "../animation/variants";
 import { motion } from "framer-motion";
 import AccordionPage from "./Accordion";
+import { Link } from "react-router-dom";
 
 export default function TextFirstServiceBlock(props: ServiceBlockProps) {
   return (
@@ -75,9 +76,9 @@ export default function TextFirstServiceBlock(props: ServiceBlockProps) {
 {props.listItem.map((item: ServiceBlockList) => {
             return <AccordionPage header={item.title} content={item.description} />
           })}
-          <button className="h-8 mt-4 text-xs font-bold text-white rounded bg-indigo-950 w-28 border-1">
+          <Link to={`${props.link}`} className="bg-indigo-950 w-28 border-1 rounded text-white font-bold h-8 mt-4 text-xs flex justify-center items-center ">
             Learn more {"->"}
-          </button>
+          </Link>
         </motion.div>
       </div>
     </section>

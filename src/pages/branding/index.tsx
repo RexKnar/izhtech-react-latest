@@ -5,6 +5,7 @@ import Servicedetails from "../../shared/components/brandingPage/Servicedetails"
 import Ourservice2 from "../../shared/components/brandingPage/OurService2";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../shared/animation/variants";
+import { datas } from "../../shared/components/data/branding";
 
 export default function Branding(){
     return (
@@ -15,7 +16,7 @@ export default function Branding(){
                 commitment="Our commitment to your brand's success is reflected in our wide-ranging suite of services. Here's a closer look at what we offer:"
              commit_heading="Our Comprehensive Suite of Branding and Design Services"
             />
-       <Brandingdetails />
+       <Brandingdetails datas={datas} />
         <Ourservice placeholder={<div className="lg:w-2/6">
             <motion.img src="/images/branding/OurService.jpg" alt=""  variants={fadeIn("right", 0.3)}
             initial="hidden"

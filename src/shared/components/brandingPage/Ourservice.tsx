@@ -10,7 +10,7 @@ interface propValues{
 export default function Ourservice({heading,content,placeholder}:propValues) {
   return (
     <section>
-      <div className="container lg:mx-auto lg:px-16 px-2 py-10">
+      <div className="container lg:mx-auto lg:px-16 px-2 py-10 mx-auto">
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 xl:gap-16 md:items-center lg:justify-center">
 
           {placeholder}

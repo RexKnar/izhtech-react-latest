@@ -8,6 +8,7 @@ export default function Services() {
     imageSrc: "images/servicepage/img.png",
     serviceName: "Branding",
     navPath: "",
+    link:"/branding",
     description:
       "Craft resonant brand identities. Guide through elevated brand experiences.",
     listItem: [
@@ -32,6 +33,7 @@ export default function Services() {
     imageSrc: "images/servicepage/img2.png",
     serviceName: "Web Application",
     navPath: "",
+    link:"/webapplication",
     description:
       "Lead in digital solutions.Rewards drive continuous enterprise improvement.",
     listItem: [
@@ -50,8 +52,9 @@ export default function Services() {
 
   const mobileAppContent: ServiceBlockProps = {
     imageSrc: "images/servicepage/img.png",
-    serviceName: "Web Application",
+    serviceName: "Mobile Application",
     navPath: "",
+    link:"/mobileapplication",
     description:
       "Master digital debts. Apps boost efficiency, elevate communication, engage customers.",
     listItem: [
@@ -71,8 +74,9 @@ export default function Services() {
 
   const digitalMarketingContent: ServiceBlockProps = {
     imageSrc: "images/servicepage/img2.png",
-    serviceName: "Web Application",
+    serviceName: "Digital Marketing",
     navPath: "",
+    link:"/digitalmarketing",
     description:
       "Using digital channels to connect brands with potential customers, fostering promotional activities.",
     listItem: [

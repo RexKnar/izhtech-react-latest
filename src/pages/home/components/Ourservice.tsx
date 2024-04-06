@@ -4,8 +4,6 @@ import BrandingService from "./branding/BrandingService";
 import WebDevelopmentService from "./webdevelopment/WebDevlopmentService";
 import MobileAppService from "./mobileapp/MobileAppService";
 import DigitalMarketingService from "./digitalmarketing/DigitalMarketingService";
-import PieScroll from "../../../shared/animation/PieScroll";
-import GroupLine from "../../../shared/animation/GroupLine";
 export default function Ourservice() {
   const customTheme: CustomFlowbiteTheme["tabs"] = {
     base: "flex flex-col ring-transparent align-start md:flex-col  lg:flex-row gap-2 md:gap-4 lg:gap-2 sm:justify-center md:justify-start",
@@ -46,7 +44,7 @@ export default function Ourservice() {
 
   return (
     <div className="relative py-10">
-      <PieScroll
+      {/* <PieScroll
             svgClassName="-rotate-90 -translate-x-60 xl:w-[10vw] xl:h-[10vw] w-[20vw] h-[20vw] "
             ringColor="purple"
             parentClassName=" absolute z-50 -right-60 md:-right-50"
@@ -54,7 +52,7 @@ export default function Ourservice() {
           <GroupLine  svgClassName="-rotate-90 -translate-x-60 xl:w-[10vw] xl:h-[10vw] w-[20vw] h-[20vw] "
             ringColor="purple"
             parentClassName=" absolute z-50 -right-60 md:-right-50"
-          />
+          /> */}
       <div className="text-center ">
         <p className="pt-4 pb-2 text-xs">#OUR SERVICE</p>
         <h1 className="pb-3 font-bold text-md lg:text-3xl md:text-3xl sm:text-3xl">
