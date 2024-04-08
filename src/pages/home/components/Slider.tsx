@@ -44,17 +44,19 @@ export default function Slider() {
 
   return (
     <section className='py-10 text-center bg-gray-100'>
-      <h1 className="pt-6 pb-3 font-bold text-center text-md lg:text-4xl md:text-4xl sm:text-4xl">
+      <h1 className="pt-6  font-bold text-center text-md lg:text-4xl md:text-4xl sm:text-4xl">
   Meet our customers.
 </h1>
-<CustomObject
+{/* dotted images removed code  */}
+
+{/* <CustomObject
   className="absolute w-8 h-8 -z-1 -top-20 lg:-top-0 left-18 max-w-screen-2xl sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-60 lg:w-60"
   variants="vector_one"
 />
 <CustomObject
   className="absolute w-8 h-8 top-60 -z-1 left-50 right-10 max-w-screen-2xl sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-60 lg:w-60"
   variants="vector_one"
-/>
+/> */}
       <div className="relative h-60">
         <Carousel theme={customTheme} leftControl={<MoveLeft/>} rightControl={<MoveRight/>}>
           

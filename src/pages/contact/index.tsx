@@ -2,6 +2,9 @@ import CustomObject from "../../shared/components/CustomObjects";
 import Contactus from "./components/Contactus";
 import Inquiry from "./components/Inquiry";
 import Map from "./components/Map";
+import { fadeIn } from '../../shared/animation/variants';
+
+import { motion } from "framer-motion";
 
 export default function Contact(){
     return(
@@ -10,8 +13,9 @@ export default function Contact(){
         <Contactus/>
         </section>
         <Map/>
-        <section className="container relative py-10 mx-auto">
-        <CustomObject className="absolute w-[45%] lg:w-[20%] right-0 -z-10" variants="line-teal-up" />
+        <section className="relative container py-6 mx-auto  " >
+        <motion.div variants={fadeIn("down",0.1)} initial="hidden" whileInView="show" exit="hidden">       <CustomObject className="absolute w-[45%] lg:w-[20%] right-4 -z-10"  variants="line-teal-up" />
+</motion.div> 
         <div className="py-8">
         <Inquiry />
         </div>
