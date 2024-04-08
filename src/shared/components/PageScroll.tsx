@@ -1,5 +1,5 @@
 import { useMotionValueEvent, useScroll,motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, } from "react";
 
 
 
@@ -19,6 +19,9 @@ export default function Item() {
       if (window.scrollY > 500) {
         setScrollPage(true)
       }
+      else if(window.scrollY >3500) {
+        setScrollPage(false)
+      }
       else {
         setScrollPage(false)
       }
@@ -32,6 +35,7 @@ export default function Item() {
       setScrollValue(value)
     })
   
+  
 
   console.log(scrollValue);
   
@@ -42,20 +46,22 @@ export default function Item() {
     })
   }
     
-  if (scrollValue <= 1000) {
+  if (scrollValue <= 700) {
   scrollIndicator=null
 }
-  else if (scrollValue > 1000 && scrollValue < 2300 ) {
+  else if (scrollValue > 700 && scrollValue < 1800 ) {
  
-   scrollIndicator= <div className="w-[20px] h-[50px] bg-black"></div>
+    scrollIndicator = <motion.div  className=" bg-black " animate={{ width: "30px", height: "10px",borderRadius:"20px" }} 
+    ></motion.div>
   }
-  else if (scrollValue > 2300 && scrollValue < 3700) {
+  else if (scrollValue >= 1800 && scrollValue <= 3600) {
 
-    scrollIndicator = <div className="w-[20px] h-[70px] bg-black"></div>
+    scrollIndicator = <motion.div  className=" bg-black " animate={{ width: "65px", height: "10px",borderRadius:"20px" }} ></motion.div>
     
   }
   else {
-    scrollIndicator = <div className="w-[20px] h-[100px] bg-black"></div>
+    scrollIndicator = <motion.div  className=" bg-black " animate={{ width: "100px", height: "10px",borderRadius:"20px" }} 
+    ></motion.div>
   }
 
   
@@ -63,16 +69,19 @@ export default function Item() {
 
   return <>
     
-    <motion.div className="fixed cursor-pointer rounded-2xl "  onClick={handleScroll}>
-    <div className="w-[20px] h-[100px] bg-slate-300 ml-10 ">
-    {scrollIndicator}
-      </div>
-      {scrollPage && <p className=" ">Back to Top</p> }
+   {scrollPage &&  <motion.div className=" fixed cursor-pointer rounded-2xl mt-[8rem]  ml-8  rotate-90 " layoutId="pointer" >
 
-    </motion.div>
-    
+<motion.div className="  w-[100px] h-[10px] bg-slate-300  mt-[5rem] "  animate={{borderRadius:"20px"}} >
+ {scrollIndicator}
+ 
+</motion.div>
+<p className=" cursor-pointer"  onClick={handleScroll} >Back to top</p>
+
+</motion.div>
+}
   
-  </>
+      </>
+      
 
 }
 
