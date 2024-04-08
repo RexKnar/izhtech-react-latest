@@ -8,7 +8,7 @@ type propsType={
     ringColor?:string | 'purple'
 }
 
-export default function GroupLine({parentClassName, svgClassName, ringColor='purple'}:propsType) {
+export default function GroupLine({parentClassName,  ringColor='purple'}:propsType) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,

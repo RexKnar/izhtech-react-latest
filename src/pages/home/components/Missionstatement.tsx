@@ -1,6 +1,5 @@
-import { motion, useTime, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeIn } from "../../../shared/animation/variants";
-import { Webhook } from "lucide-react";
 
 
 export default function MissionStatement() {
