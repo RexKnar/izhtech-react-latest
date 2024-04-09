@@ -1,5 +1,5 @@
 interface CustomObjectProps {
-  variants: "line-purple-left" | "hero-left-full" | "hero-left-full-gif" | "purple-dots" | "purple-line-small-right" | "green-disk" | "orange-disk" | "blue-dots" | "line-orange-left" | "long-line-orange-left" | "long-line-teal-left" | "line-teal-up" | "teal-disk" | "vector_one"  |"vector_fixed"; // Define a union type with valid keys
+  variants: "line-purple-left" | "hero-left-full" | "blue-short-line-left" | "hero-left-full-gif" | "purple-dots" | "purple-line-small-right" | "green-disk" | "orange-disk" | "blue-dots" | "line-orange-left" | "long-line-orange-left" | "long-line-teal-left" | "line-teal-up" | "teal-disk" | "vector_one"  |"vector_fixed"; // Define a union type with valid keys
   className: string;
 }
 
@@ -19,7 +19,8 @@ function CustomObject({ variants, className }: CustomObjectProps) {
     "teal-disk":"/images/objects/teal-disk.svg",
     "purple-line-small-right":"/images/objects/purple-line-right-small.gif",
     "vector_one":"/images/objects/Vector1.png",
-    "vector_fixed":"/images/objects/purple-line-right-small-rename.svg"
+    "vector_fixed":"/images/objects/purple-line-right-small-rename.svg",
+    "blue-short-line-left":"/images/objects/blue-short-line-left.gif"
 
 
 

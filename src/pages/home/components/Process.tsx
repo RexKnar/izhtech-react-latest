@@ -5,6 +5,7 @@ import CustomObject from '../../../shared/components/CustomObjects';
 
 export default function Process() {
   return (
+    <section  className='lg:px-10 '>
     <div className='py-10'>
       <div className="relative flex-col gap-4 py-10 h-4/5 lg:flex lg:flex-row">
         <div className="lg:w-3/4 sm:w-[75%]">
@@ -172,5 +173,6 @@ export default function Process() {
         </div>
       </div>
     </div>
+    </section>
   );
 }

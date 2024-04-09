@@ -20,7 +20,9 @@ export default function Counts() {
                     <div className="grid justify-center p-6 text-white bg-black md:pr-32">
                         <div className="flex items-center ">
                             <img src="images/Aboutpage/img/counts/square.png" alt="Example Image" className="w-10 h-10" />
-                            <h1 className="text-3xl font-bold lg:text-4xl">28+</h1>
+                            <h1 className="text-3xl font-bold lg:text-4xl">
+                            <Counter value={28} direction="up" />+
+                            </h1>
                         </div>
                         <p className="pt-2">
                             awards for digital <br /> innovation

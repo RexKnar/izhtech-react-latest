@@ -27,8 +27,11 @@ export const fadeIn =(direction:string, delay:number)=>{
 }
 
 
-export const hover=(direction:string, delay:number)=>{
+export const hover=( delay:number)=>{
     return {
+        pointer:{
+            cursor:'pointer',
+        },
         hidden:{
             backgroundColor:'transparent',
             transition:{
@@ -39,7 +42,6 @@ export const hover=(direction:string, delay:number)=>{
             }
         }, 
         show:{
-            backgroundColor:'red',
             cursor:'pointer',
             opacity:1,
             transition:{

@@ -1,5 +1,5 @@
 import { motion, useTime, useTransform } from "framer-motion";
-import { fadeIn, hover } from "../../../shared/animation/variants";
+import { fadeIn} from "../../../shared/animation/variants";
 import {
   BadgePercent,
   Ratio,
@@ -19,14 +19,9 @@ export default function Feature() {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.1 }}
-          className="flex flex-col items-center py-2 md:flex-1 lg:w-1/4"
+          className="flex flex-col items-center py-2 md:flex-1 lg:w-1/4 hover:cursor-pointer"
         >
-            <motion.div variants={hover("up", 0.2)}
-          initial="hidden"
-          whileHover={'show'}
-          viewport={{ once: false, amount: 0.1 }}
-          className="flex flex-col items-center "
-        >
+           
 
             
           <motion.span
@@ -42,13 +37,12 @@ export default function Feature() {
             <br /> Guide through elevated brand experiences.
           </p>
         </motion.div>
-        </motion.div>
         <motion.div
           variants={fadeIn("up", 0.2)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.1 }}
-          className="flex flex-col items-center py-2 md:flex-1 lg:w-1/4"
+          className="flex flex-col items-center py-2 md:flex-1 lg:w-1/4 hover:cursor-pointer"
         >
           <motion.span
             style={{ rotate }}
@@ -68,7 +62,7 @@ export default function Feature() {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.1 }}
-          className="flex flex-col items-center py-2 md:flex-1 lg:w-1/4"
+          className="flex flex-col items-center py-2 md:flex-1 lg:w-1/4 hover:cursor-pointer"
         >
           <motion.span
             style={{ rotate }}
@@ -88,7 +82,7 @@ export default function Feature() {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.1 }}
-          className="flex flex-col items-center py-2 md:flex-1 lg:w-1/4"
+          className="flex flex-col items-center py-2 md:flex-1 lg:w-1/4 hover:cursor-pointer"
         >
           <motion.span
             style={{ rotate }}

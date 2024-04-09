@@ -11,7 +11,7 @@ export default function Contact(){
         </section>
         <Map/>
         <section className="container relative py-10 mx-auto">
-        <CustomObject className="absolute w-[45%] lg:w-[20%] right-0 -z-10" variants="line-teal-up" />
+        <CustomObject className="absolute w-[45%] lg:w-[20%] right-0 -top-5 -z-10" variants="line-teal-up" />
         <div className="py-8">
         <Inquiry />
         </div>

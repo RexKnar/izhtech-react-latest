@@ -8,7 +8,7 @@ type propsType={
     ringColor?:string | 'purple'
 }
 
-export default function GroupLine({parentClassName, svgClassName, ringColor='purple'}:propsType) {
+export default function GroupLine({parentClassName, ringColor='purple'}:propsType) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -48,7 +48,7 @@ export default function GroupLine({parentClassName, svgClassName, ringColor='pur
                             ></motion.circle>
                             </motion.circle>
 
-                            <text x="50" y="50" fontFamily="Verdana" fontSize="12" textAnchor="middle" className="font-bold" alignmentBaseline="middle">63%</text>
+                          
                         </svg>
                     </div>
           {/* <svg id="progress" className={` ${svgClassName} progress  stroke-${ringColor}-600`} width="75" height="75" viewBox="0 0 100 100">

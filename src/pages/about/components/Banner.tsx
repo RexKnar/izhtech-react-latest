@@ -1,5 +1,4 @@
 import { Progress } from "flowbite-react";
-import PieScroll from "../../../shared/animation/PieScroll";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../shared/animation/variants";
 
@@ -19,14 +18,6 @@ export default function Banner() {
             alt="Example Image"
             className="w-full h-auto"
           />
-   
-          <PieScroll
-            svgClassName="-rotate-90 -translate-x-60 xl:w-[10vw] xl:h-[10vw] w-[20vw] h-[20vw] "
-            ringColor="purple"
-            parentClassName=" absolute z-10 xl:-bottom-20 -bottom-15 xl:left-20 -right-60 md:-right-40 xl:right-2 !-z-50"
-          />
-
-          {/* <CustomObject className="absolute z-10 -bottom-10 -left-32 !-z-50" variants="purple-dots"/> */}
         </motion.div>
    
    

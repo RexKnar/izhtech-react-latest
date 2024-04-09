@@ -2,6 +2,7 @@ import { Accordion } from "flowbite-react";
 import { ServiceBlockProps, ServiceBlockList } from "./types/services";
 import { fadeIn } from "../animation/variants";
 import { motion } from "framer-motion";
+import Counter from "../animation/Counter";
 
 export default function ImageFirstServiceBlock(props: ServiceBlockProps) {
   return (
@@ -21,7 +22,7 @@ export default function ImageFirstServiceBlock(props: ServiceBlockProps) {
                   alt="Example Image"
                   className="w-8 h-8"
                 />
-                <h1 className="text-3xl font-bold lg:text-4xl">35+</h1>
+                <h1 className="text-3xl font-bold lg:text-4xl"> <Counter value={35} direction="up" />+</h1>
               </div>
               <p className="pt-2 text-xs">designers and developers</p>
             </div>
@@ -32,7 +33,7 @@ export default function ImageFirstServiceBlock(props: ServiceBlockProps) {
                   alt="Example Image"
                   className="w-8 h-8"
                 />
-                <h1 className="text-3xl font-bold lg:text-4xl">28+</h1>
+                <h1 className="text-3xl font-bold lg:text-4xl"> <Counter value={28} direction="up" />+</h1>
               </div>
               <p className="pt-2 text-xs">awards for digital innovation</p>
             </div>
@@ -67,9 +68,9 @@ export default function ImageFirstServiceBlock(props: ServiceBlockProps) {
               );
             })}
           </Accordion>
-          <button className="h-8 mt-4 text-xs font-bold text-white rounded bg-indigo-950 w-28 border-1">
+          {/* <button className="h-8 mt-4 text-xs font-bold text-white rounded bg-indigo-950 w-28 border-1">
             Learn more {"->"}
-          </button>
+          </button> */}
         </motion.div>
       </div>
     </section>

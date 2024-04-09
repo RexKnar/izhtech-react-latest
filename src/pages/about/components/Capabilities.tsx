@@ -22,7 +22,7 @@ export default function PlatformInsights() {
   whileInView={"show"}
   viewport={{ once: false, amount:0.1 }} className="relative lg:w-1/2">
           <CustomObject
-            className="absolute z-10 -bottom-20 -right-20 "
+            className="absolute z-10 hidden -bottom-20 -right-20 sm:block "
             variants="blue-dots"
           />
           <img
