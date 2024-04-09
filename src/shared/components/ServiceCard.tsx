@@ -1,6 +1,6 @@
 
 import { Card, Dropdown } from 'flowbite-react';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export default function ServiceCard() {
   return (
@@ -34,7 +34,7 @@ export default function ServiceCard() {
         </Dropdown>
       </div>
       <div className="flex flex-col items-center pb-10">
-        <Image
+        <img
           alt="Bonnie image"
           height="96"
           src="/images/people/profile-picture-3.jpg"
