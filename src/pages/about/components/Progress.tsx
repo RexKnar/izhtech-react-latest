@@ -39,7 +39,7 @@ export default function ProgressBar({progressTime}:progress) {
 
 
     const ref = useRef<HTMLDivElement>(null)
-    const [progressValue,setProgressValue]=useState<number | string>(0)
+    const [progressValue,setProgressValue]=useState<number >(0)
     
     const motionValue = useMotionValue(0)
     

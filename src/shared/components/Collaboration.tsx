@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Collaboration() {
     return (
         
@@ -11,7 +13,12 @@ export default function Collaboration() {
 
             </div>
             <div className="flex justify-end lg:flex-row lg:w-1/4">
-                <button className="h-10 text-xs text-white rounded bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-36 rounded-2l">Contact Us<span>{'->'}</span></button>
+            <Link
+          to={{
+            pathname: "/contact",
+          }}
+        >
+          <button className="h-10 text-xs text-white rounded bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-36 rounded-2l">Contact Us<span>{'->'}</span></button> </Link>
             </div>
         </div><div>
                 <div>

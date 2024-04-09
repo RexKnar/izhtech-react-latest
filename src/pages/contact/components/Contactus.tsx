@@ -4,7 +4,7 @@ import { fadeIn } from "../../../shared/animation/variants";
 
 export default function Contactus() {
   return (
-    <section className="relative py-10 bg-transparent lg:py-15 ">
+    <section className="relative px-5 py-10 bg-transparent lg:py-15">
             <motion.div variants={fadeIn("right", 0.1)}
               initial="hidden"
               whileInView={"show"}

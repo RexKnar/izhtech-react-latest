@@ -4,11 +4,11 @@ import { motion, useScroll } from "framer-motion";
 
 type propsType={
     parentClassName?:string | '',
-    svgClassName?:string | '',
+    innerText?:string | '',
     ringColor?:string | 'purple'
-}
+} 
 
-export default function PieScroll({parentClassName,  ringColor='purple'}:propsType) {
+export default function PieScroll({parentClassName, innerText, ringColor='purple'}:propsType) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -35,13 +35,10 @@ export default function PieScroll({parentClassName,  ringColor='purple'}:propsTy
                                 style={{ pathLength: scrollYProgress }}
                                 strokeDashoffset="calc(400 - (400 * 45) / 100)"
                             />
-                            <text x="50" y="50" fontFamily="Verdana" fontSize="12" textAnchor="middle" className="font-bold" alignmentBaseline="middle">63%</text>
+                            <text x="50" y="50" fontFamily="Verdana" fontSize="12" textAnchor="middle" className="font-bold" alignmentBaseline="middle">{innerText}</text>
                         </svg>
                     </div>
-          {/* <svg id="progress" className={` ${svgClassName} progress  stroke-${ringColor}-600`} width="75" height="75" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="30" pathLength="1" className={`stroke-${ringColor}-50`}  />
-        
-          </svg> */}
+          
         </figure>
       </div>
     // </section>

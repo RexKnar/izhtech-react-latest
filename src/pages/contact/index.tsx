@@ -13,7 +13,7 @@ export default function Contact(){
         <Contactus/>
         </section>
         <Map/>
-        <section className="relative container py-6 mx-auto  " >
+        <section className="container relative py-6 mx-auto " >
         <motion.div variants={fadeIn("down",0.1)} initial="hidden" whileInView="show" exit="hidden">       <CustomObject className="absolute w-[45%] lg:w-[20%] right-4 -z-10"  variants="line-teal-up" />
 </motion.div> 
         <div className="py-8">

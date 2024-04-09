@@ -24,7 +24,7 @@ export default function Slider() {
       "wrapper": "absolute bottom-5 left-1/2 flex -translate-x-1/2 space-x-3"
     },
     "item": {
-      "base": "absolute top-1/2 left-1/2 block w-full bg-red-500 -translate-x-1/2 -translate-y-1/2",
+      "base": "absolute top-1/2 left-1/2 block w-full  -translate-x-1/2 -translate-y-1/2",
       "wrapper": {
         "off": "w-full flex-shrink-0 transform cursor-default snap-center",
         "on": "w-full flex-shrink-0 transform cursor-grab snap-center"
@@ -43,7 +43,7 @@ export default function Slider() {
 
   return (
     <section className='py-10 text-center bg-gray-100'>
-      <h1 className="pt-6  font-bold text-center text-md lg:text-4xl md:text-4xl sm:text-4xl">
+      <h1 className="pt-6 font-bold text-center text-md lg:text-4xl md:text-4xl sm:text-4xl">
   Meet our customers.
 </h1>
 {/* dotted images removed code  */}
@@ -53,16 +53,16 @@ export default function Slider() {
   variants="vector_one"
 />
 <CustomObject
-  className="absolute w-8 h-8 top-60 -z-1 left-50 right-10 max-w-screen-2xl sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-60 lg:w-60"
+  className="absolute -bottom-20 -z-1 left-50 right-10 max-w-screen-2xl"
   variants="vector_one"
 /> */}
       <div className="relative h-60">
         <Carousel theme={customTheme} leftControl={<MoveLeft/>} rightControl={<MoveRight/>}>
           
-          <div className="flex items-center justify-center h-full bg-gray-100 dark:bg-gray-700 dark:text-white">
+          <div className="flex items-center justify-center h-full dark:text-white">
 
             <div className="text-center ">
-              <button className="h-6 text-xs text-black bg-gray-200 rounded w-28 rounded-2l">
+              <button className="h-6 text-xs text-black rounded w-28 rounded-2l">
                 Design Quality
               </button>
               <p className="pt-2 pb-2 text-sm">
@@ -76,9 +76,9 @@ export default function Slider() {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center h-full bg-gray-100 dark:bg-gray-700 dark:text-white">
+          <div className="flex items-center justify-center h-full dark:text-white">
           <div className="text-center ">
-              <button className="h-6 text-xs text-black bg-gray-200 rounded w-28 rounded-2l">
+              <button className="h-6 text-xs text-black rounded w-28 rounded-2l">
                 Design Quality
               </button>
               <p className="pt-2 pb-2 text-sm">
@@ -94,9 +94,9 @@ export default function Slider() {
           
           </div>
 
-          <div className="flex items-center justify-center h-full bg-gray-100 dark:bg-gray-700 dark:text-white">
+          <div className="flex items-center justify-center h-full dark:text-white">
           <div className="text-center ">
-              <button className="h-6 text-xs text-black bg-gray-200 rounded w-28 rounded-2l">
+              <button className="h-6 text-xs text-black rounded w-28 rounded-2l">
                 Design Quality
               </button>
               <p className="pt-2 pb-2 text-sm">
@@ -113,6 +113,7 @@ export default function Slider() {
           </div>
   
         </Carousel>
+      {/* </div> */}
       </div>
       
     </section>

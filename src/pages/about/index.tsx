@@ -11,20 +11,20 @@ import CustomObject from "../../shared/components/CustomObjects";
 export default function About() {
   return (
     <>
-      <section className="mx-auto overflow-hidden container-fluid">
-        <section className="px-5 mx-auto md:container md:px-0">
-          {" "}
-          <Aboutus />{" "}
+      <section className="mx-auto overflow-hidden container-fluid ">
+        <section className="px-5 mx-auto md:container ">
+        
+          <Aboutus />
         </section>
-        <section className="px-5 mx-auto md:container md:px-0">
-          {" "}
+        <section className="px-5 mx-auto md:container ">
+       
           <Banner />
         </section>
         <section className="px-5 mx-auto md:container md:px-0">
-          {" "}
+         
           <Capabilities />
         </section>
-        <section className="relative mx-auto mb-10 xl:px-20 container-fluid xl:container ">
+        <section className="relative mx-auto mb-20 xl:px-20 container-fluid xl:container lg:pt-20 ">
           <Slider />
         </section>
         <section className="px-5 mx-auto md:container md:px-0">

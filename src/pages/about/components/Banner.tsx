@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../shared/animation/variants";
 import ProgressBar from "./Progress";

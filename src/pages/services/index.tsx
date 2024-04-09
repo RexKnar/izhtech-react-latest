@@ -99,7 +99,7 @@ export default function Services() {
   };
   return (
     
-      <section className="px-5 mx-auto md:container md:px-0">
+      <section className="px-5 mx-auto md:container md:px-5">
         <Ourservices />
         <ImageFirstServiceBlock {...brandingContent} />
         <TextFirstServiceBlock {...webAppContent} />

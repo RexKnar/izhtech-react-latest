@@ -43,7 +43,13 @@ export default function Ourservice() {
   };
 
   return (
+    <section className="lg:px-10 pb-20 pt-28 bg-[#F5F7FF] rounded">
+   {/* <div className="flex-col justify-center gap-4 px-5 my-auto h-4/5 lg:flex lg:flex-row">  */}
     <div className="relative py-10">
+      
+          {/* <GroupLine  svgClassName="-rotate-90 -translate-x-60 xl:w-[10vw] xl:h-[10vw] w-[20vw] h-[20vw] "
+            ringColor="purple"
+            parentClassName=" absolute z-50 -right-60 md:-right-50"
       {/* <PieScroll
             svgClassName="-rotate-90 -translate-x-60 xl:w-[10vw] xl:h-[10vw] w-[20vw] h-[20vw] "
             ringColor="purple"
@@ -85,5 +91,7 @@ export default function Ourservice() {
         </Tabs>
       </div>
     </div>
+    {/* // </div> */}
+    </section>
   );
 }

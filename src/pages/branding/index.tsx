@@ -8,6 +8,12 @@ import { fadeIn } from "../../shared/animation/variants";
 import { datas } from "../../shared/components/data/branding";
 
 export default function Branding(){
+
+    // const drandingList:any[]=[{
+    //     title:'',
+    //     description:'',
+    //     icon:''
+    // }]
     return (
        <>
             <Brandingheader title={"Branding"} />
