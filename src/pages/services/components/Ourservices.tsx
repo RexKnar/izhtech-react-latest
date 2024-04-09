@@ -3,7 +3,7 @@ import CustomObject from "../../../shared/components/CustomObjects";
 
 export default function ourservices() {
     return (
-        <section className="relative py-10 bg-transparent lg:py-15 ">
+        <section className=" container relative py-10 bg-transparent lg:py-15 ">
             <div className="flex-col justify-center gap-4 my-auto h-4/5 lg:flex lg:flex-row">
                 <div className="w-full mx-auto ">
                     <div className="flex flex-col justify-end h-full pb-5 ">

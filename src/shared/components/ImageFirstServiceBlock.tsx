@@ -1,12 +1,14 @@
-import { Accordion } from "flowbite-react";
+// import { Accordion } from "flowbite-react";
 import { ServiceBlockProps, ServiceBlockList } from "./types/services";
 import { fadeIn } from "../animation/variants";
 import { motion } from "framer-motion";
 import Counter from "../animation/Counter";
+import AccordionPage from "./Accordion";
+import { Link } from "react-router-dom";
 
 export default function ImageFirstServiceBlock(props: ServiceBlockProps) {
   return (
-    <section className="">
+    <section className="container">
       <div className="flex flex-col items-center gap-4 sm:flex-col md:flex-col lg:flex-row xl:flex-row lg:gap-20">
         <motion.div  variants={fadeIn("right", 0.1)}
               initial="hidden"
@@ -47,9 +49,10 @@ export default function ImageFirstServiceBlock(props: ServiceBlockProps) {
           <p className="pb-2 text-xs">OUR SERVICES</p>
           <h1 className="pb-2 text-3xl font-bold"> {props.serviceName}</h1>
           <p className="pb-6 text-xs">{props.description}</p>
-          <Accordion className="border-none outline-none">
+          {/* <Accordion className="border-none outline-none">
             {props.listItem.map((item: ServiceBlockList) => {
               return (
+            
                 <Accordion.Panel>
                   <Accordion.Title className="text-black ">
                     <span className="flex items-center">
@@ -65,12 +68,22 @@ export default function ImageFirstServiceBlock(props: ServiceBlockProps) {
                     <p className="text-xs text-black">{item.description}</p>
                   </Accordion.Content>
                 </Accordion.Panel>
+              
               );
             })}
-          </Accordion>
-          {/* <button className="h-8 mt-4 text-xs font-bold text-white rounded bg-indigo-950 w-28 border-1">
-            Learn more {"->"}
-          </button> */}
+          </Accordion> */}
+
+          {props.listItem.map((item: ServiceBlockList) => {
+            return <AccordionPage header={item.title} content={item.description} />
+          })}
+          
+
+          
+          <Link to={`${props.link}`} className="flex items-center justify-center h-8 mt-4 text-xs font-bold text-white rounded bg-indigo-950 w-28 border-1 ">
+            
+          {/* h-8 mt-4 text-xs font-bold text-white rounded bg-indigo-950 w-28 border-1  */}
+            Know more {"->"}
+          </Link>
         </motion.div>
       </div>
     </section>

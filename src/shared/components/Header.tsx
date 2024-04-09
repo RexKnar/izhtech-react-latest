@@ -2,6 +2,7 @@ import { Button, CustomFlowbiteTheme, Navbar } from "flowbite-react";
 import { menuItems } from "./data/MenuItems";
 import { MenuItem } from "./types/MenuItems";
 import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const location = useLocation();
@@ -49,9 +50,10 @@ export default function Header() {
         </Link>
         <Navbar.Toggle />
       </div>
-      <Navbar.Collapse>
+      <Navbar.Collapse >
         {menuItems.map((menu: MenuItem) => {
           return (
+            <motion.div >
             <Navbar.Link
               href={`${menu.path}`}
               className="text-bold "
@@ -59,7 +61,8 @@ export default function Header() {
             >
               {" "}
               {menu.label}
-            </Navbar.Link>
+              </Navbar.Link>
+              </motion.div>
           );
         })}
       </Navbar.Collapse>

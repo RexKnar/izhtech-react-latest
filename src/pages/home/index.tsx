@@ -10,10 +10,18 @@ import { fadeIn } from "../../shared/animation/variants";
 import { motion } from "framer-motion";
 import Platforminsights from "./components/Platforminsights";
 import IzhtechScroll from "../../shared/components/IzhtechScroll";
+import PageScroll from "../../shared/components/PageScroll";
+
 
 export default function Home() {
+
+
+  
+  
+
   return (
     <>
+        <PageScroll />
      
         <section className=" pt-6 lg:h-[calc(80vh-70px)] ">
           <Hero />
@@ -22,7 +30,8 @@ export default function Home() {
 
         <section className="grid w-full bg-teal-50">
           <Feature />
-        </section>
+      </section>
+
 
         <section className="container grid w-full mx-auto bg-white">
           <Partnercompany />
@@ -30,7 +39,9 @@ export default function Home() {
 
         <section className="mx-auto container-fluid xl:container">
           <Banner />
-        </section>
+      </section>
+     
+
 
         <section className="flex items-center justify-center py-4 bg-white">
           <IzhtechScroll />

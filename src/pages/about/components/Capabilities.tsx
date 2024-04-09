@@ -12,7 +12,7 @@ export default function PlatformInsights() {
   viewport={{ once: false, amount:0.1 }} className="flex flex-col justify-center lg:w-1/2">
           <CustomObject className="absolute -z-10" variants="green-disk" />
           <p className="text-xs">CAPABILITIES </p>
-          <h1 className="pt-2 text-3xl font-bold">
+          <h1 className="pt-2 text-3xl font-bold ">
             Versatile expertise, tailored strategies, and innovative solutions
             for transparent, impactful outcomes
           </h1>
@@ -21,10 +21,10 @@ export default function PlatformInsights() {
   initial="hidden"
   whileInView={"show"}
   viewport={{ once: false, amount:0.1 }} className="relative lg:w-1/2">
-          <CustomObject
-            className="absolute z-10 hidden -bottom-20 -right-20 sm:block "
+          {/* <CustomObject
+            className="absolute z-10 -bottom-20 -right-20 "
             variants="blue-dots"
-          />
+          /> */}
           <img
             src="images/Aboutpage/img/capabilities.png"
             alt="Example Image"

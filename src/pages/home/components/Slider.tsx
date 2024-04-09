@@ -3,7 +3,6 @@ import { Carousel } from 'flowbite-react';
 import type { CustomFlowbiteTheme } from 'flowbite-react';
 import { MoveLeft } from 'lucide-react';
 import { MoveRight } from 'lucide-react';
-import CustomObject from "../../../shared/components/CustomObjects";
 
 export default function Slider() {
   
@@ -43,20 +42,20 @@ export default function Slider() {
   }
 
   return (
-    // <section className='py-10 text-center bg-gray-100'>
-    <section className="lg:px-10 pb-20 pt-28 bg-[#F5F7FF] rounded  relative overflow-hidden">
-    {/* <div className="flex-col justify-center gap-4 px-5 my-auto h-4/5 lg:flex lg:flex-row"> */}
-      <h1 className="pt-6 pb-3 font-bold text-center text-md lg:text-4xl md:text-4xl sm:text-4xl">
-  Meet our customers
+    <section className='py-10 text-center bg-gray-100'>
+      <h1 className="pt-6 font-bold text-center text-md lg:text-4xl md:text-4xl sm:text-4xl">
+  Meet our customers.
 </h1>
-<CustomObject
-  className="absolute -left-0 -z-1 -top-20 lg:-top-20 max-w-screen-2xl "
+{/* dotted images removed code  */}
+
+{/* <CustomObject
+  className="absolute w-8 h-8 -z-1 -top-20 lg:-top-0 left-18 max-w-screen-2xl sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-60 lg:w-60"
   variants="vector_one"
 />
 <CustomObject
   className="absolute -bottom-20 -z-1 left-50 right-10 max-w-screen-2xl"
   variants="vector_one"
-/>
+/> */}
       <div className="relative h-60">
         <Carousel theme={customTheme} leftControl={<MoveLeft/>} rightControl={<MoveRight/>}>
           

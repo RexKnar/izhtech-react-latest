@@ -1,5 +1,5 @@
 import { motion, useTime, useTransform } from "framer-motion";
-import { fadeIn} from "../../../shared/animation/variants";
+import { fadeIn } from "../../../shared/animation/variants";
 import {
   BadgePercent,
   Ratio,
@@ -37,6 +37,7 @@ export default function Feature() {
             <br /> Guide through elevated brand experiences.
           </p>
         </motion.div>
+        {/* </motion.div> */}
         <motion.div
           variants={fadeIn("up", 0.2)}
           initial="hidden"

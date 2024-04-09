@@ -50,6 +50,14 @@ export default function Ourservice() {
           {/* <GroupLine  svgClassName="-rotate-90 -translate-x-60 xl:w-[10vw] xl:h-[10vw] w-[20vw] h-[20vw] "
             ringColor="purple"
             parentClassName=" absolute z-50 -right-60 md:-right-50"
+      {/* <PieScroll
+            svgClassName="-rotate-90 -translate-x-60 xl:w-[10vw] xl:h-[10vw] w-[20vw] h-[20vw] "
+            ringColor="purple"
+            parentClassName=" absolute z-50 -right-60 md:-right-50"
+          />
+          <GroupLine  svgClassName="-rotate-90 -translate-x-60 xl:w-[10vw] xl:h-[10vw] w-[20vw] h-[20vw] "
+            ringColor="purple"
+            parentClassName=" absolute z-50 -right-60 md:-right-50"
           /> */}
       <div className="text-center ">
         <p className="pt-4 pb-2 text-xs">#OUR SERVICE</p>
