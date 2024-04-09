@@ -27,7 +27,7 @@ export const fadeIn =(direction:string, delay:number)=>{
 }
 
 
-export const hover=(direction:string, delay:number)=>{
+export const hover=( delay:number)=>{
     return {
         hidden:{
             backgroundColor:'transparent',

@@ -8,7 +8,7 @@ type propsType={
     ringColor?:string | 'purple'
 }
 
-export default function PieScroll({parentClassName, svgClassName, ringColor='purple'}:propsType) {
+export default function PieScroll({parentClassName,  ringColor='purple'}:propsType) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,

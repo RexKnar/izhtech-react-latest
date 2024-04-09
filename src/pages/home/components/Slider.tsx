@@ -3,7 +3,6 @@ import { Carousel } from 'flowbite-react';
 import type { CustomFlowbiteTheme } from 'flowbite-react';
 import { MoveLeft } from 'lucide-react';
 import { MoveRight } from 'lucide-react';
-import CustomObject from "../../../shared/components/CustomObjects";
 
 export default function Slider() {
   
