@@ -1,87 +1,38 @@
-import { useMotionValueEvent, useScroll,motion } from "framer-motion";
-import { useEffect, useState, } from "react";
+import { motion, useScroll } from "framer-motion";
 
-
-
-export default function Item() {
-
-  let scrollIndicator
-  let value;
-
-  const [scrollValue, setScrollValue] = useState(0)
-  const [scrollPage,setScrollPage]=useState(false)
- 
-  const { scrollY } = useScroll();
-
-  useEffect(() => {
+export default function PageScroll() {
+  const { scrollYProgress } = useScroll();
   
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 500) {
-        setScrollPage(true)
-      }
-      else if(window.scrollY >3500) {
-        setScrollPage(false)
-      }
-      else {
-        setScrollPage(false)
-      }
-    })
-},[scrollValue])
-
-
-    useMotionValueEvent(scrollY, "change", (latest) => {
-  
-      value = Math.round(latest)
-      setScrollValue(value)
-    })
-  
-  
-
-  console.log(scrollValue);
-  
-  function handleScroll() {
+  function handleScrollToTop() {
     window.scrollTo({
       top: 0,
-      behavior:"smooth"
-    })
+      behavior: "smooth",
+    });
   }
-    
-  if (scrollValue <= 700) {
-  scrollIndicator=null
+
+  return (
+    <><div className="fixed z-50 flex top-[40%] flex-col cursor-pointer  h-2/6 justify-end hidden md:block">
+      <p
+        className="-rotate-90 "
+        onClick={handleScrollToTop}
+      >
+        Back to top
+      </p>
+      <motion.div
+        className="w-1 bg-black h-[100px]  ml-9 mt-9  rounded-2xl  rotate-90"
+        style={{ scaleY: scrollYProgress, transformOrigin: "top" }} />
+
+    </div>
+    <div className="fixed bottom-0 z-50 flex justify-center gap-5 p-3 cursor-pointer md:hidden">
+        <p
+          onClick={handleScrollToTop}
+        >
+          Back to top
+        </p>
+        <motion.div
+          className="h-1 bg-black w-[100px]  my-auto  rounded-2xl  "
+          style={{ scaleX: scrollYProgress, transformOrigin: "left" }} />
+
+      </div></>
+  );
 }
-  else if (scrollValue > 700 && scrollValue < 1800 ) {
- 
-    scrollIndicator = <motion.div  className=" bg-black " animate={{ width: "30px", height: "10px",borderRadius:"20px" }} 
-    ></motion.div>
-  }
-  else if (scrollValue >= 1800 && scrollValue <= 3600) {
-
-    scrollIndicator = <motion.div  className=" bg-black " animate={{ width: "65px", height: "10px",borderRadius:"20px" }} ></motion.div>
-    
-  }
-  else {
-    scrollIndicator = <motion.div  className=" bg-black " animate={{ width: "100px", height: "10px",borderRadius:"20px" }} 
-    ></motion.div>
-  }
-
-  
-  
-
-  return <>
-    
-   {scrollPage &&  <motion.div className=" fixed cursor-pointer rounded-2xl mt-[8rem]  ml-8  rotate-90 " layoutId="pointer" >
-
-<motion.div className="  w-[100px] h-[10px] bg-slate-300  mt-[5rem] "  animate={{borderRadius:"20px"}} >
- {scrollIndicator}
- 
-</motion.div>
-<p className=" cursor-pointer"  onClick={handleScroll} >Back to top</p>
-
-</motion.div>
-}
-  
-      </>
-      
-
-}
-

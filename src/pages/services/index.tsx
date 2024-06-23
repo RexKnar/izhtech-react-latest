@@ -73,7 +73,7 @@ export default function Services() {
 
 
   const digitalMarketingContent: ServiceBlockProps = {
-    imageSrc: "images/servicepage/img2.png",
+    imageSrc: "images/Ourservice/izhtech-digital-marketing.jpg",
     serviceName: "Digital Marketing",
     navPath: "",
     link:"/digitalmarketing",
@@ -99,8 +99,13 @@ export default function Services() {
   };
   return (
     
-      <section className="px-5 mx-auto md:container md:px-5">
-        <Ourservices />
+    <section className="mx-auto overflow-hidden container-fluid ">
+    <section className="px-5 mx-auto md:container ">
+    
+    <Ourservices />
+    </section>
+         
+        
         <ImageFirstServiceBlock {...brandingContent} />
         <TextFirstServiceBlock {...webAppContent} />
         <ImageFirstServiceBlock {...mobileAppContent} />

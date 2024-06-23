@@ -1,20 +1,20 @@
-// import { Accordion } from "flowbite-react";
-import { ServiceBlockProps, ServiceBlockList } from "./types/services";
+
+import { ServiceBlockProps } from "./types/services";
 import { fadeIn } from "../animation/variants";
 import { motion } from "framer-motion";
 import Counter from "../animation/Counter";
-import AccordionPage from "./Accordion";
-import { Link } from "react-router-dom";
+import  Accordion  from "./Accordion";
+import { LinkButton } from "./buttons/LinkButton";
 
 export default function ImageFirstServiceBlock(props: ServiceBlockProps) {
   return (
-    <section className="container">
-      <div className="flex flex-col items-center gap-4 sm:flex-col md:flex-col lg:flex-row xl:flex-row lg:gap-20">
+    <section className="container-fluid ">
+      <div className="flex flex-col items-center sm:flex-col md:flex-col lg:flex-row xl:flex-row lg:gap-5">
         <motion.div  variants={fadeIn("right", 0.1)}
               initial="hidden"
               whileInView={"show"}
               exit={"hidden"}
-              viewport={{ once: false, amount: 0.1 }} style={{ backgroundImage: `url('${props.imageSrc}')` }} className={`w-[100%] flex bg-center h-[20rem] lg:w-1/2 lg:h-[30rem] `}>
+              viewport={{ once: false, amount: 0.1 }} style={{ backgroundImage: `url('${props.imageSrc}')` }} className={`w-[100%] flex bg-center h-[20rem] lg:w-1/2 lg:h-[40rem] `}>
               
           <div className="flex items-end self-end justify-end hidden">
             <div className="grid justify-center p-6 text-white bg-indigo-950 md:pr-32">
@@ -45,45 +45,18 @@ export default function ImageFirstServiceBlock(props: ServiceBlockProps) {
               initial="hidden"
               whileInView={"show"}
               exit={"hidden"}
-              viewport={{ once: false, amount: 0.1 }} className="flex flex-col w-full md:flex-1 lg:w-1/2 lg:w-1/4">
+              viewport={{ once: false, amount: 0.1 }} className="w-full px-5 py-10 lg:py-0 md:flex-1 lg:w-1/2 lg:w-1/4 lg:pe-20 xl:pe-36">
           <p className="pb-2 text-xs">OUR SERVICES</p>
           <h1 className="pb-2 text-3xl font-bold"> {props.serviceName}</h1>
           <p className="pb-6 text-xs">{props.description}</p>
-          {/* <Accordion className="border-none outline-none">
-            {props.listItem.map((item: ServiceBlockList) => {
-              return (
-            
-                <Accordion.Panel>
-                  <Accordion.Title className="text-black ">
-                    <span className="flex items-center">
-                      <img
-                        src="/images/process/Vector.png"
-                        alt="image"
-                        className="w-4 h-4 mr-2"
-                      />
-                      {item.title}
-                    </span>
-                  </Accordion.Title>
-                  <Accordion.Content>
-                    <p className="text-xs text-black">{item.description}</p>
-                  </Accordion.Content>
-                </Accordion.Panel>
-              
-              );
-            })}
-          </Accordion> */}
 
-          {props.listItem.map((item: ServiceBlockList) => {
-            return <AccordionPage header={item.title} content={item.description} />
-          })}
+
+           <Accordion items={props.listItem} />
+      
           
 
-          
-          <Link to={`${props.link}`} className="flex items-center justify-center h-8 mt-4 text-xs font-bold text-white rounded bg-indigo-950 w-28 border-1 ">
-            
-          {/* h-8 mt-4 text-xs font-bold text-white rounded bg-indigo-950 w-28 border-1  */}
-            Know more {"->"}
-          </Link>
+          <LinkButton href={`${props.link}`} >Know more</LinkButton>
+
         </motion.div>
       </div>
     </section>

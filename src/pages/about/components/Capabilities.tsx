@@ -4,7 +4,7 @@ import { fadeIn } from "../../../shared/animation/variants";
 
 export default function PlatformInsights() {
   return (
-    <section className="flex gap-5 px-4 py-3 mx-auto row">
+    <section className="flex gap-5 py-3 mx-auto row">
       <div className="flex flex-col w-full gap-10 mx-auto lg:flex-row">
         <motion.div variants={fadeIn("right", 0.3)}
   initial="hidden"

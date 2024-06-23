@@ -4,9 +4,8 @@ import Capabilities from "./components/Capabilities";
 
 import Counts from "./components/Counts";
 import Slider from "../home/components/Slider";
-import { motion } from "framer-motion";
-import { fadeIn } from "../../shared/animation/variants";
-import CustomObject from "../../shared/components/CustomObjects";
+
+import Testimonials from "./components/Testimonials";
 
 export default function About() {
   return (
@@ -24,23 +23,14 @@ export default function About() {
          
           <Capabilities />
         </section>
-        <section className="relative mx-auto mb-20 xl:px-20 container-fluid xl:container lg:pt-20 ">
+        <section className="relative px-5 mx-auto mb-20 xl:px-20 container-fluid xl:container lg:pt-20">
           <Slider />
         </section>
-        <section className="px-5 mx-auto md:container md:px-0">
-          <motion.span
-            variants={fadeIn("left", 0.1)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.7 }}
-          >
-            <CustomObject
-              className="absolute z-10 -left-8 -top-10"
-              variants="line-purple-left"
-            />
-          </motion.span>
+        <section className="bg-black container-fluid">
+          <Testimonials />
         </section>
-        <section className="px-5 mx-auto md:container md:px-0">
+       
+        <section className="mx-auto md:px-0">
           <Counts />
         </section>
        

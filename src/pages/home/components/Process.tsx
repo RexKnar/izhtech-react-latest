@@ -1,10 +1,44 @@
-import AccordionPage from '../../../shared/components/Accordion';
+
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../../shared/animation/variants';
 import CustomObject from '../../../shared/components/CustomObjects';
+import Accordion from '../../../shared/components/Accordion';
 
 export default function Process() {
-
+const processContentSetOne = [
+    {
+        title: "Putting You First",
+        description:
+          "We start by getting to know you and your needs. We focus on what matters to you as our client. Our aim is to suggest practical, scalable solutions that match your vision.",
+    },
+    {
+        title: "Crafting Visual Blueprints",
+        description:
+          "   Our screen mockups make ideas real. These designs show a preview of whats coming, giving you a clear look at the future.",
+    },
+    {
+        title: "Artistry Meets Utility",
+        description:
+          " We blend creativity and functionality in our designs to elevate aesthetics, highlighting key elements for maximum impact .",
+    },
+  ];
+  const processContentSetTwo = [
+    {
+        title: "Simplify and Elegance in Development",
+        description:
+          " It powers digital innovation, transforming ideas into practical solutions for users and businesses. Our developer-friendly approach ensures smooth customer experiences, driven by these forces.",
+    },
+    {
+        title: "Meticulous Testing for Perfection",
+        description:
+          " We thoroughly test at every level—unit, integration, user acceptance—strengthening the softwares reliability and performance to ensure it stands strong.",
+    },
+    {
+        title: "Unveiling Excellence",
+        description:
+          "Its the big reveal. We prepare by setting up servers, optimizing databases, and ensuring a flawless live performance. Its the moment when your vision becomes reality.",
+    },
+  ];
     return (
         <div className='py-10'>
             <div className="relative flex-col gap-4 py-10 h-4/5 lg:flex lg:flex-row">
@@ -44,15 +78,11 @@ export default function Process() {
             <div className="flex flex-col w-full py-4 md:gap-8 md:flex-row lg:flex-row lg:flex-wrap lg:justify-center">
 
             <div className="flex flex-col md:flex-1 lg:w-1/4">
-                <AccordionPage header='Putting You First' content='We start by getting to know you and your needs. We focus on what matters to you as our client. Our aim is to suggest practical, scalable solutions that match your vision.'/>
-                <AccordionPage header='Crafting Visual Blueprints' content='   Our screen mockups make ideas real. These designs show a preview of whats coming, giving you a clear look at the future.'/>
-                <AccordionPage header='Artistry Meets Utility' content=' We blend creativity and functionality in our designs to elevate aesthetics, highlighting key elements for maximum impact .'/>
-
+            <Accordion items={processContentSetOne} />
+                
                 </div>
                  <div className="flex flex-col md:flex-1 lg:w-1/4">
-                    <AccordionPage header=' Simplify and Elegance in Development' content=' It powers digital innovation, transforming ideas into practical solutions for users and businesses. Our developer-friendly approach ensures smooth customer experiences, driven by these forces.'/>
-                     <AccordionPage header='Meticulous Testing for Perfection' content=' We thoroughly test at every level—unit, integration, user acceptance—strengthening the softwares reliability and performance to ensure it stands strong.'/>
-                    <AccordionPage header='Unveiling Excellence' content='Its the big reveal. We prepare by setting up servers, optimizing databases, and ensuring a flawless live performance. Its the moment when your vision becomes reality.'/>
+                 <Accordion items={processContentSetTwo} />
 
                 </div>
 

@@ -3,7 +3,6 @@ import { fadeIn } from "../../../shared/animation/variants";
 import MissionStatement from "./Missionstatement";
 import CustomObject from "../../../shared/components/CustomObjects";
 import { Link } from "react-router-dom";
-import { Slack } from "lucide-react";
 
 export default function banner() {
   return (
@@ -41,12 +40,7 @@ export default function banner() {
           className="absolute -left-28 w-100 h-80 -z-1 -top-20 lg:-top-20 max-w-screen-2xl"
           variants="blue-short-line-left"
         />
-        <span
-            
-            className="absolute z-50 flex items-center justify-center w-8 h-8 mx-auto mt-5 bg-green-300 rounded-full"
-          >
-            <Slack className="mx-auto text-white " />
-          </span>
+       
           <img className=" sm:w-[50%] lg:w-[100%] z-10 lg:m-0 mx-auto h-auto" src="/images/bannar1/img.png" />
         </motion.div>
       </div>
