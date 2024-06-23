@@ -9,7 +9,7 @@ export default function Banner() {
 
 
   return (
-    <section className="container flex gap-5 py-3 mx-auto ">
+    <section className="flex gap-5 py-3 mx-auto ">
       <div className="gap-10 mx-auto lg:flex ">
         <motion.div variants={fadeIn("right", 0.1)}
   initial="hidden"

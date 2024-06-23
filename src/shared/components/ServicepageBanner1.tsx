@@ -1,4 +1,5 @@
 import { Accordion } from 'flowbite-react';
+import { motion } from 'framer-motion';
 
 export default function banner(props:{serviceName:string, description:string}) {
     return (
@@ -51,9 +52,20 @@ export default function banner(props:{serviceName:string, description:string}) {
                                 </span>
                             </Accordion.Title>
                             <Accordion.Content>
+                                <motion.div  key="content"
+            initial="collapsed"
+            animate="open"
+            exit="collapsed"
+            variants={{
+              open: { opacity: 1, height: "auto" },
+              collapsed: { opacity: 0, height: 0 }
+            }}
+            transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
+          >
                                 <p className="mb-2 text-black dark:text-black">
                                     content
                                 </p>
+                                </motion.div>
                             </Accordion.Content>
                         </Accordion.Panel>
                         <button className="h-8 mt-4 text-xs font-bold text-white rounded bg-indigo-950 w-28 border-1">
