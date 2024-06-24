@@ -7,7 +7,7 @@ import { LinkButton } from "../../../shared/components/buttons/LinkButton";
 
 export default function banner() {
   return (
-    <section className="lg:px-10 pb-20 pt-28 bg-[#F5F7FF] rounded">
+    <section className="lg:px-10 pb-12 pt-12  bg-[#F5F7FF] rounded">
       <div className="flex-col justify-center gap-4 px-5 my-auto h-4/5 lg:flex lg:flex-row">
         <motion.div variants={fadeIn("right", 0.2)}
   initial="hidden"
@@ -18,7 +18,7 @@ export default function banner() {
             <p className="z-10 text-xs">
               #Grow_Your_Business
             </p>
-            <CustomObject className="absolute top-0 " variants="orange-disk" />
+            <CustomObject className="absolute top-10 " variants="orange-disk" />
             <h1 className="relative pt-4 text-4xl font-bold 2xl:text-7xl lg:text-4xl md:text-4xl sm:text-4xl">
             Innovate in Software and Excel in Digital
             </h1>
@@ -39,7 +39,7 @@ export default function banner() {
   exit={"hidden"}
   viewport={{ once: false, amount:0.1 }} className="relative flex flex-col justify-end h-full pb-5 mx-auto my-auto lg:w-3/6 sm:w-full ">
     <CustomObject
-          className="absolute hidden -left-28 w-100 h-80 -z-1 -top-20 lg:-top-20 max-w-screen-2xl lg:block"
+          className="absolute hidden -left-28 w-100 h-80 -z-1 -top-18 lg:-top-[50px] max-w-screen-2xl lg:block"
           variants="blue-short-line-left"
         />
        

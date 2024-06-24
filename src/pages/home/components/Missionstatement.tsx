@@ -1,13 +1,14 @@
-import { motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import { fadeIn } from "../../../shared/animation/variants";
 import { LinkButton } from "../../../shared/components/buttons/LinkButton";
+import { BarChartHorizontalBig, Network, Target } from "lucide-react";
 
 export default function MissionStatement() {
   // const time = useTime();
   // const rotate = useTransform(time, [0, 4000], [0, 360], { clamp: false });
 
   return (
-    <div className="flex flex-col w-full gap-6 px-4 py-8 md:flex-row lg:flex-row lg:flex-wrap lg:justify-center">
+    <div className="flex flex-col w-full gap-6 px-5 pt-8 md:flex-row lg:flex-row lg:flex-wrap lg:justify-center">
      
 
       <motion.div
@@ -19,11 +20,10 @@ export default function MissionStatement() {
         className="flex justify-around py-2 border-t md:flex-1 lg:w-1/4 border-slate-600 md:flex-col"
       >
         <div className="flex flex-col justify-center order-2 md:order-1">
-          <img
-            src="/images/bannar1/vision.png"
-            alt="Image"
-            className="w-20 h-20 mt-5 md:w-8 md:h-8"
-          />
+
+          <span
+            className="flex justify-center w-20 h-20 mt-5 bg-blue-100 rounded-full justify-item-center md:w-12 md:h-12">
+              <Network className="w-1/2 mx-auto my-auto text-blue-400 h-1/2" /> </span>
         </div>
         <div className="w-1/2 md:w-full md:order-2">
           <h2 className="pt-2 text-lg font-bold">Vision</h2>
@@ -48,11 +48,10 @@ export default function MissionStatement() {
         className="flex justify-around py-2 border-t md:flex-1 lg:w-1/4 border-slate-600 md:flex-col"
         >
           <div className="flex flex-col justify-center order-2 md:order-1">
-        <img
-          src="/images/bannar1/mission.png"
-          alt="Image"
-           className="w-20 h-20 mt-5 md:w-8 md:h-8"
-        />
+          <span
+            className="flex justify-center w-20 h-20 mt-5 bg-green-100 rounded-full justify-item-center md:w-12 md:h-12">
+              
+              <Target className="w-1/2 mx-auto my-auto text-green-400 h-1/2" /> </span>
         </div>
         <div className="order-1 w-1/2 md:w-full md:order-2">
         <h2 className="pt-2 text-lg font-bold">Mission</h2>
@@ -77,11 +76,10 @@ export default function MissionStatement() {
         className="flex justify-around py-2 border-t md:flex-1 lg:w-1/4 border-slate-600 md:flex-col"
       >
         <div className="flex flex-col justify-center order-2 md:order-1">
-          <img
-            src="/images/bannar1/values.png"
-            alt="Image"
-            className="w-20 h-20 mt-5 md:w-8 md:h-8"
-          />
+        <span
+            className="flex justify-center w-20 h-20 mt-5 bg-orange-100 rounded-full justify-item-center md:w-12 md:h-12">
+             
+              <BarChartHorizontalBig className="w-1/2 mx-auto my-auto text-orange-400 h-1/2" /> </span>
         </div>
         <div className="order-1 w-1/2 md:w-full md:order-2">
           <h2 className="pt-2 text-lg font-bold">Values</h2>

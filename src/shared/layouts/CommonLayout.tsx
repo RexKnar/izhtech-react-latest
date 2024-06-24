@@ -15,8 +15,8 @@ export default function  CommonLayout() {
         <Outlet />
 
         {currentPath !== "/contact" && (
-          <section className="py-20 bg-black">
-            <div className="container mx-auto">
+          <section className="py-12 bg-black md:py-20">
+            <div className="px-4 mx-auto md:container md:px-0">
               <Collaboration />
             </div>
           </section>
