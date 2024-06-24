@@ -75,7 +75,7 @@ const processContentSetOne = [
 
 
 
-            <div className="flex flex-col w-full py-4 md:gap-8 md:flex-row lg:flex-row lg:flex-wrap lg:justify-center">
+            <div className="flex flex-col w-full px-5 py-4 md:gap-8 md:flex-row lg:flex-row lg:flex-wrap lg:justify-center">
 
             <div className="flex flex-col md:flex-1 lg:w-1/4">
             <Accordion items={processContentSetOne} />

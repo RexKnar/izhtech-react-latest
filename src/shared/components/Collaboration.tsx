@@ -4,7 +4,7 @@ import { LinkButton } from "./buttons/LinkButton";
 export default function Collaboration() {
     return (
         
-            <><div className="flex flex-col justify-between w-full py-4 border-b-2 md:flex-row lg:flex-row border-neutral-800 ">
+            <><div className="flex flex-row justify-between w-full py-4 border-b-2 align-item-center md:flex-col md:flex-row lg:flex-row border-neutral-800 ">
             <div className="mb-4 md:w-1/2 lg:w-full">
                 <p className="pb-2 text-xs text-white">LET'S COLLABORATE</p>
                 <h1 className="pb-4 font-bold text-white text-md lg:text-6xl md:text-4xl sm:text-2xl">
@@ -15,7 +15,7 @@ export default function Collaboration() {
             </div>
             <div className="flex justify-end my-auto lg:flex-row lg:w-1/4">
           
-          <LinkButton className="text-lg h-11 w-36 "  href="/contact" variant={'gradient'}>Contact Us</LinkButton>
+          <LinkButton size={'sm'}  href="/contact" variant={'gradient'}>Contact Us</LinkButton>
           
             </div>
         </div><div>
