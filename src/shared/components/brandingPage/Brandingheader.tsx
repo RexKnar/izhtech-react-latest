@@ -10,15 +10,15 @@ type titleValue = {
 export default function Brandingheader({ title }: titleValue) {
 
   return (
-    <motion.section className=" py-4 bg-transparent" variants={fadeIn("right", 0.3)}
+    <motion.section className=" pt-4 lg:py-4 bg-transparent" variants={fadeIn("right", 0.3)}
       initial="hidden"
       whileInView="show"
       exit="hidden"
     >
       <div className="container lg:w-full sm:w-[75%] sm:px-14">
-        <div className="flex flex-col justify-end h-full pb-5 ps-2">
+        <div className="flex flex-col justify-end h-full pb-4 ps-2">
           <p className="pt-4 font-semibold text-xs">Our Service</p>
-          <h1 className="pt-2 font-bold lg:w-3/4 2xl:text-7xl lg:text-4xl md:text-4xl sm:text-4xl">
+          <h1 className="pt-2 font-bold lg:w-3/4 2xl:text-7xl lg:text-6xl text-5xl">
             {title}
           </h1>
         </div>

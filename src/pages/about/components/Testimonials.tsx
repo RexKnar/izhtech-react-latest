@@ -1,6 +1,7 @@
 import { Carousel } from "flowbite-react";
 import { MoveLeft, MoveRight } from "lucide-react";
 import { customTheme } from "../../../shared/configs/testimonialSliderConfig";
+import { LinkButton } from "../../../shared/components/buttons/LinkButton";
 
 export default function Testimonials() {
   return (
@@ -11,9 +12,9 @@ export default function Testimonials() {
           What our clients say
           <br /> about Izh-Tech.
         </h1>
-        <button className="h-6 mt-3 text-xs text-white rounded w-28 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2l">
-          More Reviews <span>{"->"}</span>
-        </button>
+        <LinkButton variant={"gradient"}>
+             more info
+            </LinkButton> 
       </div>
       <div className="w-full sm:w-2/4">
 
