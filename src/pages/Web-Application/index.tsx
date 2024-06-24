@@ -10,7 +10,10 @@ import { datas } from "../../shared/components/data/webApplication";
 
 export default function WebApplication() {
     return   <>
-    <Brandingheader title={"Web Application"} />
+    <section className="px-5 mx-auto md:container ">
+        <Brandingheader title={"Web Application"} />
+    </section>
+    
     <Servicedetails company_details="At IZH Tech, we create custom websites and provide programming services for all types of businesses, whether B2B or B2C. We have a variety of services to choose from to meet different needs. Our skilled team is dedicated to making personalized solutions for each client, ensuring a strong online presence. From designing websites to programming, we offer a complete set of services to help businesses succeed in the digital world
 "
             header=""

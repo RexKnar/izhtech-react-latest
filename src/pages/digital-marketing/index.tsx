@@ -11,7 +11,10 @@ import { datas } from "../../shared/components/data/digitalmarketing";
 
 export default function DigitalMarketing() {
     return <>
-     <Brandingheader title={"Digital Marketing"} />
+    <section className="px-5 mx-auto md:container ">
+        <Brandingheader title={"Digital Marketing"} />
+    </section>
+     
     <Servicedetails company_details="If you want more people to visit your website, get interested customers, or make more sales online, Izh-Tech is here to help. We're experts at making your online strategy better. Let us be your guide in the online world, making sure you not only reach your goals but go beyond them. Join hands with Izh-Tech, and together, we'll make your online presence a big success. Your journey to growing online starts now!"
 
             header="Enhance Your Digital Presence with Expert Digital Marketing Strategies"
