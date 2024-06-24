@@ -9,7 +9,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "about",
-    label: "About",
+    label: "About Us",
     icon: null,
     path: "/about",
   },
@@ -21,7 +21,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "contact",
-    label: "Contact",
+    label: "Contact Us",
     icon: null,
     path: "/contact",
   },
