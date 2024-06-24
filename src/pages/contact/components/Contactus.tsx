@@ -30,7 +30,7 @@ export default function Contactus() {
               exit={"hidden"}
               viewport={{ once: false, amount: 0.1 }}>
       <CustomObject
-        className="absolute z-10 opacity-25 top-10 xl:-right-32 z-1"
+        className="absolute opacity-25 z-1 top-10 xl:-right-32"
         variants="long-line-orange-left"
       />
       </motion.div>

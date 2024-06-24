@@ -1,6 +1,6 @@
 export default function Ourclients() {
     return (
-        <div className="py-8 mx-auto md:container md:px-0 ">
+        <div className="py-8 mx-auto md:container ">
             <div className="flex flex-col content-center pt-6 pb-6 text-black sm:flex-col md:flex-col lg:flex-row ">
                 <div className="">
                     <p className="text-xs">
