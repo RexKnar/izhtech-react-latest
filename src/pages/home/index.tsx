@@ -10,7 +10,7 @@ import { fadeIn } from "../../shared/animation/variants";
 import { motion } from "framer-motion";
 import Platforminsights from "./components/Platforminsights";
 import IzhtechScroll from "../../shared/components/IzhtechScroll";
-import BlogList from "./components/BlogList";
+// import BlogList from "./components/BlogList";
 
 
 export default function Home() {
