@@ -21,7 +21,7 @@ export default function About() {
        
           <Capabilities />
           </section>
-          <section className="px-5 mx-auto bg-slate-100">
+          <section className="px-5 mx-auto md:px-0 bg-slate-100">
             <Ourclients/>
             </section>
 
