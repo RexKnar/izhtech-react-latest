@@ -43,7 +43,7 @@ export default function Ourservice() {
   };
 
   return (
-    <section className="lg:px-10 pb-20 pt-28 bg-[#F5F7FF] rounded">
+    <section className="lg:px-10 pb-18 pt-18 bg-[#F5F7FF] rounded">
    {/* <div className="flex-col justify-center gap-4 px-5 my-auto h-4/5 lg:flex lg:flex-row">  */}
     <div className="relative py-10">
       

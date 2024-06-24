@@ -55,7 +55,7 @@ export default function ImageFirstServiceBlock(props: ServiceBlockProps) {
       
           
 
-          <LinkButton href={`${props.link}`} >Know more</LinkButton>
+          <LinkButton href={`${props.link}`} size={'sm'} >Know more</LinkButton>
 
         </motion.div>
       </div>

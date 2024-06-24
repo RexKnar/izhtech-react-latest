@@ -39,7 +39,7 @@ export default function banner() {
   exit={"hidden"}
   viewport={{ once: false, amount:0.1 }} className="relative flex flex-col justify-end h-full pb-5 mx-auto my-auto lg:w-3/6 sm:w-full ">
     <CustomObject
-          className="absolute -left-28 w-100 h-80 -z-1 -top-20 lg:-top-20 max-w-screen-2xl"
+          className="absolute hidden -left-28 w-100 h-80 -z-1 -top-20 lg:-top-20 max-w-screen-2xl lg:block"
           variants="blue-short-line-left"
         />
        

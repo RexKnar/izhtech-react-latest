@@ -61,7 +61,7 @@ export default function TextFirstServiceBlock(props: ServiceBlockProps) {
 
           <Accordion items={props.listItem} />
 
-          <LinkButton href={`${props.link}`} >Know more</LinkButton>
+          <LinkButton href={`${props.link}`} size={'sm'} >Know more</LinkButton>
 
         </motion.div>
       </div>
