@@ -25,7 +25,7 @@ export default function About() {
             <Ourclients/>
             </section>
 
-        <section className="bg-black container-fluid">
+        <section className="bg-black container-fluid ">
           <Testimonials />
         </section>
        
