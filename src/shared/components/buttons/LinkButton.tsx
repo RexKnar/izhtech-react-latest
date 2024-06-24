@@ -8,7 +8,7 @@ const linkButtonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'relative flex items-center justify-center h-8 mt-4 text-sm font-bold text-white rounded bg-indigo-950  border-1 ',
+        default: 'relative px-2 flex items-center justify-center h-8 mt-4 text-sm font-bold text-white rounded bg-indigo-950  border-1 ',
         gradient: ' text-sm text-white rounded bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  rounded-2l',
         destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         outline: 'w-32 px-2 py-1 text-xs font-bold text-black border-2 border-black rounded bg-transparent',
@@ -18,8 +18,8 @@ const linkButtonVariants = cva(
         mild: 'bg-gray-300 text-gray-foreground hover:bg-gray/90 text-white',
       },
       size: {
-        default: 'h-9 px-3 rounded-md w-28',
-        sm: 'h-8 py-1 px-4 w-28',        
+        default: 'h-9 px-3 rounded-md w-32',
+        sm: 'h-8 py-1 px-4 w-32',        
         lg: 'h-11 px-8 rounded-md w-32',
         xs: 'h-7 px-3 rounded-md',
       },
@@ -50,7 +50,7 @@ const LinkButton = React.forwardRef<HTMLAnchorElement, LinkButtonProps>(
           {children}
         </span>
        {showArrow && <ArrowRightIcon
-          className="absolute w-4 h-4 transition-opacity duration-300 opacity-0 right-4 group-hover:opacity-100"
+          className="absolute w-4 h-4 transition-opacity duration-300 opacity-0 right-3 group-hover:opacity-100"
         />
        }
       </a>
