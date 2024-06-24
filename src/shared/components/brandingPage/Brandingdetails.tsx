@@ -9,7 +9,7 @@ export default function Brandingdetails({ datas }:any) {
     text:string
   }
  
-  return <div className="w-full bg-black text-white grid justify-center items-center mx-auto  ">
+  return (
   <div className="grid lg:grid-cols-3 lg:gap-14 lg:p-16 py-[4rem]  p-8 gap-[3.3rem]  " >
       {datas.map((item:items) => {
       return <motion.li key={item?.id} className=" list-none  " variants={fadeIn("up", 0.3)}
@@ -25,7 +25,7 @@ export default function Brandingdetails({ datas }:any) {
   
   })}
     </div>
-    </div>
 
+  )
 
 }
