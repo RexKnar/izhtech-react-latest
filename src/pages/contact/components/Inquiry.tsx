@@ -7,7 +7,7 @@ export default function Inquiry() {
     <section className="">
        
                        
-      <div className="flex flex-col p-4 lg:flex-row md:flex-row lg:px-8 md:gap-1 xl:gap-6">
+      <div className="flex flex-col lg:flex-row md:flex-row lg:px-8 md:gap-1 xl:gap-6">
         <motion.div variants={fadeIn("right", 0.1)}
               initial="hidden"
               whileInView={"show"}
@@ -33,7 +33,7 @@ export default function Inquiry() {
       </div>
     </section>
     <section>
-        <div className="flex-none p-4 py-4 lg:px-8 md:px-4 lg:flex xl:gap-6 ">
+        <div className="flex-none py-4 lg:px-8 md:px-4 lg:flex xl:gap-6 ">
           <motion.div  variants={fadeIn("right", 0.1)}
               initial="hidden"
               whileInView={"show"}
