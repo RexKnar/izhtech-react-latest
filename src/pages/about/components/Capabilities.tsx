@@ -9,7 +9,7 @@ export default function PlatformInsights() {
         <motion.div variants={fadeIn("right", 0.3)}
   initial="hidden"
   whileInView={"show"}
-  viewport={{ once: false, amount:0.1 }} className="flex flex-col justify-center w-full px-5 py-10 lg:py-0 md:flex-1 lg:w-1/2 lg:w-1/4 lg:ps-5 2xl:ps-48 ">
+  viewport={{ once: false, amount:0.1 }} className="flex flex-col justify-center w-full py-10 lg:py-0 md:flex-1 lg:w-1/2 lg:w-1/4 lg:ps-5 2xl:ps-48 ">
           <CustomObject className="absolute -z-10" variants="green-disk" />
           <p className="text-xs">CAPABILITIES </p>
           <h1 className="pt-2 text-4xl font-bold ">
