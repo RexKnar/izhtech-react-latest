@@ -1,21 +1,20 @@
 import { Carousel } from "flowbite-react";
 import { MoveLeft, MoveRight } from "lucide-react";
 import { customTheme } from "../../../shared/configs/testimonialSliderConfig";
+import { LinkButton } from "../../../shared/components/buttons/LinkButton";
 
 export default function Testimonials() {
   return (
     <div className="container relative flex flex-col xl:gap-[15%] lg:gap[12%] py-20 mx-auto text-left md:flex-row">
-      <div className="w-full sm:w-2/4">
+      <div className="w-full mb-10 sm:w-2/4">
         <h1 className="text-sm text-gray-200">TESTIMONIALS</h1>
         <h1 className="pt-4 mt-3 text-2xl font-bold text-white border-t xl:text-4xl sm:text-3xl border-t-gray-700">
           What our clients say
           <br /> about Izh-Tech.
         </h1>
-        <button className="h-6 mt-3 text-xs text-white rounded w-28 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2l">
-          More Reviews <span>{"->"}</span>
-        </button>
+        <LinkButton href="/contact" size={'xs'} className="w-1/4 mt-5" variant={'gradient'}>Lets Connect</LinkButton>
       </div>
-      <div className="w-full sm:w-2/4">
+      <div className="w-full sm:w-2/4 ">
 
         <Carousel
           theme={customTheme}

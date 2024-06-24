@@ -5,9 +5,10 @@ import { useEffect, useRef, useState } from "react"
 
 type progress = {
     progressTime: number;
+    className?: string;
 }
 
-export default function ProgressBar({progressTime}:progress) {
+export default function ProgressBar({progressTime, className}:progress) {
 
     const themeCustom:CustomFlowbiteTheme['progress']={
         "base": "w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700",
@@ -72,10 +73,10 @@ export default function ProgressBar({progressTime}:progress) {
                 
                 theme={themeCustom}
                  progress={progressValue}
-                size="sm"
+                size="md"
                 color="gradient"
               // className="bg-gradient-to-r mt-5 from-indigo-500 via-purple-500 to-pink-500 h-1 rounded-full w-[50%] relative"
-                className={`w-[40%] mt-5  rounded-full relative `}
+                className={` mt-5  rounded-full relative ${className} `}
                 
           
             /></div>

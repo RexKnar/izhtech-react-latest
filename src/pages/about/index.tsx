@@ -3,9 +3,10 @@ import Banner from "./components/Banner";
 import Capabilities from "./components/Capabilities";
 
 import Counts from "./components/Counts";
-import Slider from "../home/components/Slider";
 
 import Testimonials from "./components/Testimonials";
+import Ourclients from "./components/Ourclients";
+import OurTeam from "./components/Ourteam";
 
 export default function About() {
   return (
@@ -15,23 +16,25 @@ export default function About() {
         
           <Aboutus />
         </section>
-        <section className="px-5 mx-auto md:container ">
-       
+       <section className="px-5 mx-auto ">
           <Banner />
-        </section>
-        <section className="px-5 mx-auto md:container md:px-0">
-         
+       
           <Capabilities />
-        </section>
-        <section className="relative px-5 mx-auto mb-20 xl:px-20 container-fluid xl:container lg:pt-20">
-          <Slider />
-        </section>
+          </section>
+          <section className="px-5 mx-auto bg-slate-100">
+            <Ourclients/>
+            </section>
+
         <section className="bg-black container-fluid">
           <Testimonials />
         </section>
        
         <section className="mx-auto md:px-0">
           <Counts />
+        </section>
+
+        <section className="bg-black container-fluid">
+          <OurTeam />
         </section>
        
       </section>

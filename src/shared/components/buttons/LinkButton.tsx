@@ -19,7 +19,7 @@ const linkButtonVariants = cva(
       },
       size: {
         default: 'h-9 px-3 rounded-md w-28',
-        sm: 'h-10 py-2 px-4 w-28',        
+        sm: 'h-8 py-1 px-4 w-28',        
         lg: 'h-11 px-8 rounded-md w-32',
         xs: 'h-7 px-3 rounded-md',
       },
