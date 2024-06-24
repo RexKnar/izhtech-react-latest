@@ -33,7 +33,7 @@ export default function Home() {
       </section>
 
 
-        <section className="container grid w-full mx-auto bg-white">
+        <section className="container grid hidden w-full mx-auto bg-white md:block">
           <Partnercompany />
         </section>
 
