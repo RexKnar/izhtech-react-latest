@@ -11,7 +11,7 @@ const linkButtonVariants = cva(
         default: 'relative flex items-center justify-center h-8 mt-4 text-sm font-bold text-white rounded bg-indigo-950  border-1 ',
         gradient: ' text-sm text-white rounded bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  rounded-2l',
         destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
-        outline: 'w-32 px-2 py-1 text-xs font-bold text-black border-2 border-black rounded',
+        outline: 'w-32 px-2 py-1 text-xs font-bold text-black border-2 border-black rounded bg-transparent',
         secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'underline-offset-4 hover:underline text-primary',

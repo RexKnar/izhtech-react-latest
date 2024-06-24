@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../../shared/animation/variants";
 import MissionStatement from "./Missionstatement";
 import CustomObject from "../../../shared/components/CustomObjects";
-import { Link } from "react-router-dom";
+
+import { LinkButton } from "../../../shared/components/buttons/LinkButton";
 
 export default function banner() {
   return (
@@ -24,10 +25,11 @@ export default function banner() {
             <p className="z-10 pt-4 pb-4 text-xs text-justify">
             We are dedicated to advancing your business. Whether you're a growing startup, a traditional business adapting to digital transformation, or an individual entrepreneur, our tailored suite of services is strategically crafted to enhance your online visibility and elevate your digital presence.
             </p>
-            <Link to={'/about'} className="w-32 px-2 py-1 text-xs font-bold text-black border-2 border-black rounded">
+            <LinkButton href={'/about'} variant={"outline"} size={"xs"}>
               Explore More
+            </LinkButton> 
             
-            </Link>
+          
           </div>
 
         </motion.div>
