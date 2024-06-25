@@ -14,7 +14,7 @@ export default function ImageFirstServiceBlock(props: ServiceBlockProps) {
               initial="hidden"
               whileInView={"show"}
               exit={"hidden"}
-              viewport={{ once: false, amount: 0.1 }} style={{ backgroundImage: `url('${props.imageSrc}')` }} className={`w-[100%] flex bg-center h-[20rem] lg:w-1/2 lg:h-[40rem] `}>
+              viewport={{ once: false, amount: 0.1 }} style={{ backgroundImage: `url('${props.imageSrc}')` }} className={`w-[100%] bg-no-repeat flex bg-cover h-[20rem] lg:w-1/2 lg:h-[40rem] `}>
               
           <div className="flex items-end self-end justify-end hidden">
             <div className="grid justify-center p-6 text-white bg-indigo-950 md:pr-32">

@@ -4,6 +4,7 @@ import { fadeIn } from "../../../shared/animation/variants";
 import CustomObject from "../../../shared/components/CustomObjects";
 
 export default function Hero() {
+
   return (
     <>
       <div className="md:container relative flex justify-center md:h-full h-[60vh] mx-auto ">
@@ -51,7 +52,9 @@ export default function Hero() {
           loop={true}
           className="absolute bottom-0 right-0 w-[75%] md:bottom-[-14rem] md:w-[25%] md:right-[-9rem] z-[-1]"
         /> */}
-        {/* <Lottie animationData={circle} loop={true} className="absolute top-[-9rem] right-[-9rem] z-[-1]"/> */}
+             
+
+
       </div>
       <motion.span
         variants={fadeIn("right", 0.5)}

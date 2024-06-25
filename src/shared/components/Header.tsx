@@ -5,6 +5,8 @@ import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function Header() {
+
+  
   const location = useLocation();
   const currentPath = location.pathname || "/";
 
@@ -66,6 +68,7 @@ export default function Header() {
           );
         })}
       </Navbar.Collapse>
+
     </Navbar>
   );
 }

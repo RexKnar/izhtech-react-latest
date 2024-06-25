@@ -5,7 +5,7 @@ import { ServiceBlockProps } from "../../shared/components/types/services";
 
 export default function Services() {
   const brandingContent: ServiceBlockProps = {
-    imageSrc: "images/servicepage/img.png",
+    imageSrc: "images/Ourservice/branding.png",
     serviceName: "Branding",
     navPath: "",
     link:"/branding",
