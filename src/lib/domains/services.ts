@@ -1,3 +1,5 @@
+import { ServicesFeaturesModal } from "./serviceFeatures";
+import { ServicesHighlightsModal } from "./serviceHighlights";
 export type ServicesModal ={
     id: string,
     title?:string,
@@ -10,7 +12,8 @@ export type ServicesModal ={
     createdAt?:string;
     updatedAt?:string;
     deletedAt?:string;
+    serviceFeatures  : ServicesFeaturesModal[];
+    serviceHighlights : ServicesHighlightsModal[];
 
-}
-
+}   
 export type AddServiceModel= Omit<ServicesModal, 'id' | 'updatedAt' | 'deletedAt' | 'createdAt' >

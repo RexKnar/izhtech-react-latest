@@ -12,6 +12,8 @@ import MobileApplication from "./pages/mobile-Apllication";
 import DigitalMarketing from "./pages/digital-marketing";
 import CommonLayout from "./shared/layouts/CommonLayout";
 import WebApplication from "./pages/Web-Application";
+
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,10 +33,13 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-
+const queryClient = new QueryClient()
 ReactDOM.render(
   <React.StrictMode>
+    
+    <QueryClientProvider client={queryClient}>
     <RouterProvider router={router} />
+    </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

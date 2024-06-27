@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Minus, Plus , ArrowUpRightSquare } from "lucide-react";
+import { ServiceFeature } from "../../pages/services";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const AccordionItem = ({ header, content, i, expanded, setExpanded }: any) => {
@@ -40,7 +41,8 @@ const AccordionItem = ({ header, content, i, expanded, setExpanded }: any) => {
             }}
             transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
-            <p className="p-5 text-sm text-black">{content}</p>
+            {/* <p className="p-5 text-sm text-black">{content}</p> */}
+            <div className="p-5 text-sm text-black" dangerouslySetInnerHTML={{ __html: content }} />
           </motion.section>
         )}
       </AnimatePresence>
@@ -48,17 +50,17 @@ const AccordionItem = ({ header, content, i, expanded, setExpanded }: any) => {
   );
 };
 
-export default function Accordion({ items }: { items: { title: string; description: string }[] }) {
+export default function Accordion({ items }: { items: ServiceFeature[] }) {
   const [expanded, setExpanded] = useState<false | number>(0);
   return (
     <div className="flex flex-col gap-2">
-      {items.map((item: { title: string; description: string }, index: number) => {
+      {items.map((item: ServiceFeature, index: number) => {
         return (
           <AccordionItem
             i={index}
             expanded={expanded}
             setExpanded={setExpanded}
-            header={item.title}
+            header={item.name}
             content={item.description}
           />
         );

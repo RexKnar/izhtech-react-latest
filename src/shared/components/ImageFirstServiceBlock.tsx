@@ -1,20 +1,24 @@
 
-import { ServiceBlockProps } from "./types/services";
+
 import { fadeIn } from "../animation/variants";
 import { motion } from "framer-motion";
 import Counter from "../animation/Counter";
 import  Accordion  from "./Accordion";
 import { LinkButton } from "./buttons/LinkButton";
+import { ServicesModal } from "../../lib/domains/services";
 
-export default function ImageFirstServiceBlock(props: ServiceBlockProps) {
+
+export default function ImageFirstServiceBlock(props: ServicesModal) {
+  const {id,title,shortNote,featuredImagePath,serviceHighlights} = props;
+  
   return (
     <section className="container-fluid ">
       <div className="flex flex-col items-center sm:flex-col md:flex-col lg:flex-row xl:flex-row lg:gap-5">
         <motion.div  variants={fadeIn("right", 0.1)}
               initial="hidden"
               whileInView={"show"}
-              exit={"hidden"}
-              viewport={{ once: false, amount: 0.1 }} style={{ backgroundImage: `url('${props.imageSrc}')` }} className={`w-[100%] bg-no-repeat flex bg-cover h-[20rem] lg:w-1/2 lg:h-[40rem] `}>
+              exit={"hidden"} 
+              viewport={{ once: false, amount: 0.1 }} style={{ backgroundImage: `url('${import.meta.env.VITE_BASE_URL}/${featuredImagePath}')` }} className={`w-[100%] bg-no-repeat flex bg-cover h-[20rem] lg:w-1/2 lg:h-[40rem] `}>
               
           <div className="flex items-end self-end justify-end hidden">
             <div className="grid justify-center p-6 text-white bg-indigo-950 md:pr-32">
@@ -47,15 +51,16 @@ export default function ImageFirstServiceBlock(props: ServiceBlockProps) {
               exit={"hidden"}
               viewport={{ once: false, amount: 0.1 }} className="w-full px-5 py-10 lg:py-0 md:flex-1 lg:w-1/2 lg:w-1/4 lg:pe-20 xl:pe-36">
           <p className="pb-2 text-xs">OUR SERVICES</p>
-          <h1 className="pb-2 text-3xl font-bold"> {props.serviceName}</h1>
-          <p className="pb-6 text-xs">{props.description}</p>
+          <h1 className="pb-2 text-3xl font-bold"> {title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: shortNote }} />
+          {/* <p className="pb-6 text-xs" dangerouslySetInnerHTML={{__html:shortNote}}></p> */}
 
 
-           <Accordion items={props.listItem} />
+           <Accordion items={serviceHighlights} />
       
           
 
-          <LinkButton href={`${props.link}`} size={'sm'} >Know more</LinkButton>
+          <LinkButton href={`/service-detail/${id}`} size={'sm'} >Know more</LinkButton>
 
         </motion.div>
       </div>

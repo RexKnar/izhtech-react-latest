@@ -10,13 +10,16 @@ import { GET_SERVICES_LIST } from "../endpoints";
 
   function getServiceList(options?:UseQueryOptions<ServicesModal[]>
                          ): UseQueryOptions<ServicesModal[]> {
+                          console.log('dead');
             return {
                 ...options,
                 queryKey: [GET_SERVICES_LIST],
                 queryFn: async () => {
-                    return await makeAPICall<ServicesModal[]>(
+                    const data=await makeAPICall<ServicesModal[]>(
                         GET_SERVICES_LIST
                     );
+                    console.log(data);
+                    return data;
                   },
             }
   }
