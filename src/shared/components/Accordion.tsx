@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Minus, Plus , ArrowUpRightSquare } from "lucide-react";
-import { ServiceFeature } from "../../pages/services";
+import { ServicesFeaturesModal } from "../../lib/domains/serviceFeatures";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const AccordionItem = ({ header, content, i, expanded, setExpanded }: any) => {
@@ -50,17 +50,17 @@ const AccordionItem = ({ header, content, i, expanded, setExpanded }: any) => {
   );
 };
 
-export default function Accordion({ items }: { items: ServiceFeature[] }) {
+export default function Accordion({ items }: { items: ServicesFeaturesModal[] }) {
   const [expanded, setExpanded] = useState<false | number>(0);
   return (
     <div className="flex flex-col gap-2">
-      {items.map((item: ServiceFeature, index: number) => {
+      {items.map((item: ServicesFeaturesModal, index: number) => {
         return (
           <AccordionItem
             i={index}
             expanded={expanded}
             setExpanded={setExpanded}
-            header={item.name}
+            header={item.title}
             content={item.description}
           />
         );

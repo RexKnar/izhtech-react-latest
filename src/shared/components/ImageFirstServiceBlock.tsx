@@ -9,7 +9,7 @@ import { ServicesModal } from "../../lib/domains/services";
 
 
 export default function ImageFirstServiceBlock(props: ServicesModal) {
-  const {id,title,shortNote,featuredImagePath,serviceHighlights} = props;
+  const {id,title,shortNote,featuredImagePath,serviceFeatures} = props;
   
   return (
     <section className="container-fluid ">
@@ -52,12 +52,9 @@ export default function ImageFirstServiceBlock(props: ServicesModal) {
               viewport={{ once: false, amount: 0.1 }} className="w-full px-5 py-10 lg:py-0 md:flex-1 lg:w-1/2 lg:w-1/4 lg:pe-20 xl:pe-36">
           <p className="pb-2 text-xs">OUR SERVICES</p>
           <h1 className="pb-2 text-3xl font-bold"> {title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: shortNote }} />
-          {/* <p className="pb-6 text-xs" dangerouslySetInnerHTML={{__html:shortNote}}></p> */}
+          <div dangerouslySetInnerHTML={{ __html: shortNote?.toString() || '' }} />
 
-
-           <Accordion items={serviceHighlights} />
-      
+           <Accordion items={serviceFeatures} />
           
 
           <LinkButton href={`/service-detail/${id}`} size={'sm'} >Know more</LinkButton>

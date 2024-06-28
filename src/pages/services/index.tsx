@@ -1,6 +1,7 @@
 import Ourservices from "./components/Ourservices";
 import ImageFirstServiceBlock from "../../shared/components/ImageFirstServiceBlock";
 import { useGetServicesListQuery } from "../../lib/queries/services/useGetServicesListQuery";
+import { ServicesModal } from "../../lib/domains/services";
 
 
 export default function Services() {
@@ -15,15 +16,11 @@ export default function Services() {
     <Ourservices />
     </section>
          
-         {servicesList?.map((serviceDetail:any)=>{
+         {servicesList?.map((serviceDetail:ServicesModal)=>{
            return (<ImageFirstServiceBlock key={serviceDetail.id} {...serviceDetail} />)
          }) }
-        
-        {/* <ImageFirstServiceBlock {...brandingContent} />
-        <TextFirstServiceBlock {...webAppContent} />
-        <ImageFirstServiceBlock {...mobileAppContent} />
-        <TextFirstServiceBlock {...digitalMarketingContent} /> */}
-      </section>
+
+    </section>
 
     
    

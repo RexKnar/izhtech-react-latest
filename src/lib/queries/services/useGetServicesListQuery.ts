@@ -3,9 +3,9 @@ import {
     UseQueryOptions,
     UseQueryResult,
   } from '@tanstack/react-query';
-import { makeAPICall } from "../api";
-import { ServicesModal } from "../domains/services";
-import { GET_SERVICES_LIST } from "../endpoints";
+import { GET_SERVICES_LIST } from '../../endpoints';
+import { ServicesModal } from '../../domains/services';
+import { makeAPICall } from '../../api';
 
 
   function getServiceList(options?:UseQueryOptions<ServicesModal[]>

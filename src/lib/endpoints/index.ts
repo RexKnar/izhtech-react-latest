@@ -4,7 +4,7 @@ import { EndpointDetails } from "./type";
 export const GET_SERVICES_LIST = `GET_SERVICES`;
 export const GET_POST_LIST = `GET_POST_LIST`;
 export const GET_CATEGORY_LIST = `GET_CATEGORY_LIST`;
-export const ADD_CONTACTS = `ADD_CONTACTS`;
+export const GET_CONTACT_LIST = `GET_CONTACT_LIST`;
 
 
 export default <EndpointDetails>{
@@ -20,7 +20,7 @@ export default <EndpointDetails>{
         requestType: `GET`,
         endpoint: `/api/admin/category`,
       },
-      [ADD_CONTACTS]: {
+      [GET_CONTACT_LIST]: {
         requestType: `POST`,
         endpoint: `/api/contact`,
       },
