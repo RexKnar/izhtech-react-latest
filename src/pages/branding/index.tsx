@@ -9,11 +9,6 @@ import { datas } from "../../shared/components/data/branding";
 
 export default function Branding(){
 
-    // const drandingList:any[]=[{
-    //     title:'',
-    //     description:'',
-    //     icon:''
-    // }]
     return (
        <>
        <section className="px-3 mx-auto md:container ">
