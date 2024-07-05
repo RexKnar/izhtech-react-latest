@@ -5,8 +5,7 @@ export type ServicesHighlightsModal ={
     name:string;
     description: string;    
     imagePath?: string ;   
-    icon?:string;    
-    isFeatuered:boolean;   
+    icon?:string;      
     order:number;     
     isActive:boolean;   
     serviceId:string;   

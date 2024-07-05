@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       { path: '/webapplication', element: <WebApplication /> },
       {path:"/mobileapplication",element:<MobileApplication />},
       { path: "/digitalmarketing", element: <DigitalMarketing /> },
-      { path: "/service-detail", element: <Branding /> },
+      { path: "/service-detail/:id", element: <Branding /> },
   
     ],
   },

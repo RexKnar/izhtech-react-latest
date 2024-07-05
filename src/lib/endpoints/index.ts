@@ -5,6 +5,7 @@ export const GET_SERVICES_LIST = `GET_SERVICES`;
 export const GET_POST_LIST = `GET_POST_LIST`;
 export const GET_CATEGORY_LIST = `GET_CATEGORY_LIST`;
 export const GET_CONTACT_LIST = `GET_CONTACT_LIST`;
+export const GET_SERVICES_BY_ID = `GET_SERVICES_BY_ID`;
 
 
 export default <EndpointDetails>{
@@ -23,5 +24,9 @@ export default <EndpointDetails>{
       [GET_CONTACT_LIST]: {
         requestType: `POST`,
         endpoint: `/api/contact`,
+      },
+      [GET_SERVICES_BY_ID]: {
+        requestType: `GET`,
+        endpoint: `/api/services/[id]`,
       },
 }

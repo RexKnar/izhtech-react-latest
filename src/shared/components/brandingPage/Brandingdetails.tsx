@@ -1,25 +1,21 @@
 import { motion } from "framer-motion"
 import { fadeIn } from "../../animation/variants";
-export default function Brandingdetails({ datas }:any) {
-  
-  interface items{
-    id: number,
-    logo: any,
-    title: string,
-    text:string
-  }
- 
+import { ServicesFeaturesModal } from "../../../lib/domains/serviceFeatures";
+export default function Brandingdetails({ datas }:ServicesFeaturesModal) {
+
+
   return (
   <div className="grid lg:grid-cols-3 lg:gap-14 lg:p-16 py-[4rem]  p-8 gap-[3.3rem]  " >
-      {datas.map((item:items) => {
+      {datas.map((item:ServicesFeaturesModal) => {
       return <motion.li key={item?.id} className=" list-none  " variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView="show"
         exit="hidden">
         
-         <div className="w-[50px] h-[50px] bg-neutral-600 flex justify-center items-center rounded-full"> <p >{item?.logo}</p></div>
+         <div className="w-[50px] h-[50px] bg-neutral-600 flex justify-center items-center rounded-full"> <p >{item?.icon}</p></div>
           <h1 className="text-slate-50 font-bold text-[1.2rem] py-3">{item?.title}</h1>
-          <p className="text-slate-300">{ item?.text}</p>
+
+          {<div className="text-slate-300" dangerouslySetInnerHTML={{ __html: item?.description }}/>}
 
       </motion.li>
   

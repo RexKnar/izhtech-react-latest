@@ -10,7 +10,6 @@ import { makeAPICall } from '../../api';
 
   function getServiceList(options?:UseQueryOptions<ServicesModal[]>
                          ): UseQueryOptions<ServicesModal[]> {
-                          console.log('dead');
             return {
                 ...options,
                 queryKey: [GET_SERVICES_LIST],
@@ -18,7 +17,6 @@ import { makeAPICall } from '../../api';
                     const data=await makeAPICall<ServicesModal[]>(
                         GET_SERVICES_LIST
                     );
-                    console.log(data);
                     return data;
                   },
             }

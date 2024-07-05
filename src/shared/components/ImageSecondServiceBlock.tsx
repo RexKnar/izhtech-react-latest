@@ -8,29 +8,13 @@ import { LinkButton } from "./buttons/LinkButton";
 import { ServicesModal } from "../../lib/domains/services";
 
 
-export default function ImageFirstServiceBlock(props: ServicesModal) {
+export default function ImageSecondServiceBlock(props: ServicesModal) {
   const {id,title,shortNote,featuredImagePath,serviceFeatures} = props;
   
   
   return (
     <section className="container-fluid ">
       <div className="flex flex-col items-center sm:flex-col md:flex-col lg:flex-row xl:flex-row lg:gap-5">
-       
-        <motion.div  variants={fadeIn("left", 0.1)}
-              initial="hidden"
-              whileInView={"show"}
-              exit={"hidden"}
-              viewport={{ once: false, amount: 0.1 }} className="w-full px-5 py-10 lg:py-0 md:flex-1 lg:w-1/2 lg:w-1/4 lg:pe-20 xl:pe-36">
-          <p className="pb-2 text-xs">OUR SERVICES</p>
-          <h1 className="pb-2 text-3xl font-bold"> {title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: shortNote?.toString() || '' }} />
-
-           <Accordion items={serviceFeatures} />
-          
-
-          <LinkButton href={`/service-detail/${id}`} size={'sm'} >Know more</LinkButton>
-
-        </motion.div>
         <motion.div  variants={fadeIn("right", 0.1)} 
               initial="hidden"
               whileInView={"show"}
@@ -61,6 +45,21 @@ export default function ImageFirstServiceBlock(props: ServicesModal) {
               <p className="pt-2 text-xs">awards for digital innovation</p>
             </div>
           </div>
+        </motion.div>
+        <motion.div  variants={fadeIn("left", 0.1)}
+              initial="hidden"
+              whileInView={"show"}
+              exit={"hidden"}
+              viewport={{ once: false, amount: 0.1 }} className="w-full px-5 py-10 lg:py-0 md:flex-1 lg:w-1/2 lg:w-1/4 lg:pe-20 xl:pe-36">
+          <p className="pb-2 text-xs">OUR SERVICES</p>
+          <h1 className="pb-2 text-3xl font-bold"> {title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: shortNote?.toString() || '' }} />
+
+           <Accordion items={serviceFeatures} />
+          
+
+          <LinkButton href={`/service-detail/${id}`} size={'sm'} >Know more</LinkButton>
+
         </motion.div>
       </div>
     </section>
