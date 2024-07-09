@@ -3,6 +3,7 @@ import { fadeIn } from "../../../shared/animation/variants";
 import { useCreateContactMutationQuery } from "../../../lib/queries/contact/useCreateContactMutationQuery";
 import { ContactModel } from "../../../lib/domains/contact";
 import { useForm } from 'react-hook-form';
+import { useGetSiteInfoListQuery } from "../../../lib/queries/siteinfo/useGetAllSiteInfoListQuery";
 
 export default function Inquiry() {
   const {
@@ -12,6 +13,9 @@ export default function Inquiry() {
     formState: { errors },
   } = useForm();
 const{mutateAsync:contactMutation ,isSuccess:isSuccessContact}=useCreateContactMutationQuery();
+const { data: siteInfoList } = useGetSiteInfoListQuery();
+const siteInfo= siteInfoList??[];
+  
 
   const saveContact = async (payload: ContactModel) => {
     try{
@@ -44,12 +48,9 @@ const{mutateAsync:contactMutation ,isSuccess:isSuccessContact}=useCreateContactM
               exit={"hidden"}
               viewport={{ once: false, amount: 0.1 }} className="">
           <h2 className="mb-3 font-black">Singapore</h2>
-          <p>
-            Flora drive, Singapore
-            <br />
-            506889
-          </p>
-          <p className="mb-5 font-black">Call us: +65 89269693</p>
+          {siteInfo[0]?.address
+          }
+          <p className="mb-5 font-black">Call us: {siteInfo[0]?.mobilePrimary}</p>
           <p>Monday-Friday</p>
         </motion.div>
       </div>

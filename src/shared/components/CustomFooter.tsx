@@ -1,9 +1,12 @@
 import { Footer } from "flowbite-react";
 import { Button,  TextInput } from "flowbite-react";
 import logo from "../../assets/Logo/Logo-white.png";
+import { useGetSiteInfoListQuery } from "../../lib/queries/siteinfo/useGetAllSiteInfoListQuery";
 
 export default function CustomFooter() {
   
+  const { data: siteInfoList } = useGetSiteInfoListQuery();
+  const siteInfo= siteInfoList??[];
   return (
     <footer className="py-10 bg-neutral-900">
       <div className="mx-auto md:container">
@@ -13,11 +16,12 @@ export default function CustomFooter() {
           </div>
           <div className="text-stone-50 ">
             <h2 className="font-semibold">Singapore</h2>
+            {siteInfo?.length > 0 && (
             <div className="pt-3 space-y-1 text-gray-300">
               <p>Head Office</p>
-              <p>Flora Drive, Singapore</p>
-              <p>506889.</p>
+              <p> {siteInfo[0]?.address}</p>
             </div>
+            )}
           </div>
           <div className="text-stone-50 ">
             <h2 className="font-semibold">Work Inquiries</h2>

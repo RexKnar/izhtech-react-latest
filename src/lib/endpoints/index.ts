@@ -7,6 +7,8 @@ export const GET_CATEGORY_LIST = `GET_CATEGORY_LIST`;
 export const GET_CONTACT_LIST = `GET_CONTACT_LIST`;
 export const GET_SERVICES_BY_ID = `GET_SERVICES_BY_ID`;
 export const ADD_CONTACTS = `ADD_CONTACTS`;
+export const GET_SITE_INFO_LIST = `GET_SITE_INFO_LIST`;
+export const GET_ALL_TESTIMONIALS = `GET_ALL_TESTIMONIALS`;
 
 
 export default <EndpointDetails>{
@@ -33,5 +35,13 @@ export default <EndpointDetails>{
       [ADD_CONTACTS]: {
         requestType: `POST`,
         endpoint: `/api/contact`,
+      },
+      [GET_SITE_INFO_LIST]:{
+        requestType: `GET`,
+        endpoint: `/api/siteInfo`
+      },
+      [GET_ALL_TESTIMONIALS]:{
+        requestType: `GET`,
+        endpoint: `/api/testimonials`
       },
 }
