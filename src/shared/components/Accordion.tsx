@@ -11,7 +11,7 @@ const AccordionItem = ({ header, content, i, expanded, setExpanded }: any) => {
   return (
     <>
       <motion.button
-        className="flex items-center justify-between w-full px-5 py-5 font-medium text-left text-black bg-gray-100 first:rounded-t-lg last:rounded-b-lg dark:text-gray-400 hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 dark:hover:bg-gray-900 dark:focus:ring-gray-800"
+        className="flex items-center justify-between w-full px-5 py-5 font-medium text-left text-black first:rounded-t-lg last:rounded-b-lg dark:text-gray-400 hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:hover:bg-gray-900 dark:focus:ring-gray-800"
         initial={false}
         onClick={() => setExpanded(isOpen ? false : i)}
       >

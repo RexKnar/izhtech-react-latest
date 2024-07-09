@@ -6,7 +6,7 @@ title:string;
 description: string;    
 imagePath?: string ;   
 icon?:string;    
-isFeatuered:boolean;   
+isFeatured:boolean;   
 order:number;     
 isActive:boolean;   
 serviceId:string;   

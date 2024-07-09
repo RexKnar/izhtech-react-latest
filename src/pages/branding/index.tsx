@@ -9,7 +9,7 @@ import { usegetServiceByIdQuery } from "../../lib/queries/services/useGetService
 import { useParams } from "react-router-dom";
 
 
-export default function Branding(){
+export default function ServiceDetail(){
 
     const { id: serviceId } = useParams();
   

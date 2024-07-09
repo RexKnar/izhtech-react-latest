@@ -1,10 +1,16 @@
 import { Tabs } from "flowbite-react";
 import type { CustomFlowbiteTheme } from "flowbite-react";
-import BrandingService from "./branding/BrandingService";
-import WebDevelopmentService from "./webdevelopment/WebDevlopmentService";
-import MobileAppService from "./mobileapp/MobileAppService";
-import DigitalMarketingService from "./digitalmarketing/DigitalMarketingService";
+// import BrandingService from "./branding/BrandingService";
+// import WebDevelopmentService from "./webdevelopment/WebDevlopmentService";
+// import MobileAppService from "./mobileapp/MobileAppService";
+// import DigitalMarketingService from "./digitalmarketing/DigitalMarketingService";
+import { useGetServicesListQuery } from "../../../lib/queries/services/useGetServicesListQuery";
+import { ServicesModal } from "../../../lib/domains/services";
+import ServicesTab from "./serviceTabs/ServicesTab";
 export default function Ourservice() {
+  
+  const { data: servicesList} = useGetServicesListQuery();
+  
   const customTheme: CustomFlowbiteTheme["tabs"] = {
     base: "flex flex-col ring-transparent align-start md:flex-col  lg:flex-row gap-2 md:gap-4 lg:gap-2 sm:justify-center md:justify-start",
     tablist: {
@@ -44,21 +50,7 @@ export default function Ourservice() {
 
   return (
     <section className="lg:px-10 pb-18 pt-18 bg-[#F5F7FF] rounded">
-   {/* <div className="flex-col justify-center gap-4 px-5 my-auto h-4/5 lg:flex lg:flex-row">  */}
     <div className="relative py-10">
-      
-          {/* <GroupLine  svgClassName="-rotate-90 -translate-x-60 xl:w-[10vw] xl:h-[10vw] w-[20vw] h-[20vw] "
-            ringColor="purple"
-            parentClassName=" absolute z-50 -right-60 md:-right-50"
-      {/* <PieScroll
-            svgClassName="-rotate-90 -translate-x-60 xl:w-[10vw] xl:h-[10vw] w-[20vw] h-[20vw] "
-            ringColor="purple"
-            parentClassName=" absolute z-50 -right-60 md:-right-50"
-          />
-          <GroupLine  svgClassName="-rotate-90 -translate-x-60 xl:w-[10vw] xl:h-[10vw] w-[20vw] h-[20vw] "
-            ringColor="purple"
-            parentClassName=" absolute z-50 -right-60 md:-right-50"
-          /> */}
       <div className="text-center ">
         <p className="pt-4 pb-2 text-xs">#OUR SERVICE</p>
         <h1 className="pb-3 font-bold text-md lg:text-3xl md:text-3xl sm:text-3xl">
@@ -74,24 +66,19 @@ export default function Ourservice() {
           style="pills"
           theme={customTheme}
           className="outline-none "
-        >
-          <Tabs.Item active title="Branding" className="outline-none">
-            <BrandingService />
+        >{servicesList?.map((serviceDetail:ServicesModal) => {
+           
+           return (
+          <Tabs.Item active title={serviceDetail.title} className="outline-none">
+            <ServicesTab key={serviceDetail.id} {...serviceDetail} />
+
           </Tabs.Item>
-          <Tabs.Item
-            title="Web development"
-            className="outline-none"
-          ><WebDevelopmentService /></Tabs.Item>
-          <Tabs.Item title="Mobile app" className="outline-none">
-            <MobileAppService />
-          </Tabs.Item>
-          <Tabs.Item title="Digital marketing" className="outline-none">
-            <DigitalMarketingService/>
-          </Tabs.Item>
+           )
+           
+         }) }
         </Tabs>
       </div>
-    </div>
-    {/* // </div> */}
+    </div>  
     </section>
   );
 }

@@ -75,3 +75,8 @@ circle {
   height: 100%;
   background-color: blue;
 }
+
+
+.services-description *{
+  color: white !important;
+}
