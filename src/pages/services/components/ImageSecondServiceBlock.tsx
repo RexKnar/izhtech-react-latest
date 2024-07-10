@@ -1,11 +1,11 @@
 
 
-import { fadeIn } from "../animation/variants";
+import { fadeIn } from "../../../shared/animation/variants";
 import { motion } from "framer-motion";
-import  Accordion  from "./Accordion";
-import { LinkButton } from "./buttons/LinkButton";
-import { ServicesModal } from "../../lib/domains/services";
-import { ServicesFeaturesModal } from "../../lib/domains/serviceFeatures";
+import  Accordion  from "../../../shared/components/Accordion";
+import { LinkButton } from "../../../shared/components/buttons/LinkButton";
+import { ServicesModal } from "../../../lib/domains/services";
+import { ServicesFeaturesModal } from "../../../lib/domains/serviceFeatures";
 
 
 export default function ImageSecondServiceBlock(props: ServicesModal) {

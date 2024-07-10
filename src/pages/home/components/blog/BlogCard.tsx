@@ -1,7 +1,11 @@
 import { Card } from "flowbite-react";
+import { PostModel } from "../../../../lib/domains/post";
+import { CategoryModel } from "../../../../lib/domains/category";
+import { formatDate } from "../../../../utils";
 
-export default function BlogCard()
-{
+export default function BlogCard({ item }: { item: PostModel }){
+    const id=item.id;
+    const date=formatDate(item?.publishedDate)
     return (
     <Card className="max-w-lg bg-gray-100 h-96">
     <div className="flow-root">
@@ -16,7 +20,7 @@ export default function BlogCard()
                 </div>
                 <div className="flex-1">
                     <p className="text-black text-md ">Posted by</p>
-                    <p className="font-bold text-black text-md">Colin Lucido</p>
+                    <p className="font-bold text-black text-md">{item.author?.name}</p>
                 </div>
                 <svg className="w-6 h-6 text-black" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" />
@@ -34,20 +38,18 @@ export default function BlogCard()
             </div>
         </div>
     </div>
-    <p className="mb-2 text-sm font-medium text-black">Sep 26, 2021 · 9 min read</p>
-    <p className="justify-center mb-2 text-base text-xl font-bold text-black">
-        Creativo Jóvenes: a Designer’s UI/UX Complete Checklist.        </p>
+    <p className="mb-2 text-sm font-medium text-black">{date}</p>
+    <a href={`/blog-detail/${id}`}><p className="justify-center mb-2 text-base text-xl font-bold text-black">{item.title}</p></a>
+    
     <div className="flex flex-row gap-4">
-        <button className="items-center justify-center h-6 text-black bg-gray-200 rounded-lg w-28">
-            <div>
-                <div className="text-sm">Case Study</div>
-            </div>
-        </button>
-        <button className="items-center justify-center h-6 text-black bg-gray-200 rounded-lg w-28">
-            <div>
-                <div className="text-sm">Perspectives</div>
-            </div>
-        </button>
+        {item?.categories?.map((category: CategoryModel, index: number) => (
+          <button
+            key={index}
+            className="items-center justify-center h-6 text-black bg-gray-200 rounded-lg w-28"
+          >
+            <div className="text-xs">{category.name}</div>
+          </button>
+        ))}
     </div>
 </Card>)
 }

@@ -11,6 +11,7 @@ import CommonLayout from "./shared/layouts/CommonLayout";
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import ServiceDetail from "./pages/ServiceDetailPage";
+import Blog from "./pages/blog";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,9 +21,9 @@ const router = createBrowserRouter([
       { path: "/about", element: <About /> },
       { path: "/contact", element: <Contact /> },
       { path: "/service", element: <Services /> },
-      { path: "/blog-detail", element: <BlogDetail /> },
+      { path: "/blog-detail/:id", element: <BlogDetail /> },
       { path: "/service-detail/:id", element: <ServiceDetail /> },
-  
+      { path: "/blog", element: <Blog/> },
     ],
   },
 ]);

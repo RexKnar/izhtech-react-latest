@@ -1,20 +1,15 @@
 import { motion } from "framer-motion"
-import { fadeIn } from "../../animation/variants";
 import { ServicesFeaturesModal } from "../../../lib/domains/serviceFeatures";
-export default function Brandingdetails({ datas }:{datas:ServicesFeaturesModal[]}) {
-  alert();
+import { fadeIn } from "../../../shared/animation/variants";
+
+export default function ServiceFeatureList({ datas }:{datas:ServicesFeaturesModal[]}) {
   const replaceStrings = (str: string) => {
     let newStr = str;
-    newStr = newStr.replace('background-color: rgb(0, 0, 0);','' );
-    newStr = newStr.replace('color: rgb(255, 255, 255);','');
+    newStr = newStr.replace('background-color: rgb(0, 0, 0);','' ).replace('color','');
+    // newStr = newStr.replace('color: rgb(255, 255, 255);','');
     console.log(newStr);
     return newStr;
   };
-  
- 
-
-  
-
   return (
   <div className="grid lg:grid-cols-4 lg:gap-5 lg:p-16 py-[4rem]  p-8 gap-[3.3rem]  " >
       {datas.map((item:ServicesFeaturesModal) => {

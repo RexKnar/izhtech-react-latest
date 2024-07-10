@@ -1,8 +1,8 @@
 import Ourservices from "./components/Ourservices";
 import { useGetServicesListQuery } from "../../lib/queries/services/useGetServicesListQuery";
 import { ServicesModal } from "../../lib/domains/services";
-import ImageFirstServiceBlock from "../../shared/components/ImageFirstServiceBlock";
-import ImageSecondServiceBlock from "../../shared/components/ImageSecondServiceBlock";
+import ImageFirstServiceBlock from "./components/ImageFirstServiceBlock";
+import ImageSecondServiceBlock from "./components/ImageSecondServiceBlock";
 
 
 export default function Services() {
