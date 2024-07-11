@@ -9,6 +9,7 @@ export const GET_SERVICES_BY_ID = `GET_SERVICES_BY_ID`;
 export const ADD_CONTACTS = `ADD_CONTACTS`;
 export const GET_SITE_INFO_LIST = `GET_SITE_INFO_LIST`;
 export const GET_ALL_TESTIMONIALS = `GET_ALL_TESTIMONIALS`;
+export const GET_POST_BY_ID =`GET_POST_BY_ID`;
 
 
 export default <EndpointDetails>{
@@ -43,5 +44,9 @@ export default <EndpointDetails>{
       [GET_ALL_TESTIMONIALS]:{
         requestType: `GET`,
         endpoint: `/api/testimonials`
+      },
+      [GET_POST_BY_ID]: {
+        requestType: `GET`,
+        endpoint: `/api/post/[id]`,
       },
 }

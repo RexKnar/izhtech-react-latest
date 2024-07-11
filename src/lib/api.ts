@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 import { getToken } from '../utils/cookies';
 import endpointInfo from './endpoints';
 
@@ -7,7 +8,7 @@ export async function makeAPICall<T>(
   payload: Record<string, unknown> = {},
   params: Record<string, string | number | boolean> = {},
   substitutions: Record<string, string> = {},
-  formData?: FormData | undefined = undefined
+  formData: FormData | undefined = undefined
 ): Promise<T> {
   let { endpoint, requestType } = endpointInfo[apiName];
   const token = getToken();
@@ -34,8 +35,10 @@ export async function makeAPICall<T>(
       options.body = formData;
     } else {
       // For JSON payload
-      
-      options.headers['Content-Type'] =  'application/json';
+      const requestHeaders: HeadersInit = new Headers();
+requestHeaders.set('Content-Type', 'application/json');
+
+      options.headers=requestHeaders;
       
       options.body = JSON.stringify(payload);
     }

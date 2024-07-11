@@ -20,6 +20,12 @@ export const menuItems: MenuItem[] = [
     path: "/service",
   },
   {
+    id: "blog",
+    label: "Blog",
+    icon: null,
+    path: "/blog",
+  },
+  {
     id: "contact",
     label: "Contact Us",
     icon: null,

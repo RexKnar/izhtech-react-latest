@@ -11,7 +11,7 @@ export default function PageScroll() {
   }
 
   return (
-    <><div className="fixed z-50 flex top-[40%] flex-col cursor-pointer  h-2/6 justify-end hidden md:block">
+    <><div className="fixed z-50 flex top-[40%] flex-col cursor-pointer -m-5 h-2/6 justify-end hidden md:block ">
       <p
         className="-rotate-90 "
         onClick={handleScrollToTop}

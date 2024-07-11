@@ -1,8 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Minus, Plus , ArrowUpRightSquare } from "lucide-react";
-import { ServicesFeaturesModal } from "../../lib/domains/serviceFeatures";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const AccordionItem = ({ header, content, i, expanded, setExpanded }: any) => {
@@ -11,7 +11,7 @@ const AccordionItem = ({ header, content, i, expanded, setExpanded }: any) => {
   return (
     <>
       <motion.button
-        className="flex items-center justify-between w-full px-5 py-5 font-medium text-left text-black bg-gray-100 first:rounded-t-lg last:rounded-b-lg dark:text-gray-400 hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 dark:hover:bg-gray-900 dark:focus:ring-gray-800"
+        className="flex items-center justify-between w-full px-5 py-5 font-medium text-left text-black first:rounded-t-lg last:rounded-b-lg dark:text-gray-400 hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:hover:bg-gray-900 dark:focus:ring-gray-800"
         initial={false}
         onClick={() => setExpanded(isOpen ? false : i)}
       >
@@ -50,11 +50,12 @@ const AccordionItem = ({ header, content, i, expanded, setExpanded }: any) => {
   );
 };
 
-export default function Accordion({ items }: { items: ServicesFeaturesModal[] }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function Accordion({ items }: { items: any[] }) {
   const [expanded, setExpanded] = useState<false | number>(0);
   return (
     <div className="flex flex-col gap-2">
-      {items.map((item: ServicesFeaturesModal, index: number) => {
+      {items.map((item: any, index: number) => {
         return (
           <AccordionItem
             i={index}

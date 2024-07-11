@@ -1,7 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../shared/animation/variants";
 import { useCreateContactMutationQuery } from "../../../lib/queries/contact/useCreateContactMutationQuery";
-import { ContactModel } from "../../../lib/domains/contact";
 import { useForm } from 'react-hook-form';
 import { useGetSiteInfoListQuery } from "../../../lib/queries/siteinfo/useGetAllSiteInfoListQuery";
 
@@ -17,7 +17,7 @@ const { data: siteInfoList } = useGetSiteInfoListQuery();
 const siteInfo= siteInfoList??[];
   
 
-  const saveContact = async (payload: ContactModel) => {
+  async function saveContact(payload: any) {
     try{
         contactMutation(payload);
     }

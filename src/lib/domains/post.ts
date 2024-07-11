@@ -11,7 +11,7 @@ export type PostModel ={
     imagePath:string;
     featuredImagePath:string;
     publishedDate: Date;
-    author:string;
+    author:{name:string, id:string};
     createdAt: Date;
     updatedAt: Date;
     deletedAt: Date;    

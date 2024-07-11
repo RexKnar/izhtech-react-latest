@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { fadeIn } from "../../animation/variants";
+import { fadeIn } from "../../../shared/animation/variants";
 
 
 type titleValue = {
@@ -8,7 +8,7 @@ type titleValue = {
 }
 
 
-export default function Brandingheader({ title }: titleValue) {
+export default function ServiceDetailHeader({ title }: titleValue) {
 
   return (
     <motion.section className=" pt-4 lg:py-4 bg-transparent" variants={fadeIn("right", 0.3)}
