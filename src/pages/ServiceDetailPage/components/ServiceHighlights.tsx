@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ServicesHighlightsModal } from "../../../lib/domains/serviceHighlights";
 import { fadeIn } from "../../../shared/animation/variants";
 
-export default function ServiceHighlights({ datas }: ServicesHighlightsModal) {
+export default function ServiceHighlights({ datas }: {datas:ServicesHighlightsModal[]}) {
   console.log(datas);
 
   return (
@@ -11,19 +11,19 @@ export default function ServiceHighlights({ datas }: ServicesHighlightsModal) {
         console.log(item);
         if (index % 2 === 0) {
           return (
-            <div className="container lg:mx-auto lg:px-16 px-2 py-10 mx-auto">
-              <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 xl:gap-16 md:items-center lg:justify-center">
+            <div className="container px-2 py-10 mx-auto lg:mx-auto lg:px-16">
+              <div className="flex flex-col gap-4 lg:flex-row lg:gap-8 xl:gap-16 md:items-center lg:justify-center">
                 <motion.img
                   src={`${import.meta.env.VITE_BASE_URL}/${item?.imagePath}`}
                   alt=""
-                  className="rounded-lg w-full lg:w-1/2 h-40rem"
+                  className="w-full rounded-lg lg:w-1/2 h-40rem"
                   variants={fadeIn("left", 0.3)}
                   initial="hidden"
                   whileInView="show"
                   exit="hidden"
                 />
                 <motion.div
-                  className="w-full lg:w-1/2 px-2"
+                  className="w-full px-2 lg:w-1/2"
                   variants={fadeIn("left", 0.3)}
                   initial="hidden"
                   whileInView="show"
@@ -43,10 +43,10 @@ export default function ServiceHighlights({ datas }: ServicesHighlightsModal) {
           );
         } else {
           return (
-            <div className="container lg:mx-auto lg:px-16 px-2 bg-teal-50 py-10 mx-auto">
-              <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 xl:gap-16 md:items-center lg:justify-center">
+            <div className="container px-2 py-10 mx-auto lg:mx-auto lg:px-16 bg-teal-50">
+              <div className="flex flex-col gap-4 lg:flex-row lg:gap-8 xl:gap-16 md:items-center lg:justify-center">
                 <motion.div
-                  className="w-full lg:w-1/2 px-2"
+                  className="w-full px-2 lg:w-1/2"
                   variants={fadeIn("left", 0.3)}
                   initial="hidden"
                   whileInView="show"
@@ -64,7 +64,7 @@ export default function ServiceHighlights({ datas }: ServicesHighlightsModal) {
                 <motion.img
                   src={`${import.meta.env.VITE_BASE_URL}/${item?.imagePath}`}
                   alt=""
-                  className="rounded-lg w-full lg:w-1/2 h-40rem"
+                  className="w-full rounded-lg lg:w-1/2 h-40rem"
                   variants={fadeIn("left", 0.3)}
                   initial="hidden"
                   whileInView="show"

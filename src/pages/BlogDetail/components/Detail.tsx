@@ -1,4 +1,3 @@
-import { Progress } from 'flowbite-react';
 import { useParams } from 'react-router-dom';
 import { useGetPostByIdQuery } from '../../../lib/queries/blog/useGetPostByIdQuery';
 import { formatDate } from '../../../utils';
@@ -8,7 +7,7 @@ export default function Detail() {
     const { id: postId } = useParams();
   
     const { data: postDetail} = useGetPostByIdQuery(postId as string, { enabled: !!postId });
-    const date=formatDate(postDetail?.publishedDate)
+    const date=formatDate(postDetail?.publishedDate.toString() as string)
 
     console.log(postDetail);
     
@@ -63,23 +62,26 @@ export default function Detail() {
                     </div>
 
 
-                    <div className="flex justify-center lg:h-[35rem] w-full ">
+                    <div className="flex justify-center lg:h-[35rem] w-full lg:ml-10">
                         <img className='flex justify-center' src={`${import.meta.env.VITE_BASE_URL}/${postDetail?.imagePath}`} alt="" />
-                        <div className="container flex items-end justify-center md:justify-end"></div>
+                        
                     </div>
 
                     <div className='px-12 pt-6'>
-                         <div className='text-sm' dangerouslySetInnerHTML={{ __html: postDetail?.description }}></div>
+                         <div className='text-sm' dangerouslySetInnerHTML={{ __html: postDetail?.description as string}}></div>
                     </div>
                     <div className="flex flex-col px-12 pt-4 md:flex-row">
                         <div className="flex gap-4 ">
                             <div className="pb-2">
                                 <p className="text-sm text-black">Tagged with:</p>
                             </div>
-                            <div className="flex-2">
-                                <button className="w-20 h-6 text-xs rounded text-slate-950 bg-slate-300 border-1">
-                                    {postDetail?.tags}
-                                </button>
+                            <div className="flex flex-wrap gap-2">
+                            {postDetail?.tags?.split(/[ ,.!?]+/).filter(Boolean).map((tag) => (
+             <button className="w-20 h-6 text-xs rounded text-slate-950 bg-slate-300 border-1">
+             {tag}
+         </button>
+        ))}
+                               
                             </div>
                         </div>
                     </div>

@@ -17,7 +17,7 @@ export default function ServicesTab(props: ServicesModal) {
         viewport={{ once: false, amount: 0.1 }}
       >
         <Card
-          className="hidden max-w-sm shadow-none sm:block "
+          className="max-w-sm shadow-none "
           imgAlt="img"
           imgSrc={`${import.meta.env.VITE_BASE_URL}/${featuredImagePath}`}
         >

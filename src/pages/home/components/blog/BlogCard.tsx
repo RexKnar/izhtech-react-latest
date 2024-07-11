@@ -2,21 +2,21 @@ import { Card } from "flowbite-react";
 import { PostModel } from "../../../../lib/domains/post";
 import { CategoryModel } from "../../../../lib/domains/category";
 import { formatDate } from "../../../../utils";
+import { CircleUser } from "lucide-react";
 
 export default function BlogCard({ item }: { item: PostModel }){
     const id=item.id;
-    const date=formatDate(item?.publishedDate)
+    const date=formatDate(item?.publishedDate.toString())
     return (
     <Card className="max-w-lg bg-gray-100 h-96">
     <div className="flow-root">
         <div className="py-3 border-gray-200 sm:py-4 dark:border-gray-700">
             <div className="flex items-center mb-8 space-x-4">
                 <div className="flex-shrink-0">
-                    <img
-                        alt="Neil image"
-                        src="/images/cardprofile/Avatar.png"
-                        className="rounded-full h-14 w-14"
-                    />
+                    <span
+                    >
+                        <CircleUser size={38} strokeWidth={2} color="black" />
+                    </span>
                 </div>
                 <div className="flex-1">
                     <p className="text-black text-md ">Posted by</p>

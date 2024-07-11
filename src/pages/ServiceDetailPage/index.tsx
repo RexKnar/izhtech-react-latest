@@ -12,14 +12,14 @@ export default function ServiceDetail() {
   const { id: serviceId } = useParams();
   
   const { data: serviceIdResponse } = usegetServiceByIdQuery(
-      serviceId,{enabled: !!serviceId,});
+      serviceId as string,{enabled: !!serviceId,});
 
   if(serviceIdResponse){
     return (
       <>
 
 <section className="px-5 mx-auto md:container ">
-        <ServiceHeader title={serviceIdResponse?.title} />
+        <ServiceHeader title={serviceIdResponse?.title as string} />
     </section>
     <section>
            <Details 
@@ -27,15 +27,18 @@ export default function ServiceDetail() {
                 description={serviceIdResponse?.description || ""}
                 featuredImagePath={`${import.meta.env.VITE_BASE_URL}/${serviceIdResponse?.featuredImagePath}`}
                 header={""}        />
-           <section className="px-3 mx-auto w-full bg-black ">
-           <div className=" text-white grid justify-center items-center mx-auto  ">
+           <section className="w-full px-3 mx-auto bg-black ">
+           <div className="grid items-center justify-center mx-auto text-white ">
            <ServiceFeatureList datas={ serviceIdResponse?.serviceFeatures } />
            
            
            </div>
            </section>
      </section>
-       <ServiceHighlights datas={serviceIdResponse?.serviceHighlights}/>
+     <section>
+     <ServiceHighlights datas={serviceIdResponse?.serviceHighlights}/>
+     </section>
+       
      
       </>
    )

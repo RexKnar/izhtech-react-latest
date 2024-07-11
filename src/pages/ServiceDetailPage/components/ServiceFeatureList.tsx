@@ -11,11 +11,11 @@ export default function ServiceFeatureList({ datas }:{datas:ServicesFeaturesModa
     return newStr;
   };
   return (
-  <div className="grid lg:grid-cols-4 lg:gap-5 lg:p-16 py-[4rem]  p-8 gap-[3.3rem]  " >
+  <div className="container grid lg:grid-cols-4 lg:gap-5 lg:p-16 py-[4rem]  p-8 gap-[3.3rem]  " >
       {datas.map((item:ServicesFeaturesModal) => {
         const description = replaceStrings(item?.description);
         console.log(item);
-      return <motion.li key={item?.id} className=" list-none  " variants={fadeIn("up", 0.3)}
+      return <motion.li key={item?.id} className="list-none " variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView="show"
         exit="hidden">

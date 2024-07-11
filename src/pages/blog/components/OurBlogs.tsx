@@ -15,7 +15,7 @@ export default function OurBlogs() {
               viewport={{ once: false, amount: 0.1 }} className="flex-col justify-center gap-4 my-auto h-4/5 lg:flex lg:flex-row">
           <div className="w-full mx-auto ">
             <div className="flex flex-col justify-end h-full ">
-              <CustomObject className="absolute -z-10" variants="green-disk" />
+              <CustomObject className="absolute -z-40" variants="green-disk" />
               <h1 className="pt-4 text-5xl font-bold lg:w-3/4 2xl:text-7xl lg:text-4xl md:text-4xl sm:text-4xl">
                 Our Blogs
               </h1>
@@ -32,7 +32,7 @@ export default function OurBlogs() {
               exit={"hidden"}
               viewport={{ once: false, amount: 0.1 }}>
         <CustomObject
-          className="absolute z-10 opacity-25 top-10 xl:-right-32 z-1"
+          className="absolute opacity-25 -z-10 top-10 xl:-right-32 "
           variants="long-line-orange-left"
         />
         </motion.div>
