@@ -1,9 +1,9 @@
-import Blogdetail from "./components/Blogdetail";
+import Detail from "./components/Detail";
 export  default function BlogDetail(){
 
     return (
        <>
-       <Blogdetail/>
+       <Detail/>
 
        </>
     )

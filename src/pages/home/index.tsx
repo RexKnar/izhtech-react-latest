@@ -10,6 +10,7 @@ import { fadeIn } from "../../shared/animation/variants";
 import { motion } from "framer-motion";
 import Platforminsights from "./components/Platforminsights";
 import IzhtechScroll from "../../shared/components/IzhtechScroll";
+import BlogList from "./components/blog/BlogList";
 
 
 export default function Home() {
@@ -45,10 +46,12 @@ export default function Home() {
           <IzhtechScroll />
         </section>
         
-
-        <section className="mx-auto container-fluid xl:container">
         {/* <section className="lg:px-10 pb-20 pt-28 bg-[#F5F7FF] rounded"> */}
-       <Platforminsights />
+        <section className="mx-auto container-fluid xl:container">
+          <Platforminsights />
+       </section>
+       <section className="container px-20 py-8 mx-auto">
+        <BlogList />
        </section>
        <section>
         <NewsLetter />
