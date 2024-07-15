@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import { ServicesFeaturesModal } from "../../../lib/domains/serviceFeatures";
 import { fadeIn } from "../../../shared/animation/variants";
+import DynamicIcon from "../../../shared/components/icon/Icon";
 
 export default function ServiceFeatureList({ datas }:{datas:ServicesFeaturesModal[]}) {
   const replaceStrings = (str: string) => {
@@ -20,13 +21,14 @@ export default function ServiceFeatureList({ datas }:{datas:ServicesFeaturesModa
       whileInView="show"
         exit="hidden">
         
-         <div className="w-[50px] h-[50px] bg-neutral-600 flex text-important justify-center items-center rounded-full"> <p >{item?.icon}</p></div>
+         <div className="w-[50px] h-[50px] bg-neutral-600 flex text-important justify-center items-center rounded-full">
+           <DynamicIcon iconName={item?.icon  as string} /></div>
           <h1 className="text-slate-50 font-bold text-[1.2rem] py-3">{item?.title}</h1>
 
           {<div className="!text-white services-description" dangerouslySetInnerHTML={{ __html: description }}/>}
 
       </motion.li>
-  
+
   })}
     </div>
 

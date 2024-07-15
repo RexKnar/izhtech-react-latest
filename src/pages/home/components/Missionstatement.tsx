@@ -27,7 +27,8 @@ const siteInfo= siteInfoList??[];
 
    <span
      className="flex justify-center w-20 h-20 mt-5 bg-blue-100 rounded-full justify-item-center md:w-12 md:h-12">
-       <Network className="w-1/2 mx-auto my-auto text-blue-400 h-1/2" /> </span>
+       <Network className="w-1/2 mx-auto my-auto text-blue-400 h-1/2" /> 
+       </span>
  </div>
  <div className="w-1/2 md:w-full md:order-2">
    <h2 className="pt-2 text-lg font-bold">Vision</h2>
