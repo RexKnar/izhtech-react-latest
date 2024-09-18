@@ -12,6 +12,7 @@ import MobileApplication from "./pages/mobile-Apllication";
 import DigitalMarketing from "./pages/digital-marketing";
 import CommonLayout from "./shared/layouts/CommonLayout";
 import WebApplication from "./pages/Web-Application";
+import ServiceDetail from "./pages/service-detail";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,13 +22,13 @@ const router = createBrowserRouter([
       { path: "/about", element: <About /> },
       { path: "/contact", element: <Contact /> },
       { path: "/service", element: <Services /> },
+      { path: "/service/:slug", element: <ServiceDetail /> },
+      { path: "/blog/:slug", element: <BlogDetail /> },
       { path: "/branding", element: <Branding /> },
       { path: "/blog-detail", element: <BlogDetail /> },
       { path: '/webapplication', element: <WebApplication /> },
       {path:"/mobileapplication",element:<MobileApplication />},
       { path: "/digitalmarketing", element: <DigitalMarketing /> },
-  
-      
     ],
   },
 ]);

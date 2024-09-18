@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import { fadeIn } from "../../animation/variants";
+import Icon from "../Icon";
 export default function Brandingdetails({ datas }:any) {
   
   interface items{
@@ -12,12 +13,12 @@ export default function Brandingdetails({ datas }:any) {
   return (
   <div className="grid lg:grid-cols-3 lg:gap-14 lg:p-16 py-[4rem]  p-8 gap-[3.3rem]  " >
       {datas.map((item:items) => {
-      return <motion.li key={item?.id} className=" list-none  " variants={fadeIn("up", 0.3)}
+      return <motion.li key={item?.id} className="list-none " variants={fadeIn("up", 0.3)}
       initial="hidden"
       whileInView="show"
         exit="hidden">
         
-         <div className="w-[50px] h-[50px] bg-neutral-600 flex justify-center items-center rounded-full"> <p >{item?.logo}</p></div>
+         <div className="w-[50px] h-[50px] bg-neutral-600 flex justify-center items-center rounded-full"> <p ><Icon name="Home" color={'red'} size={20}/>{item?.logo}</p></div>
           <h1 className="text-slate-50 font-bold text-[1.2rem] py-3">{item?.title}</h1>
           <p className="text-slate-300">{ item?.text}</p>
 
