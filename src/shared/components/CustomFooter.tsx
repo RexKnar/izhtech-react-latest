@@ -15,10 +15,9 @@ export default function CustomFooter() {
             <img src={logo} className="h-16" alt="" />
           </div>
           <div className="text-stone-50 ">
-            <h2 className="font-semibold">Singapore</h2>
+            <h2 className="font-semibold">Head Office</h2>
             {siteInfo?.length > 0 && (
             <div className="pt-3 space-y-1 text-gray-300">
-              <p>Head Office</p>
               <p> {siteInfo[0]?.address}</p>
             </div>
             )}

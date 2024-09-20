@@ -47,7 +47,7 @@ const siteInfo= siteInfoList??[];
               whileInView={"show"}
               exit={"hidden"}
               viewport={{ once: false, amount: 0.1 }} className="">
-          <h2 className="mb-3 font-black">Singapore</h2>
+          <h2 className="mb-3 font-black">Head Office</h2>
           {siteInfo[0]?.address
           }
           <p className="mb-5 font-black">Call us: {siteInfo[0]?.mobilePrimary}</p>

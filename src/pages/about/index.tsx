@@ -5,7 +5,7 @@ import Capabilities from "./components/Capabilities";
 import Counts from "./components/Counts";
 
 import Testimonials from "./components/Testimonials";
-import Ourclients from "./components/Ourclients";
+// import Ourclients from "./components/Ourclients";
 import OurTeam from "./components/Ourteam";
 
 export default function About() {
@@ -21,9 +21,9 @@ export default function About() {
        
           <Capabilities />
           </section>
-          <section className="px-5 mx-auto md:px-0 bg-slate-100">
+          {/* <section className="px-5 mx-auto md:px-0 bg-slate-100">
             <Ourclients/>
-            </section>
+            </section> */}
 
         <section className="bg-black container-fluid ">
           <Testimonials />
