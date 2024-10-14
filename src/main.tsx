@@ -6,13 +6,12 @@ import Services from "./pages/services";
 import About from "./pages/about";
 import Home from "./pages/home";
 import Contact from "./pages/contact";
-import Branding from "./pages/branding";
 import BlogDetail from "./pages/BlogDetail";
-import MobileApplication from "./pages/mobile-Apllication";
-import DigitalMarketing from "./pages/digital-marketing";
 import CommonLayout from "./shared/layouts/CommonLayout";
-import WebApplication from "./pages/Web-Application";
-import ServiceDetail from "./pages/service-detail";
+
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import ServiceDetail from "./pages/ServiceDetailPage";
+import Blog from "./pages/blog";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,20 +21,19 @@ const router = createBrowserRouter([
       { path: "/about", element: <About /> },
       { path: "/contact", element: <Contact /> },
       { path: "/service", element: <Services /> },
-      { path: "/service/:slug", element: <ServiceDetail /> },
-      { path: "/blog/:slug", element: <BlogDetail /> },
-      { path: "/branding", element: <Branding /> },
-      { path: "/blog-detail", element: <BlogDetail /> },
-      { path: '/webapplication', element: <WebApplication /> },
-      {path:"/mobileapplication",element:<MobileApplication />},
-      { path: "/digitalmarketing", element: <DigitalMarketing /> },
+      { path: "/blog-detail/:id", element: <BlogDetail /> },
+      { path: "/service-detail/:id", element: <ServiceDetail /> },
+      { path: "/blog", element: <Blog/> },
     ],
   },
 ]);
-
+const queryClient = new QueryClient()
 ReactDOM.render(
   <React.StrictMode>
+    
+    <QueryClientProvider client={queryClient}>
     <RouterProvider router={router} />
+    </QueryClientProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

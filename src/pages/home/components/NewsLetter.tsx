@@ -1,5 +1,6 @@
 
-import { Button, Footer, TextInput } from "flowbite-react";
+import { Footer } from "flowbite-react";
+import { LinkButton } from "../../../shared/components/buttons/LinkButton";
 
 
 
@@ -26,19 +27,19 @@ export default function NewsLetter() {
           <Footer.LinkGroup col>
             <div className="max-w-md">
               <div className="flex items-center gap-2">
-                <TextInput
+                {/* <TextInput
                   className="py-2 border-transparent w-46 text-slate-800"
                   id="email"
                   type="email"
                   placeholder="Your Email Id"
                   required
-                />
-                <Button
-                  className="w-24 h-10 text-white bg-gray-800"
-                  size="xs"
+                /> */}
+                <LinkButton href="./contact"
+                  className="w-64 h-10 text-white bg-gray-800"
+                 
                 >
                   Get a Demo
-                </Button>
+                </LinkButton>
               </div>
             </div>
           </Footer.LinkGroup>

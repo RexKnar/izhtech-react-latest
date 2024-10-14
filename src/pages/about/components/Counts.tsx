@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Counter from "../../../shared/animation/Counter";
 
-export default function Counts() {
+export default function Counts(props:any) {
+    const {designers, awards}=props
     return (
         
             <div className="  bg-center h-[25rem] justify-end bg-cover bg-no-repeat bg-[url('/images/Aboutpage/img/counts/bg.png')]">
@@ -10,7 +12,7 @@ export default function Counts() {
                         <div className="flex items-center ">
                             <img src="images/Aboutpage/img/counts/diamond.png" alt="Example Image" className="w-12 h-10 lg:w-8 lg:h-6" />
                             <h1 className="text-3xl font-bold lg:text-4xl">
-                            <Counter value={35} direction="up" />+
+                            <Counter value={designers || 0} direction="up" />+
                             
                             </h1>
                         </div>
@@ -22,11 +24,11 @@ export default function Counts() {
                         <div className="flex items-center ">
                             <img src="images/Aboutpage/img/counts/square.png" alt="Example Image" className="w-10 h-10" />
                             <h1 className="text-3xl font-bold lg:text-4xl">
-                            <Counter value={28} direction="up" />+
+                            <Counter value={awards || 0} direction="up" />+
                             </h1>
                         </div>
                         <p className="pt-2">
-                            awards for digital <br /> innovation
+                            digital <br /> innovations
                         </p>
                     </div>
                 </div>

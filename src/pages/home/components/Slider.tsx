@@ -3,9 +3,11 @@ import { Carousel } from 'flowbite-react';
 import type { CustomFlowbiteTheme } from 'flowbite-react';
 import { MoveLeft } from 'lucide-react';
 import { MoveRight } from 'lucide-react';
+import { useGetAllTestimonialsListQuery } from '../../../lib/queries/testimonials/useGetAllTestimonialsListQuery';
 
 export default function Slider() {
   
+  const { data: testimonialsList } = useGetAllTestimonialsListQuery();
 
 
   const customTheme: CustomFlowbiteTheme['carousel'] = {
@@ -50,52 +52,22 @@ export default function Slider() {
 
       <div className="relative h-60">
         <Carousel theme={customTheme} leftControl={<MoveLeft/>} rightControl={<MoveRight/>}>
-          
+          {testimonialsList?.map((testimonial) => (
           <div className="flex items-center justify-center h-full dark:text-white">
 
-            <div className="text-center ">
-              
-              <p className="pt-2 pb-2 text-sm">
-                “Izhtech turned our ideas into an amazing reality with their creative design work, <br/>taking our LinkedIn presence to a whole new level ”
-              </p>
-
-              <div className="flex flex-col items-center">
-                <img src="/images/clients/statppc.png" alt="Image" className="w-auto h-12 mb-2" />
-                <p className="pt-2 text-xs text-gray-500">CEO · <b>StatPPC</b></p>
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center justify-center h-full dark:text-white">
           <div className="text-center ">
             
-              <p className="pt-2 pb-2 text-sm">
-                “Izhtech's strategic marketing has successfully <br/> attracted more customers for us.  ”
-              </p>
-   
-              <div className="flex flex-col items-center">
-                <img src="/images/cardprofile/Avatar.png" alt="Image" className="w-auto h-12 mb-2" />
-                {/* <h2 className="pt-2 text-sm font-bold">Colin Lucido</h2> */}
-                <p className="pt-2 text-xs text-gray-500">CEO · <b>Fastrack llc</b></p>
-              </div>
-            </div>
-          
-          </div>
+          <div dangerouslySetInnerHTML={{ __html: testimonial?.testimonials }} />
 
-          <div className="flex items-center justify-center h-full dark:text-white">
-          <div className="text-center ">
-             
-              <p className="pt-2 pb-2 text-sm">
-                “Izhtech team clearly fulfils what we needed! <br/>They extract every details of what we want from us in prior and gave us the perfect design
-           ”
-              </p>
-  
-              <div className="flex flex-col items-center">
-                <img src="/images/cardprofile/Avatar.png" alt="Image" className="w-auto h-12 mb-2" />
-                {/* <h2 className="pt-2 text-sm font-bold">Colin Lucido</h2> */}
-                <p className="pt-2 text-xs text-gray-500">CEO · <b>Rexcoders</b></p>
-              </div>
+            <div className="flex flex-col items-center mt-2">
+              <img src={`${import.meta.env.VITE_BASE_URL}/${testimonial?.imagePath}`} alt="Image" className="w-auto h-12 mb-2 rounded-full"  />
+              <p className="pt-2 text-xs text-gray-500"> {testimonial?.designation} &nbsp;<b>{testimonial?.companyName}</b></p>
             </div>
           </div>
+        </div>
+          ))}
+          
+
   
         </Carousel>
       {/* </div> */}

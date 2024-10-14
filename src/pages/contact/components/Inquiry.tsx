@@ -1,7 +1,33 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../shared/animation/variants";
+import { useCreateContactMutationQuery } from "../../../lib/queries/contact/useCreateContactMutationQuery";
+import { useForm } from 'react-hook-form';
+import { useGetSiteInfoListQuery } from "../../../lib/queries/siteinfo/useGetAllSiteInfoListQuery";
 
 export default function Inquiry() {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+const{mutateAsync:contactMutation ,isSuccess:isSuccessContact}=useCreateContactMutationQuery();
+const { data: siteInfoList } = useGetSiteInfoListQuery();
+const siteInfo= siteInfoList??[];
+  
+
+  async function saveContact(payload: any) {
+    try{
+        contactMutation(payload);
+    }
+    catch(error){
+    console.log(error);
+    }
+    finally{
+        reset();
+    }
+  }
   return (
     <>
     <section className="">
@@ -21,18 +47,16 @@ export default function Inquiry() {
               whileInView={"show"}
               exit={"hidden"}
               viewport={{ once: false, amount: 0.1 }} className="">
-          <h2 className="mb-3 font-black">Singapore</h2>
-          <p>
-            Flora drive, Singapore
-            <br />
-            506889
-          </p>
-          <p className="mb-5 font-black">Call us: +65 89269693</p>
+          <h2 className="mb-3 font-black">Head Office</h2>
+          {siteInfo[0]?.address
+          }
+          <p className="mb-5 font-black">Call us: {siteInfo[0]?.mobilePrimary}</p>
           <p>Monday-Friday</p>
         </motion.div>
       </div>
     </section>
     <section>
+      <form  onSubmit={handleSubmit(saveContact)}>
         <div className="flex-none py-4 lg:px-8 md:px-4 lg:flex xl:gap-6 ">
           <motion.div  variants={fadeIn("right", 0.1)}
               initial="hidden"
@@ -50,8 +74,8 @@ export default function Inquiry() {
               initial="hidden"
               whileInView={"show"}
               exit={"hidden"}
-              viewport={{ once: false, amount: 0.1 }} >
-                <div  className="grid w-full grid-cols-1 gap-2 md:grid-cols-2 lg:pl-1">
+              viewport={{ once: false, amount: 0.1 }}className="lg:w-5/12">
+                <div  className="grid w-full grid-cols-1 gap-2 p-4 md:grid-cols-2 lg:pl-1">
             
               
               <div className="mb-5 ">
@@ -62,6 +86,7 @@ export default function Inquiry() {
                   Phone (optional)
                 </label>
                 <input
+                {...register('mobileNumber')}
                   type="text"
                   id="base-input"
                   placeholder="Your actual number"
@@ -78,6 +103,7 @@ export default function Inquiry() {
                   Company (optional)
                 </label>
                 <input
+                {...register('companyName')}
                   type="text"
                   id="base-input"
                   placeholder="Your Company Name"
@@ -90,16 +116,12 @@ export default function Inquiry() {
                 >
                   Subject (optional)
                 </label>
-                <select
-                  id="countries"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                >
-                  <option selected>Choose a Subject</option>
-                  <option value="US">United States</option>
-                  <option value="CA">Canada</option>
-                  <option value="FR">France</option>
-                  <option value="DE">Germany</option>
-                </select>
+                <input
+                {...register('subject')}
+                  type="text"
+                  id="base-input"
+                  placeholder="Your Company Name"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
               </div>
           
               <div className="mb-5">
@@ -110,10 +132,22 @@ export default function Inquiry() {
                   Email (required)
                 </label>
                 <input
+                {...register('email', {
+                  required: 'Email is required',
+                  pattern: {
+                      value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                      message: 'Invalid email address'
+                    }
+                })}
                   type="text"
                   id="base-input"
                   placeholder="Your e-mail"
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                  {errors['email'] && (
+                  <p className="h-2 p-1 text-sm text-red-600">
+                    {errors['email'].message as string}
+                  </p>
+                )}
               </div>
              
            
@@ -125,31 +159,29 @@ export default function Inquiry() {
                 Message (required)
               </label>
               <textarea
+              {...register('message', {
+                required: 'Message is required',
+              })}
                 id="message"
                 className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Brief project details"
               ></textarea>
+              {errors['message'] && (
+                  <p className="h-2 p-1 text-sm text-red-600">
+                    {errors['message'].message as string}
+                  </p>
+                )}
               <div className="flex items-center mt-2 mb-4">
-                <input
-                  id="default-checkbox"
-                  type="checkbox"
-                  value=""
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                <label
-                  htmlFor="default-checkbox"
-                  className="text-sm text-gray-900 ms-2 dark:text-gray-300"
-                >
-                  I’m okay with getting emails and having that activity tracked to
-                  improve my experience.
-                </label>
+                {isSuccessContact&&<p className="text-green-500">Thank you for your inquiry. We will get back to you soon.</p>}
               </div>
             </div>
             </div>
             <button className="h-8 text-xs font-bold text-white rounded bg-indigo-950 w-28 border-1">
-            Get a Quote 
+            Submit
           </button>
           </motion.div>
         </div>
+        </form>
       </section></>
   );
 }

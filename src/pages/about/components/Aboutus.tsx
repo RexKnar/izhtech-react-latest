@@ -26,10 +26,7 @@ export default function Aboutus() {
           </div>
         </div>
       </div>
-      <CustomObject
-        className="absolute z-10 opacity-25 top-10 xl:-right-32 z-1"
-        variants="long-line-orange-left"
-      />
+      
     </section>
   );
 }

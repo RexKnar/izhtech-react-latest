@@ -11,7 +11,7 @@ export default function PageScroll() {
   }
 
   return (
-    <><div className="fixed z-50 flex top-[40%] flex-col cursor-pointer  h-2/6 justify-end hidden md:block">
+    <><div className="fixed z-50 flex top-[40%] flex-col cursor-pointer -m-5 h-2/6 justify-end hidden md:block ">
       <p
         className="-rotate-90 "
         onClick={handleScrollToTop}
@@ -23,7 +23,7 @@ export default function PageScroll() {
         style={{ scaleY: scrollYProgress, transformOrigin: "top" }} />
 
     </div>
-    <div className="fixed bottom-0 z-50 flex justify-center gap-5 p-3 cursor-pointer md:hidden">
+    {/* <div className="fixed bottom-0 z-50 flex justify-center gap-5 p-3 cursor-pointer md:hidden">
         <p
           onClick={handleScrollToTop}
         >
@@ -33,6 +33,7 @@ export default function PageScroll() {
           className="h-1 bg-black w-[100px]  my-auto  rounded-2xl  "
           style={{ scaleX: scrollYProgress, transformOrigin: "left" }} />
 
-      </div></>
+      </div> */}
+      </>
   );
 }

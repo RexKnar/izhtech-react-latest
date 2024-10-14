@@ -4,35 +4,20 @@ import { Outlet, useLocation } from "react-router-dom";
 import CustomFooter from "../components/CustomFooter";
 import SocialMediaTag from "../components/SocialMediaTag";
 import PageScroll from "../components/PageScroll";
-import Lottie from 'react-lottie';
-import * as animationData from '../../shared/lottie-icons/triangle.json'
-// import * as animationData from '../../shared/lottie-icons/lined-triangle.json'
+import CustomObject from "../components/CustomObjects";
 
 
 export default function  CommonLayout() {
   const location = useLocation();
   const currentPath = location.pathname || "/";
-  const defaultOptions = {
-    loop: true,
-    autoplay: true, 
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  };
+
   return (
     <>
       <Header />
-
-
-
-
- 
-  <div className="absolute w-40 h-40 rotate-45 xl:-top-96 xl:-right-64 lg:-top-96 lg:w-1/3 lg:h-1/6 lg:-right-64">
-      <Lottie options={defaultOptions} style={{ width: '100%', height: '100%' }} 
-              
-             />
-             </div>
+      <CustomObject
+          className="absolute sm:-top-20 sm:h-[40vh] sm:-right-20  -top-40 lg:-top-40 -z-10 -right-40 lg:-right-40 -right-20 max-w-screen-xl h-[100vw] lg:h-[50vh]  lg:block"
+          variants="circle-2"
+        />
       <PageScroll />
       <section className="relative mx-auto overflow-hidden container-fluid">
         <Outlet />
