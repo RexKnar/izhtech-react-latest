@@ -1,10 +1,8 @@
-
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../shared/animation/variants";
 import CustomObject from "../../../shared/components/CustomObjects";
 
 export default function Hero() {
-
   return (
     <>
       <div className="md:container relative flex justify-center md:h-full h-[60vh] mx-auto ">
@@ -18,7 +16,6 @@ export default function Hero() {
               viewport={{ once: false, amount: 0.1 }}
               className="flex flex-col xl:pl-36 lg:pl-16"
             >
-             
               <p className="text-[#0C1C28]  order-2 lg:order-1 text-justify pt-5 text-sm">
                 Don't navigate the digital world alone. We're your trusted
                 partner, providing comprehensive solutions to ignite your online
@@ -31,7 +28,7 @@ export default function Hero() {
               </h1>
             </motion.div>
           </div>
-          
+
           <motion.div
             variants={fadeIn("left", 0.2)}
             initial="hidden"
@@ -52,9 +49,6 @@ export default function Hero() {
           loop={true}
           className="absolute bottom-0 right-0 w-[75%] md:bottom-[-14rem] md:w-[25%] md:right-[-9rem] z-[-1]"
         /> */}
-             
-
-
       </div>
       <motion.span
         variants={fadeIn("right", 0.5)}
@@ -63,8 +57,8 @@ export default function Hero() {
         viewport={{ once: false, amount: 0.1 }}
       >
         <CustomObject
-          className="absolute -top-20 lg:-top-40 -z-10  -left-16 max-w-screen-2xl  h-[140vw] lg:h-[100vh]"
-          variants="hero-left-full"
+          className="absolute -top-60 md:-top-64 -z-10 md:-left-85 lg:-left-[290px] xl:-left-90 -left-[700px] max-w-screen-2xl h-[220vw] md:h-[115vh] lg:h-[125vh] " 
+          variants="full"
         />
       </motion.span>
     </>

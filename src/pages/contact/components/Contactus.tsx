@@ -6,11 +6,14 @@ import { LinkButton } from "../../../shared/components/buttons/LinkButton";
 export default function Contactus() {
   return (
     <section className="relative py-5 bg-transparent lg:py-10 ">
-      <motion.div variants={fadeIn("right", 0.1)}
-              initial="hidden"
-              whileInView={"show"}
-              exit={"hidden"}
-              viewport={{ once: false, amount: 0.1 }} className="flex-col justify-center gap-4 my-auto h-4/5 lg:flex lg:flex-row">
+      <motion.div
+        variants={fadeIn("right", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        exit={"hidden"}
+        viewport={{ once: false, amount: 0.1 }}
+        className="flex-col justify-center gap-4 my-auto h-4/5 lg:flex lg:flex-row"
+      >
         <div className="w-full mx-auto ">
           <div className="flex flex-col justify-end h-full ">
             <CustomObject className="absolute -z-10" variants="orange-disk" />
@@ -20,19 +23,11 @@ export default function Contactus() {
             <p className="pt-4 pb-4 text-xs">
               Leave us a little info, and we’ll be in touch.
             </p>
-            <LinkButton href={`#`} className="mt-0 bg-black" size={'sm'} >Contact Us</LinkButton>
+            <LinkButton href={`#`} className="mt-0 bg-black" size={"sm"}>
+              Contact Us
+            </LinkButton>
           </div>
         </div>
-      </motion.div>
-      <motion.div variants={fadeIn("right", 0.1)}
-              initial="hidden"
-              whileInView={"show"}
-              exit={"hidden"}
-              viewport={{ once: false, amount: 0.1 }}>
-      <CustomObject
-        className="absolute opacity-25 z-1 top-10 xl:-right-32"
-        variants="long-line-orange-left"
-      />
       </motion.div>
     </section>
   );

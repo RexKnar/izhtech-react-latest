@@ -28,7 +28,7 @@ export default function Feature() {
   ];
   return (
     <section>
-      <div className="container flex w-full py-8 mx-auto flex-col-4 md:flex-row md:py-24 lg:flex-row lg:flex-wrap lg:justify-center">
+      <div className="container flex flex-col w-full py-8 mx-auto flex-col-4 md:flex-row md:py-24 lg:flex-row lg:flex-wrap lg:justify-center">
         {servicesList?.map((item, index) => (
           <motion.div
             variants={fadeIn("up", 0.2)}
@@ -43,8 +43,8 @@ export default function Feature() {
             ><DynamicIcon iconName={item?.icon as string} className={`text-${colors[index % 10]}-500`} />
             </motion.span>
 
-            <h2 className="pt-2 text-sm font-bold">{item.title}</h2>
-            <p className="pt-2 text-xs text-center">
+            <h2 className="pt-2 text-xl font-bold">{item.title}</h2>
+            <p className="pt-2 text-center text-md">
               {item.shortNote}
             </p>
           </motion.div>

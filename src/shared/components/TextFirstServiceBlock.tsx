@@ -1,11 +1,16 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ServiceBlockProps } from "./types/services";
 import { fadeIn } from "../animation/variants";
 import { motion } from "framer-motion";
 import Counter from "../animation/Counter";
 import Accordion from "./Accordion";
 import { LinkButton } from "./buttons/LinkButton";
+import { useGetSiteInfoListQuery } from "../../lib/queries/siteinfo/useGetAllSiteInfoListQuery";
 
 export default function TextFirstServiceBlock(props: ServiceBlockProps) {
+  const { data: siteInfoList  } = useGetSiteInfoListQuery() ?? [] ;
+  const siteInfo=siteInfoList?.[0];
+
   return (
     <section className="container-fluid ">
       <div className="flex flex-col items-center sm:flex-col md:flex-col lg:flex-row xl:flex-row lg:gap-5">
@@ -27,7 +32,11 @@ export default function TextFirstServiceBlock(props: ServiceBlockProps) {
                   className="w-8 h-8"
                 />
                 <h1 className="text-3xl font-bold lg:text-4xl">
-                  <Counter value={35} direction="up" />+
+                  {siteInfo && (<>
+
+<Counter value={siteInfo.teamCount as any} direction="up" />+
+                  </>)}
+                  
                 </h1>
               </div>
               <p className="pt-2 text-xs">designers and developers</p>
@@ -36,14 +45,14 @@ export default function TextFirstServiceBlock(props: ServiceBlockProps) {
               <div className="flex items-center ">
                 <img
                   src="images/servicepage/Icon1.png"
-                  alt="Example Image"
+                  alt="Example Image" 
                   className="w-8 h-8"
                 />
                 <h1 className="text-3xl font-bold lg:text-4xl">
-                  <Counter value={28} direction="up" />+
+                  <Counter value={siteInfo?.projectHandled as any} direction="up" />+
                 </h1>
               </div>
-              <p className="pt-2 text-xs">awards for digital innovation</p>
+              <p className="pt-2 text-xs"> digital innovations</p>
             </div>
           </div>
         </motion.div>

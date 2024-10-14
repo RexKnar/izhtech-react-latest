@@ -11,7 +11,7 @@ export default function Details({izhtech,header,description,featuredImagePath}:p
 
   return (
     <section>
-      <div className="container px-2 py-10 mx-auto lg:mx-auto lg:px-16">
+      <div className="container py-10 mx-auto lg:mx-auto ">
         <div className="flex flex-col gap-8 lg:flex-row xl:gap-16 md:items-center lg:justify-center">
           <div className="lg:w-3/6">
             <motion.img src={featuredImagePath} alt="" className="w-full rounded-xl" variants={fadeIn("right", 0.3)}

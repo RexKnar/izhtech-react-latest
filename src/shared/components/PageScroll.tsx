@@ -23,7 +23,7 @@ export default function PageScroll() {
         style={{ scaleY: scrollYProgress, transformOrigin: "top" }} />
 
     </div>
-    <div className="fixed bottom-0 z-50 flex justify-center gap-5 p-3 cursor-pointer md:hidden">
+    {/* <div className="fixed bottom-0 z-50 flex justify-center gap-5 p-3 cursor-pointer md:hidden">
         <p
           onClick={handleScrollToTop}
         >
@@ -33,6 +33,7 @@ export default function PageScroll() {
           className="h-1 bg-black w-[100px]  my-auto  rounded-2xl  "
           style={{ scaleX: scrollYProgress, transformOrigin: "left" }} />
 
-      </div></>
+      </div> */}
+      </>
   );
 }
