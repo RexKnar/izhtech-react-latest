@@ -51,12 +51,12 @@ export default function Process() {
               viewport={{ once: false, amount: 0.1 }}
             >
               {" "}
-              <p className="z-10 text-xs">OUR PROCESS</p>
+              <p className="z-10 text-base">OUR PROCESS</p>
               <CustomObject className="absolute -z-10 " variants="green-disk" />
               <h1 className="py-2 text-4xl font-bold">
                 Digital Triumph Assurance
               </h1>
-              <p className="pt-4 pb-4 text-xs">
+              <p className="pt-4 pb-4 text-base">
                 How we get things done
                 <br />
               </p>
@@ -78,7 +78,7 @@ export default function Process() {
         <div className="flex flex-col md:flex-1 lg:w-1/4 ">
           <Accordion items={processContentSetOne} />
         </div>
-        <div className="flex flex-col md:flex-1 lg:w-1/4">
+        <div className="flex flex-col md:flex-1 lg:w-1/4 ">
           <Accordion items={processContentSetTwo} />
         </div>
       </div>

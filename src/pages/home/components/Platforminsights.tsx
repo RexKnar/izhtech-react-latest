@@ -12,13 +12,13 @@ export default function PlatformInsights() {
           <div className="lg:w-3/6 sm:w-[75%] sm:px-2 lg:px-2 mx-auto">
             <div className="flex flex-col justify-center h-full pb-1">
               <div>
-              <p className="pt-10 text-xs">
+              <p className="pt-10 text-base">
                 COMPREHENSIVE #DIGITAL SOLUTION
               </p>
               <h1 className="pt-4 text-4xl font-bold lg:text-6xl md:text-3xl sm:text-3xl">
                 A One Stop Destination
               </h1>
-              <p className="pt-4 text-sm md:text-xl">
+              <p className="pt-4 text-base md:text-xl">
                 Our top-notch digital growth services are designed to make your brand stand out in the digital world.
               </p>
               </div>

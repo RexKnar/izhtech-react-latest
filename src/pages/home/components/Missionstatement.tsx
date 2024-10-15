@@ -32,7 +32,7 @@ const siteInfo= siteInfoList??[];
  </div>
  <div className="w-1/2 md:w-full md:order-2">
    <h2 className="pt-2 text-lg font-bold">Vision</h2>
-   <p className="pt-2 pb-3 text-md">
+   <p className="pt-2 pb-3 text-base">
     {siteInfo[0]?.vision}
    </p>
    <LinkButton
@@ -60,7 +60,7 @@ const siteInfo= siteInfoList??[];
  </div>
  <div className="order-1 w-1/2 md:w-full md:order-2">
  <h2 className="pt-2 text-lg font-bold">Mission</h2>
- <p className="pt-2 pb-3 text-md">
+ <p className="pt-2 pb-3 text-base">
  {siteInfo[0]?.mission}
  </p>
  <LinkButton
@@ -88,7 +88,7 @@ const siteInfo= siteInfoList??[];
  </div>
  <div className="order-1 w-1/2 md:w-full md:order-2">
    <h2 className="pt-2 text-lg font-bold">Values</h2>
-   <p className="pt-2 pb-3 text-md">
+   <p className="pt-2 pb-3 text-base">
    {siteInfo[0]?.values}
    </p>
    <LinkButton

@@ -16,7 +16,7 @@ export default function Hero() {
               viewport={{ once: false, amount: 0.1 }}
               className="flex flex-col xl:pl-36 lg:pl-16"
             >
-              <p className="text-[#0C1C28]  order-2 lg:order-1 text-justify pt-5 text-sm">
+              <p className="text-[#0C1C28]  order-2 lg:order-1 text-justify pt-5 text-base">
                 Don't navigate the digital world alone. We're your trusted
                 partner, providing comprehensive solutions to ignite your online
                 journey. Let's unlock your true potential and fuel your brand's

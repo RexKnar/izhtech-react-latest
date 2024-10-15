@@ -19,13 +19,13 @@ export default function Detail() {
                         <div className=" lg:w-full sm:w-[75%] sm:px-11 mx-auto">
                             <div className="flex flex-col justify-end h-full pb-5 ">
                             {postDetail?.categories?.map((category: CategoryModel,  index: number) => (
-                            <p key={index} className="pt-4 text-xs">
+                            <p key={index} className="pt-4 text-base">
                                     {category?.name} </p>
                             ))}
                                 
                                 <h1 className="pt-2 font-bold text-md lg:w-3/4 2xl:text-5xl lg:text-4xl md:text-4xl sm:text-4xl">
                                     {postDetail?.title}</h1>
-                                <p className="pt-4 pb-4 text-xs">
+                                <p className="pt-4 pb-4 text-base">
                                     {postDetail?.shortNote}</p>
                                 <div className="flow-root">
                                     <div className="py-3 border-gray-200 sm:py-4 dark:border-gray-700">
@@ -40,16 +40,16 @@ export default function Detail() {
                                             <div className="flex sm:flex-col md:flex-col">
                                                 <div className="flex gap-4">
                                                     <div className="">
-                                                        <p className="text-sm text-black sm:text-xs md:text-xs">Posted by</p>
-                                                        <p className="text-sm font-medium text-black sm:text-xs md:text-xs">{postDetail?.author?.name}</p>
+                                                        <p className="text-base text-black sm:text-xs md:text-xs">Posted by</p>
+                                                        <p className="text-base font-medium text-black sm:text-xs md:text-xs">{postDetail?.author?.name}</p>
                                                     </div>
                                                     <div className="flex-2 sm:flex-1 md:flex-2">
-                                                        <p className="text-sm text-black sm:text-xs md:text-xs">Published</p>
-                                                        <p className="text-sm font-medium text-black sm:text-xs md:text-xs">{date}</p>
+                                                        <p className="text-base text-black sm:text-xs md:text-xs">Published</p>
+                                                        <p className="text-base font-medium text-black sm:text-xs md:text-xs">{date}</p>
                                                     </div>
                                                     <div className="flex-4">
-                                                        <p className="text-sm text-black sm:text-xs md:text-xs">25 comments</p>
-                                                        <p className="text-sm font-medium text-black sm:text-xs md:text-xs">Join the Conversation</p>
+                                                        <p className="text-base text-black sm:text-xs md:text-xs">25 comments</p>
+                                                        <p className="text-base font-medium text-black sm:text-xs md:text-xs">Join the Conversation</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -68,16 +68,16 @@ export default function Detail() {
                     </div>
 
                     <div className='px-12 pt-6'>
-                         <div className='text-sm' dangerouslySetInnerHTML={{ __html: postDetail?.description as string}}></div>
+                         <div className='text-base' dangerouslySetInnerHTML={{ __html: postDetail?.description as string}}></div>
                     </div>
                     <div className="flex flex-col px-12 pt-4 md:flex-row">
                         <div className="flex gap-4 ">
                             <div className="pb-2">
-                                <p className="text-sm text-black">Tagged with:</p>
+                                <p className="text-base text-black">Tagged with:</p>
                             </div>
                             <div className="flex flex-wrap gap-2">
                             {postDetail?.tags?.split(/[ ,.!?]+/).filter(Boolean).map((tag) => (
-             <button className="w-20 h-6 text-xs rounded text-slate-950 bg-slate-300 border-1">
+             <button className="w-20 h-6 text-base rounded text-slate-950 bg-slate-300 border-1">
              {tag}
          </button>
         ))}
@@ -98,9 +98,9 @@ export default function Detail() {
                                     </div>
                                     <div>
                                         <div>
-                                            <p className="text-sm font-medium text-black">{postDetail?.author?.name}</p>
-                                            <p className='pt-1 text-sm'>UI Designer · Interactive Media</p>
-                                            <p className='pt-1 text-sm '>Digital content wrangler | UX enthusiast | Recovering educator | Shameless nerd & GIF connoisseur | Hockey fan | Oxford comma or death.</p>
+                                            <p className="text-base font-medium text-black">{postDetail?.author?.name}</p>
+                                            <p className='pt-1 text-base'>UI Designer · Interactive Media</p>
+                                            <p className='pt-1 text-base '>Digital content wrangler | UX enthusiast | Recovering educator | Shameless nerd & GIF connoisseur | Hockey fan | Oxford comma or death.</p>
                                         </div>
                                     </div>
                                 </div>

@@ -14,7 +14,7 @@ export default function PlatformInsights() {
           className="flex flex-col justify-center w-full py-10 lg:py-0 md:flex-1 lg:w-1/2 lg:w-1/4 lg:ps-5 2xl:ps-48 "
         >
           <CustomObject className="absolute -z-10" variants="green-disk" />
-          <p className="text-xs">CAPABILITIES </p>
+          <p className="text-base">CAPABILITIES </p>
           <h1 className="pt-2 text-4xl font-bold lg:text-5xl ">
             Versatile expertise, tailored strategies, and innovative solutions
             for transparent, impactful outcomes

@@ -50,7 +50,7 @@ export default function Home() {
         <section className="mx-auto container-fluid xl:container">
           <Platforminsights />
        </section>
-       <section className="container px-20 py-8 mx-auto">
+       <section className="py-8 mx-auto container-fluid">
         <BlogList />
        </section>
        <section>

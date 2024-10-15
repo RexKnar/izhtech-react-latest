@@ -20,7 +20,7 @@ export default function Contactus() {
             <h1 className="pt-4 text-5xl font-bold lg:w-3/4 2xl:text-7xl lg:text-4xl md:text-4xl sm:text-4xl">
               Contact Us
             </h1>
-            <p className="pt-4 pb-4 text-xs">
+            <p className="pt-4 pb-4 text-base">
               Leave us a little info, and we’ll be in touch.
             </p>
             <LinkButton href={`#`} className="mt-0 bg-black" size={"sm"}>

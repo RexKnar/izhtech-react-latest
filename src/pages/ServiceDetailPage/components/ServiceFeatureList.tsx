@@ -42,10 +42,10 @@ export default function ServiceFeatureList({ datas }:{datas:ServicesFeaturesModa
   initial="hidden"
   whileInView={"show"}
   viewport={{ once: false, amount: 0.1 }}
-  className="absolute right-0 bottom-10" // Move the element down
+  className="absolute right-0 bottom-80" // Move the element down
 >
   <CustomObject
-    className="absolute right-0 max-w-screen-xl h-[60vw] lg:h-[40vh] opacity-15"
+    className="absolute hidden lg:block right-0 max-w-screen-xl h-[60vw] lg:h-[40vh] opacity-25"
     variants="half-dash-yellow"
   />
 </motion.span>

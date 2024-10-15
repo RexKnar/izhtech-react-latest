@@ -34,8 +34,17 @@ async function saveContact(payload: any) {
       <div className="mx-auto md:container">
         <div className="grid w-full gap-8 p-4 py-8 lg:px-8 lg:grid-cols-4 md:px-6 md:grid-cols-4">
           <div >
-            <img src={logo} className="h-16" alt="" />
-          </div>
+     
+  <img src={logo} className="h-16 mb-4" alt="Logo" />
+  <div className="h-[1vw] flex justify-start">
+    <h6 className="my-auto text-sm font-semibold text-white">
+      Follow Us - <a href="">Fb.</a>
+      <a href="">/Ig.</a>
+      <a href="">/In.</a>
+    </h6>
+  </div>
+</div>
+
           <div className="text-stone-50 ">
             <h2 className="font-semibold">Address</h2>
             {siteInfo?.length > 0 && (

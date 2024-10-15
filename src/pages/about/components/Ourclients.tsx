@@ -9,7 +9,7 @@ export default function Ourclients() {
     <div className="py-8 mx-auto md:container ">
       <div className="flex flex-col content-center pt-6 pb-6 text-black sm:flex-col md:flex-col lg:flex-row ">
         <div className="">
-          <p className="text-xs">
+          <p className="text-base">
             CLIENTS WE WORK FOR
             <br />
           </p>
@@ -24,7 +24,7 @@ export default function Ourclients() {
               <h1 className="font-bold text-md lg:text-lg">
                 {client?.companyName}
               </h1>
-              <p className="text-md lg:text-sm">
+              <p className="text-md lg:text-base">
                 <a href="https://www.jpmorgan.com" className="text-black">
                   <div
                     dangerouslySetInnerHTML={{ __html: client?.description }}

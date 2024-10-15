@@ -6,7 +6,7 @@ export default function Collaboration() {
         
             <><div className="flex flex-row justify-between w-full py-4 border-b-2 md:container align-item-center md:flex-col md:flex-row lg:flex-row border-neutral-800 ">
             <div className="mb-4 md:w-1/2 lg:w-full">
-                <p className="pb-2 text-xs text-white">LET'S COLLABORATE</p>
+                <p className="pb-2 text-base text-white">LET'S COLLABORATE</p>
                 <h1 className="pb-4 font-bold text-white text-md lg:text-6xl md:text-4xl sm:text-2xl">
                     Send us an email, <br />
                     to discuss a new project.
@@ -20,7 +20,7 @@ export default function Collaboration() {
             </div>
         </div><div className="md:container">
                 <div>
-                    <p className="pt-4 pb-2 text-sm text-lg text-white">
+                    <p className="pt-4 pb-2 text-base text-lg text-white">
                         We're a team of creatives who are excited about unique ideas and<br /> help digital and fin-tech companies to create amazing identity. </p>
                 </div>
             </div></>
