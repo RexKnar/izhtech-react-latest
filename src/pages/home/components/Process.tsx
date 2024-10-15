@@ -59,16 +59,7 @@ const processContentSetOne = [
                             </p>
 
                         </motion.div>
-                        <motion.div
-                            variants={fadeIn("left", 0.2)}
-                            initial="hidden"
-                            whileInView={"show"}
-                            exit={"hidden"}
-                            viewport={{ once: false, amount: 0.1 }}
-                            className="absolute right-0 bg-right bg-no-repeat bg-cover top-6 bottom-5 left-72"
-                            style={{ backgroundImage: "url('images/img/Group11.png')" }}
-                        ></motion.div>
-
+                        
                     </div>
                 </div>
             </div>

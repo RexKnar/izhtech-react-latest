@@ -80,3 +80,17 @@ circle {
 .services-description *{
   color: white !important;
 }
+
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+}
+
+/* Allow vertical scrolling and prevent horizontal overflow on larger screens */
+@media (min-width: 769px) {
+  html, body {
+    overflow-x: auto;  /* Allow horizontal scrolling if necessary */
+    overflow-y: auto;  /* Allow vertical scrolling */
+  }
+}

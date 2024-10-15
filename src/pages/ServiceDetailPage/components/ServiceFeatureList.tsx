@@ -47,10 +47,6 @@ export default function ServiceFeatureList({ datas }:{datas:ServicesFeaturesModa
   className="absolute  bottom-0  right-0 max-w-screen-xl h-[60vw] lg:h-[40vh] opacity-15" 
   variants="half-dash-yellow"
 />
-
-
-
-
       </motion.span>
     </div>
 
