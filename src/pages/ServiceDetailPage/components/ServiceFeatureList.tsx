@@ -38,20 +38,18 @@ export default function ServiceFeatureList({ datas }:{datas:ServicesFeaturesModa
   })}
   </ul>
   <motion.span
-        variants={fadeIn("right", 0.5)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.1 }}
-      >
+  variants={fadeIn("right", 0.5)}
+  initial="hidden"
+  whileInView={"show"}
+  viewport={{ once: false, amount: 0.1 }}
+  className="absolute right-0 bottom-80" // Move the element down
+>
   <CustomObject
-  className="absolute  bottom-0  right-0 max-w-screen-xl h-[60vw] lg:h-[40vh] opacity-15" 
-  variants="half-dash-yellow"
-/>
+    className="absolute hidden lg:block right-0 max-w-screen-xl h-[60vw] lg:h-[40vh] opacity-25"
+    variants="half-dash-yellow"
+  />
+</motion.span>
 
-
-
-
-      </motion.span>
     </div>
 
   )

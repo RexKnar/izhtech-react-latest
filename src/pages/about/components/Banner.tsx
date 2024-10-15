@@ -48,7 +48,7 @@ export default function Banner() {
             <h1 className="pb-4 text-4xl font-bold ">
               Business Growth Solution
             </h1>
-            <p className="text-justify sm:text-xs lg:text-lg md:text-md">
+            <p className="text-justify sm:text-xs lg:text-base md:text-md">
               At IZHTech we help businesses grow. Whether you’re a startup,
               traditional business, or entrepreneur, our service enhance your
               digital presence From app development to branding and marketing,
@@ -62,7 +62,7 @@ export default function Banner() {
             <h1 className="pb-4 text-4xl font-bold">
               Customized Business Success
             </h1>
-            <p className="text-justify sm:text-xs lg:text-lg md:text-md">
+            <p className="text-justify sm:text-xs lg:text-base md:text-md">
               Get expert help for your business, whether it's in e-commerce or
               healthcare. We customize our services to fit your unique goals,
               always keeping you updated and making sure you see real results.

@@ -52,7 +52,7 @@ export default function Ourservice() {
     <section className="lg:px-10 pb-18 pt-18 bg-[#F5F7FF] rounded">
     <div className="relative py-10">
       <div className="text-center ">
-        <p className="pt-4 pb-2 text-xs">#OUR SERVICE</p>
+        <p className="pt-4 pb-2 text-base">#OUR SERVICE</p>
         <h1 className="pb-3 font-bold text-md lg:text-3xl md:text-3xl sm:text-3xl">
           What to expect? 
           
