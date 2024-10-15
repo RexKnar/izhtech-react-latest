@@ -51,17 +51,16 @@ export default function Hero() {
         /> */}
       </div>
       <motion.span
-  variants={fadeIn("right", 0.5)}
-  initial="hidden"
-  whileInView={"show"}
-  viewport={{ once: false, amount: 0.1 }}
->
-  <CustomObject
-    className="absolute -top-60 md:-top-64 -z-10 md:-left-85 lg:-left-[290px] xl:-left-90 -left-[700px] max-w-screen-2xl h-[220vw] md:h-[115vh] lg:h-[125vh] hidden lg:block" 
-    variants="full"
-  />
-</motion.span>
-
+        variants={fadeIn("right", 0.5)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.1 }}
+      >
+        <CustomObject
+          className="absolute -top-60 md:-top-64 -z-10 md:-left-85 lg:-left-[290px] xl:-left-90 -left-[700px] max-w-screen-2xl h-[220vw] md:h-[115vh] lg:h-[125vh] hidden lg:block"
+          variants="full"
+        />
+      </motion.span>
     </>
   );
 }

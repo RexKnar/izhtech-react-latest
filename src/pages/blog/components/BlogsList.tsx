@@ -21,13 +21,17 @@ export  default function BlogsList(){
                   
                 </div>
                 {blogList && (
-        <div className="flex w-full gap-6 px-4 flex-col-3 md:flex-row md:py-6 lg:flex-row lg:flex-wrap lg:justify-center">
-        {blogList?.map((item: PostModel,) => (
-                        <div className="h-full pb-5 mx-auto lg:w-1/4 sm:w-full">
-                    <BlogCard key={item.id} item={item} />
-                    </div>
-                ))}
-        </div>)}
+  <div className="flex flex-col w-full gap-6 px-4 md:flex-row md:flex-wrap md:gap-4 md:px-0">
+    {/* Blog cards layout: 1 card per row on small screens, multiple cards per row on medium+ */}
+    {blogList?.map((item: PostModel) => (
+      <div key={item.id} className="w-9/12 pb-5 mx-auto sm:w-8/12 md:w-1/3 lg:w-1/4">
+        <BlogCard item={item} />
+      </div>
+    ))}
+  </div>
+)}
+
+
         {blogList && (
           <div className="flex w-full gap-6 px-4 flex-col-3 md:flex-row md:py-6 lg:flex-row lg:flex-wrap lg:justify-center">
             <p>No Blogs Found</p>

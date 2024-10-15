@@ -25,9 +25,7 @@ export default function PlatformInsights() {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.1 }}
-        >
-          
-        </motion.span>
+        ></motion.span>
         <motion.div
           variants={fadeIn("left", 0.3)}
           initial="hidden"
@@ -37,7 +35,6 @@ export default function PlatformInsights() {
         >
           <img
             src="images/Aboutpage/img/capabilities.png"
-           
             className="relative z-20 w-full h-auto"
           />
         </motion.div>
